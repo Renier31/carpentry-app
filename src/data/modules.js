@@ -5,129 +5,94 @@ export const modules = [
     icon: '🦺',
     description: 'Learn about essential safety gear required in carpentry and woodworking.',
     color: '#e67e22',
-    intro: `Personal Protective Equipment (PPE) is any gear worn to minimize exposure to hazards that cause workplace injuries. In carpentry, PPE is your first line of defense against cuts, dust, noise, and eye injuries.
-
-Wearing the correct PPE is not optional — it is a professional and legal requirement in any woodworking environment. Understanding when and how to use each piece of equipment can prevent life-altering injuries.`,
+    intro: `Personal Protective Equipment (PPE) is any gear worn to minimize exposure to hazards that cause workplace injuries. In carpentry, PPE is your first line of defense against cuts, dust, noise, and eye injuries.\n\nWearing the correct PPE is not optional — it is a professional and legal requirement in any woodworking environment. Understanding when and how to use each piece of equipment can prevent life-altering injuries.`,
     lessons: [
       {
         id: 'l1_1',
         title: 'Eye and Face Protection',
-        content: `**Safety Glasses and Face Shields**
-
-Eye injuries are among the most common in woodworking. Flying wood chips, sawdust, and tool fragments can cause permanent damage.
-
-**Types of Eye Protection:**
-- **Safety glasses** — basic protection for general work
-- **Safety goggles** — sealed protection against dust and fine particles
-- **Face shield** — full-face protection for grinding and turning operations
-
-**When to wear eye protection:**
-- Any cutting or sawing operation
-- Using power tools
-- Chiseling or hammering
-- Sanding and finishing
-
-Always choose eyewear marked with ANSI Z87.1 or equivalent safety standard.`,
+        content: `**Safety Glasses and Face Shields**\n\nEye injuries are among the most common in woodworking. Flying wood chips, sawdust, and tool fragments can cause permanent damage.\n\n**Types of Eye Protection:**\n- **Safety glasses** — basic protection for general work\n- **Safety goggles** — sealed protection against dust and fine particles\n- **Face shield** — full-face protection for grinding and turning\n\n**When to wear:**\n- Any cutting or sawing operation\n- Using power tools\n- Chiseling or hammering\n- Sanding and finishing\n\nAlways choose eyewear marked with ANSI Z87.1 or equivalent safety standard.`,
         videoUrl: 'https://www.youtube.com/embed/0Lyb0NZNBVY',
         videoTitle: 'Eye Protection in Woodworking'
       },
       {
         id: 'l1_2',
-        title: 'Hearing, Respiratory and Body Protection',
-        content: `**Hearing Protection**
-
-Power tools generate noise levels above 85 decibels — prolonged exposure causes permanent hearing loss.
-
-- **Earplugs** — disposable foam plugs, reduce noise by 25-33 dB
-- **Earmuffs** — cover the entire ear, good for extended use
-- Rule: If you have to shout to be heard, wear hearing protection
-
-**Respiratory Protection**
-
-Wood dust is classified as a carcinogen. Never work without dust protection.
-
-- **Dust mask (N95)** — filters fine particles from sanding and sawing
-- **Respirator** — for finishing work with chemicals, stains, and varnishes
-- Always check the filter rating matches the hazard
-
-**Body Protection**
-
-- **Workshop apron** — protects against cuts and splinters
-- **Work gloves** — for handling rough lumber, NOT for operating spinning tools
-- **Steel-toed boots** — protect feet from dropped lumber and tools
-- **Avoid loose clothing** — can catch in rotating machinery`,
+        title: 'Hearing and Respiratory Protection',
+        content: `**Hearing Protection**\n\nPower tools generate noise above 85 decibels — prolonged exposure causes permanent hearing loss.\n\n- **Earplugs** — disposable foam, reduce noise 25-33 dB\n- **Earmuffs** — cover entire ear, good for extended use\n- Rule: If you must shout to be heard, wear hearing protection\n\n**Respiratory Protection**\n\nWood dust is classified as a carcinogen.\n\n- **N95 dust mask** — filters fine particles from sanding and sawing\n- **Respirator** — for finishing work with chemicals, stains, varnishes\n- Always check the filter rating matches the hazard`,
         videoUrl: 'https://www.youtube.com/embed/8HlqAb2RkCk',
-        videoTitle: 'PPE in Woodworking Shop'
+        videoTitle: 'Hearing and Respiratory PPE'
+      },
+      {
+        id: 'l1_3',
+        title: 'Body and Hand Protection',
+        content: `**Body Protection**\n\n- **Workshop apron** — protects against cuts and splinters\n- **Work gloves** — for handling rough lumber, NOT for operating spinning tools\n- **Steel-toed boots** — protect feet from dropped lumber and tools\n- **Avoid loose clothing** — can catch in rotating machinery\n- **Remove jewelry** — rings, bracelets, and watches can catch on tools\n\n**Important Rules:**\n1. Never wear gloves when operating a drill press, lathe, or table saw\n2. Long hair must be tied back or covered\n3. Always wear closed-toe shoes in the shop — sandals are prohibited`,
+        videoUrl: 'https://www.youtube.com/embed/8HlqAb2RkCk',
+        videoTitle: 'Body Protection in the Workshop'
+      },
+      {
+        id: 'l1_4',
+        title: 'PPE Inspection and Maintenance',
+        content: `**Inspecting PPE Before Use**\n\nPPE that is damaged provides false security and may fail when needed most.\n\n**Safety Glasses/Goggles:**\n- Check for cracks, scratches, and loose frames\n- Replace if lenses are heavily scratched — visibility is reduced\n- Clean with lens-safe wipes only\n\n**Dust Masks/Respirators:**\n- Check for tears, damaged straps, and bent nose pieces\n- Replace N95 masks when breathing becomes difficult\n- Store in a clean dry place away from dust\n\n**Hearing Protection:**\n- Earplugs: replace if compressed and won't spring back\n- Earmuffs: check cushions for cracks and proper seal\n\n**General Rules:**\n- Never share PPE between workers without sanitizing\n- Store PPE in designated clean areas\n- Report damaged PPE to your supervisor immediately`,
+        videoUrl: 'https://www.youtube.com/embed/0Lyb0NZNBVY',
+        videoTitle: 'PPE Inspection and Maintenance'
+      },
+      {
+        id: 'l1_5',
+        title: 'PPE Standards and Regulations',
+        content: `**Why Standards Matter**\n\nPPE standards ensure equipment provides consistent, tested levels of protection.\n\n**Key Standards:**\n- **ANSI Z87.1** — Eye and face protection\n- **ANSI S3.19** — Hearing protection noise reduction rating\n- **NIOSH N95** — Respiratory particle filtration\n- **ASTM F2413** — Safety footwear\n\n**Workplace Requirements:**\n- Employers must provide PPE at no cost to workers\n- Workers must be trained on correct use and limitations\n- PPE must be properly maintained and replaced when worn\n\n**Hierarchy of Controls:**\n1. Elimination — remove the hazard entirely\n2. Substitution — replace with less hazardous option\n3. Engineering controls — guards and ventilation\n4. Administrative controls — training and procedures\n5. PPE — last line of defense\n\nPPE should always be the LAST resort, not the first solution.`,
+        videoUrl: 'https://www.youtube.com/embed/0Lyb0NZNBVY',
+        videoTitle: 'PPE Standards and Workplace Safety'
+      },
+      {
+        id: 'l1_6',
+        title: 'Emergency Procedures and First Aid',
+        content: `**What to Do When PPE Fails**\n\n**Eye Injury:**\n- Do NOT rub the eye\n- Flush immediately with clean water for 15 minutes\n- Seek medical attention even if pain subsides\n\n**Hearing Damage:**\n- Remove from noisy environment immediately\n- Ringing after exposure indicates damage — see a doctor\n\n**Respiratory Exposure:**\n- Move to fresh air immediately\n- If breathing difficulty persists, call emergency services\n\n**Cut or Laceration:**\n- Apply firm pressure with clean cloth\n- Elevate the injured limb\n- Seek medical attention for deep cuts\n\n**First Aid Kit Contents for a Workshop:**\n- Bandages and sterile gauze\n- Eye wash station or saline solution\n- Burn treatment gel\n- Emergency contact numbers posted visibly\n- First aider must be designated in every workshop`,
+        videoUrl: 'https://www.youtube.com/embed/8HlqAb2RkCk',
+        videoTitle: 'Workshop First Aid and Emergency Procedures'
       }
     ],
     preTest: [
-      {
-        id: 'pre1_1',
-        question: 'What does PPE stand for?',
-        options: ['Personal Power Equipment', 'Personal Protective Equipment', 'Professional Power Equipment', 'Professional Protective Ensemble'],
-        correct: 1
-      },
-      {
-        id: 'pre1_2',
-        question: 'Which PPE protects your eyes from flying wood chips?',
-        options: ['Earmuffs', 'Face shield', 'Work gloves', 'Dust mask'],
-        correct: 1
-      },
-      {
-        id: 'pre1_3',
-        question: 'At what noise level should hearing protection be worn?',
-        options: ['Above 50 dB', 'Above 70 dB', 'Above 85 dB', 'Above 100 dB'],
-        correct: 2
-      },
-      {
-        id: 'pre1_4',
-        question: 'Should gloves be worn when operating a spinning power tool?',
-        options: ['Yes, always', 'No, gloves can get caught in the tool', 'Only thick gloves', 'Only when cutting metal'],
-        correct: 1
-      },
-      {
-        id: 'pre1_5',
-        question: 'What type of mask filters fine wood dust particles?',
-        options: ['Surgical mask', 'N95 dust mask', 'Cloth mask', 'Gas mask'],
-        correct: 1
-      }
+      { id: 'pre1_1', question: 'What does PPE stand for?', options: ['Personal Power Equipment', 'Personal Protective Equipment', 'Professional Power Equipment', 'Professional Protective Ensemble'], correct: 1 },
+      { id: 'pre1_2', question: 'Which PPE protects your eyes from flying wood chips?', options: ['Earmuffs', 'Face shield', 'Work gloves', 'Dust mask'], correct: 1 },
+      { id: 'pre1_3', question: 'At what noise level should hearing protection be worn?', options: ['Above 50 dB', 'Above 70 dB', 'Above 85 dB', 'Above 100 dB'], correct: 2 },
+      { id: 'pre1_4', question: 'Should gloves be worn when operating a spinning power tool?', options: ['Yes, always', 'No, gloves can get caught', 'Only thick gloves', 'Only when cutting metal'], correct: 1 },
+      { id: 'pre1_5', question: 'What type of mask filters fine wood dust?', options: ['Surgical mask', 'N95 dust mask', 'Cloth mask', 'Gas mask'], correct: 1 },
+      { id: 'pre1_6', question: 'What footwear is required in a woodworking shop?', options: ['Sandals', 'Running shoes', 'Steel-toed boots', 'Bare feet'], correct: 2 },
+      { id: 'pre1_7', question: 'Why should loose clothing be avoided in the shop?', options: ['It looks unprofessional', 'It can catch in rotating machinery', 'It causes sweating', 'It absorbs sawdust'], correct: 1 },
+      { id: 'pre1_8', question: 'What safety standard marking should eye protection carry?', options: ['ISO 9001', 'ANSI Z87.1', 'CE only', 'OSHA 1910'], correct: 1 },
+      { id: 'pre1_9', question: 'Which is the last resort in the hierarchy of controls?', options: ['Elimination', 'Engineering controls', 'PPE', 'Substitution'], correct: 2 },
+      { id: 'pre1_10', question: 'What should you do immediately after an eye injury?', options: ['Rub the eye', 'Flush with water for 15 minutes', 'Apply eye drops', 'Wait and see'], correct: 1 },
+      { id: 'pre1_11', question: 'A face shield protects:', options: ['Eyes only', 'Ears only', 'The entire face', 'The neck only'], correct: 2 },
+      { id: 'pre1_12', question: 'When should N95 masks be replaced?', options: ['Every day', 'When breathing becomes difficult', 'After one use only', 'Never'], correct: 1 },
+      { id: 'pre1_13', question: 'What is the difference between safety goggles and safety glasses?', options: ['No difference', 'Goggles are sealed; glasses give basic protection', 'Glasses are sealed', 'Goggles are only for chemicals'], correct: 1 },
+      { id: 'pre1_14', question: 'Why should jewelry be removed in the workshop?', options: ['It looks unprofessional', 'It can catch on tools and cause injury', 'It rusts near sawdust', 'No reason'], correct: 1 },
+      { id: 'pre1_15', question: 'Who is responsible for providing PPE to workers?', options: ['Workers buy their own', 'Employers must provide it at no cost', 'The government provides it', 'PPE is optional'], correct: 1 }
     ],
     postTest: [
-      {
-        id: 'post1_1',
-        question: 'Why is wood dust considered dangerous?',
-        options: ['It is flammable only', 'It is classified as a carcinogen', 'It dulls tool edges', 'It causes rust'],
-        correct: 1
-      },
-      {
-        id: 'post1_2',
-        question: 'Which safety standard marking should you look for on safety glasses?',
-        options: ['ISO 9001', 'ANSI Z87.1', 'CE Mark only', 'OSHA 1910'],
-        correct: 1
-      },
-      {
-        id: 'post1_3',
-        question: 'What is the difference between safety goggles and safety glasses?',
-        options: [
-          'No difference',
-          'Goggles are sealed and protect against dust; glasses give basic protection',
-          'Glasses are sealed; goggles are open',
-          'Goggles are only for chemicals'
-        ],
-        correct: 1
-      },
-      {
-        id: 'post1_4',
-        question: 'What should you wear to protect your body from splinters when handling lumber?',
-        options: ['Lab coat', 'Workshop apron', 'Rain jacket', 'Vest'],
-        correct: 1
-      },
-      {
-        id: 'post1_5',
-        question: 'A face shield provides protection for:',
-        options: ['Eyes only', 'Ears only', 'The entire face', 'The neck only'],
-        correct: 2
-      }
+      { id: 'post1_1', question: 'Why is wood dust considered dangerous?', options: ['It is flammable only', 'It is classified as a carcinogen', 'It dulls tools', 'It causes rust'], correct: 1 },
+      { id: 'post1_2', question: 'What ANSI standard applies to eye protection?', options: ['ANSI Z87.1', 'ANSI S3.19', 'ANSI A10.1', 'ANSI B11'], correct: 0 },
+      { id: 'post1_3', question: 'Earplugs reduce noise by approximately:', options: ['5-10 dB', '15-20 dB', '25-33 dB', '40-50 dB'], correct: 2 },
+      { id: 'post1_4', question: 'What should you wear to protect from splinters when handling lumber?', options: ['Lab coat', 'Workshop apron', 'Rain jacket', 'Vest'], correct: 1 },
+      { id: 'post1_5', question: 'When inspecting safety glasses, you should replace them if:', options: ['They are clean', 'Lenses are heavily scratched', 'They are one year old', 'The color fades'], correct: 1 },
+      { id: 'post1_6', question: 'What does NIOSH N95 certification mean for a mask?', options: ['It is waterproof', 'It filters 95% of airborne particles', 'It prevents chemical vapors', 'It is reusable for 95 days'], correct: 1 },
+      { id: 'post1_7', question: 'How long should you flush an eye injury with water?', options: ['2 minutes', '5 minutes', '10 minutes', '15 minutes'], correct: 3 },
+      { id: 'post1_8', question: 'What is the first step in the hierarchy of controls?', options: ['PPE', 'Engineering controls', 'Elimination of the hazard', 'Administrative controls'], correct: 2 },
+      { id: 'post1_9', question: 'Which PPE should NOT be worn while operating a drill press?', options: ['Safety glasses', 'Hearing protection', 'Work gloves', 'Dust mask'], correct: 2 },
+      { id: 'post1_10', question: 'Steel-toed boots protect against:', options: ['Dust exposure', 'Dropped lumber and tools', 'Electrical shock only', 'Chemical spills'], correct: 1 },
+      { id: 'post1_11', question: 'What indicates hearing damage after loud tool exposure?', options: ['Headache', 'Ringing in the ears (tinnitus)', 'Dizziness only', 'Eye strain'], correct: 1 },
+      { id: 'post1_12', question: 'A respirator (vs N95 mask) is needed when:', options: ['Doing light sanding', 'Working with chemical finishes and stains', 'Sweeping the floor', 'Using hand tools only'], correct: 1 },
+      { id: 'post1_13', question: 'What must a workshop always have posted visibly?', options: ['Tool prices', 'Emergency contact numbers', 'Work schedules', 'Material lists'], correct: 1 },
+      { id: 'post1_14', question: 'Engineering controls in a workshop include:', options: ['PPE only', 'Guards and ventilation systems', 'Training programs', 'Rules and procedures'], correct: 1 },
+      { id: 'post1_15', question: 'Earmuffs are better than earplugs for:', options: ['Swimming', 'Extended use over long periods', 'Very loud environments only', 'Light work'], correct: 1 },
+      { id: 'post1_16', question: 'PPE should be stored:', options: ['Anywhere convenient', 'In clean, designated areas away from dust', 'On the workbench', 'In your pocket'], correct: 1 },
+      { id: 'post1_17', question: 'When should you seek medical attention after a cut?', options: ['Never — bandage it yourself', 'Only for deep cuts', 'For any cut in the workshop', 'Only if bleeding continues for an hour'], correct: 1 },
+      { id: 'post1_18', question: 'The ASTM F2413 standard applies to:', options: ['Eye protection', 'Hearing protection', 'Safety footwear', 'Respiratory protection'], correct: 2 },
+      { id: 'post1_19', question: 'Long hair in a workshop must be:', options: ['Cut short', 'Tied back or covered', 'Left loose if clean', 'Hidden under a hat only'], correct: 1 },
+      { id: 'post1_20', question: 'What is a designated first aider in a workshop?', options: ['Anyone who volunteers', 'A trained person responsible for first aid response', 'The shop owner only', 'The most experienced worker'], correct: 1 },
+      { id: 'post1_21', question: 'Which action is correct after respiratory chemical exposure?', options: ['Stay in the area', 'Move to fresh air immediately', 'Drink water', 'Lie down in the shop'], correct: 1 },
+      { id: 'post1_22', question: 'PPE is considered the last resort because:', options: ['It is expensive', 'It only protects the wearer, not others, and can fail', 'It is uncomfortable', 'It slows down work'], correct: 1 },
+      { id: 'post1_23', question: 'How often should earplugs be replaced?', options: ['Never', 'When they no longer spring back after compression', 'Daily always', 'Monthly always'], correct: 1 },
+      { id: 'post1_24', question: 'What is the purpose of an eye wash station in a workshop?', options: ['General face washing', 'Emergency eye flushing after chemical or debris exposure', 'Cleaning tools', 'Washing hands'], correct: 1 },
+      { id: 'post1_25', question: 'Which statement about PPE is TRUE?', options: ['PPE eliminates all hazards', 'PPE reduces the risk but does not eliminate it', 'PPE is only needed for power tools', 'PPE is optional for experienced workers'], correct: 1 }
     ]
   },
   {
@@ -136,151 +101,94 @@ Wood dust is classified as a carcinogen. Never work without dust protection.
     icon: '🔨',
     description: 'Identify and properly use essential hand tools in carpentry.',
     color: '#2980b9',
-    intro: `Hand tools are the foundation of carpentry. Before power tools existed, all woodworking was done by hand. Understanding hand tools improves your skill, precision, and safety when working with wood.
-
-Proper use, maintenance, and storage of hand tools ensures they last longer and perform better. A sharp, well-maintained tool is always safer than a dull or damaged one.`,
+    intro: `Hand tools are the foundation of carpentry. Before power tools existed, all woodworking was done by hand. Understanding hand tools improves your skill, precision, and safety.\n\nProper use, maintenance, and storage of hand tools ensures they last longer and perform better. A sharp, well-maintained tool is always safer than a dull or damaged one.`,
     lessons: [
       {
         id: 'l2_1',
         title: 'Measuring and Marking Tools',
-        content: `**Tape Measure**
-- Most essential tool in carpentry
-- Read measurements carefully — fractions matter
-- Rule: Measure twice, cut once
-
-**Try Square and Combination Square**
-- Used to mark perpendicular and 45° lines
-- Check that your square is actually square before trusting it
-
-**Marking Gauge**
-- Sets a consistent parallel line from an edge
-- Used for joinery layout and ripping lines
-
-**Marking Knife**
-- Scores a crisp line across wood grain
-- Gives cleaner cuts than a pencil line
-
-**Chalk Line**
-- Snaps a straight reference line over long distances
-- Essential for flooring and framing work
-
-**Tips:**
-- Always mark on the waste side of the line
-- Use a sharp pencil (not a thick marker) for accuracy
-- Keep measuring tools clean and stored flat`,
+        content: `**Tape Measure**\n- Most essential carpentry tool\n- Read fractions carefully — measure twice, cut once\n- Hook the end on the material edge before measuring\n\n**Try Square and Combination Square**\n- Marks perpendicular (90°) and 45° lines\n- Check your square is actually square before trusting it\n\n**Marking Gauge**\n- Sets a consistent parallel line from an edge\n- Used for joinery layout and ripping lines\n\n**Marking Knife**\n- Scores a crisp line across wood grain\n- Gives cleaner cuts than a pencil\n\n**Chalk Line**\n- Snaps a straight reference line over long distances\n- Essential for flooring and framing`,
         videoUrl: 'https://www.youtube.com/embed/ZSHqpCMDLnk',
         videoTitle: 'Measuring and Marking Tools'
       },
       {
         id: 'l2_2',
-        title: 'Cutting and Shaping Tools',
-        content: `**Hand Saw**
-- Crosscut saw — cuts across the grain
-- Rip saw — cuts along the grain
-- Technique: Let the saw do the work, use long smooth strokes
-
-**Back Saw and Miter Box**
-- Fine-toothed saw for accurate joinery cuts
-- Miter box guides the saw at 45° or 90°
-
-**Chisels**
-- Used for paring, chopping mortises, and cleaning joints
-- Always cut AWAY from your body
-- Keep chisels razor sharp — dull chisels are dangerous
-
-**Block Plane**
-- Smooths end grain and removes thin shavings
-- Set the blade depth shallow for best results
-
-**Rasp and File**
-- Rasp — aggressive shaping of wood
-- File — smoother finishing after the rasp
-
-**Mallet**
-- Used with chisels — softer than a steel hammer
-- Prevents damage to chisel handles`,
+        title: 'Cutting Tools — Saws',
+        content: `**Hand Saw**\n- **Crosscut saw** — cuts across the grain (most common)\n- **Rip saw** — cuts along the grain (fewer, larger teeth)\n- Technique: Let the saw do the work, use long smooth strokes\n- Start the cut with a backstroke to create a kerf\n\n**Back Saw and Miter Box**\n- Fine-toothed saw for accurate joinery cuts\n- Miter box guides at 45° or 90°\n- Tenon saw is a type of back saw for larger joints\n\n**Coping Saw**\n- Thin blade for cutting curves and internal cutouts\n- Blade can be rotated to cut at any angle\n- Used for decorative work and fitting moldings\n\n**Hacksaw**\n- Cuts metal hardware like bolts and screws\n- Fine-toothed blade, cuts on the push stroke`,
         videoUrl: 'https://www.youtube.com/embed/HNmSLCBxHKI',
-        videoTitle: 'Hand Cutting Tools for Carpentry'
+        videoTitle: 'Hand Saws for Carpentry'
+      },
+      {
+        id: 'l2_3',
+        title: 'Chisels and Planes',
+        content: `**Chisels**\n- Used for paring wood, cutting mortises, and cleaning joints\n- Types: bench chisel, mortise chisel, paring chisel\n- Always cut AWAY from your body\n- Keep razor sharp — a dull chisel is more dangerous than a sharp one\n- Drive with a mallet, not a steel hammer (damages handles)\n\n**Block Plane**\n- Smooths end grain and removes thin shavings\n- Set blade depth shallow for best results\n- Essential for fitting joints and trimming doors\n\n**Jack Plane**\n- Flattens rough sawn lumber\n- Used before the smoothing plane\n- Set for a heavier cut\n\n**Smoothing Plane**\n- Final surface preparation before finishing\n- Set for very thin shavings\n- Sharp iron (blade) is critical for glass-smooth results`,
+        videoUrl: 'https://www.youtube.com/embed/HNmSLCBxHKI',
+        videoTitle: 'Chisels and Hand Planes'
+      },
+      {
+        id: 'l2_4',
+        title: 'Shaping and Finishing Tools',
+        content: `**Rasp and File**\n- **Rasp** — aggressive shaping with coarse teeth\n- **File** — smoother finishing after the rasp\n- Always use a handle on a file — the tang can stab your palm\n- Move in one direction only — lift on the return stroke\n\n**Spokeshave**\n- Shapes curved surfaces and chair legs\n- Two handles for controlled two-hand operation\n- Can be used with or against the grain depending on curve direction\n\n**Cabinet Scraper**\n- Removes thin shavings with a burr edge\n- Superior to sandpaper for hardwoods — no clogging\n- Produces glass-smooth surfaces without scratches\n\n**Scratch Awl**\n- Marks starting points for screws and nails\n- Creates a small dimple that prevents bit wandering`,
+        videoUrl: 'https://www.youtube.com/embed/HNmSLCBxHKI',
+        videoTitle: 'Shaping and Finishing Hand Tools'
+      },
+      {
+        id: 'l2_5',
+        title: 'Fastening Tools',
+        content: `**Hammers**\n- **Claw hammer** — most common; driving nails and pulling them\n- Grip near the end of handle for maximum power\n- Keep face clean — a dirty face causes glancing blows\n- **Framing hammer** — heavier, for structural work\n- **Tack hammer** — light, for upholstery and small nails\n\n**Screwdrivers**\n- Match the tip exactly to the screw head — prevents cam-out\n- Types: Phillips, flat, Torx, Robertson (square)\n- Use the correct length — short screwdrivers strip heads more easily\n\n**Mallet**\n- Used with chisels to prevent handle damage\n- Also used for driving wooden joints together without marking\n- Types: wooden, rubber, dead-blow\n\n**Hand Drill (Brace)**\n- Manual drill for boring holes without electricity\n- Still useful for controlled, quiet drilling in fieldwork`,
+        videoUrl: 'https://www.youtube.com/embed/HNmSLCBxHKI',
+        videoTitle: 'Fastening Hand Tools'
+      },
+      {
+        id: 'l2_6',
+        title: 'Tool Care and Storage',
+        content: `**Sharpening Hand Tools**\n\nSharp tools are safer, more accurate, and less tiring to use.\n\n**Sharpening Process:**\n1. Flatten the back of the blade on a sharpening stone\n2. Hone the bevel at the correct angle (25-30° for chisels and plane irons)\n3. Strop on leather to remove the wire edge\n4. Test — a sharp blade shaves arm hair cleanly\n\n**Preventing Rust:**\n- Wipe metal surfaces with a light coat of oil after use\n- Store tools in a dry environment\n- Use a tool roll or wooden toolbox — not a metal box that promotes condensation\n\n**Storage Best Practices:**\n- Hang saws so teeth don't contact other tools\n- Store chisels in a roll or rack with edge protection\n- Never throw tools into a pile — edges chip and workers get cut\n- Label and organize tools — missing tools cause accidents`,
+        videoUrl: 'https://www.youtube.com/embed/ZSHqpCMDLnk',
+        videoTitle: 'Hand Tool Care and Storage'
       }
     ],
     preTest: [
-      {
-        id: 'pre2_1',
-        question: 'What is the golden rule of measuring in carpentry?',
-        options: ['Cut once, measure once', 'Measure twice, cut once', 'Always use a ruler', 'Mark with a marker'],
-        correct: 1
-      },
-      {
-        id: 'pre2_2',
-        question: 'Which saw is designed to cut along the grain of wood?',
-        options: ['Crosscut saw', 'Back saw', 'Rip saw', 'Hacksaw'],
-        correct: 2
-      },
-      {
-        id: 'pre2_3',
-        question: 'What tool creates a consistent parallel line from an edge?',
-        options: ['Try square', 'Marking gauge', 'Tape measure', 'Chalk line'],
-        correct: 1
-      },
-      {
-        id: 'pre2_4',
-        question: 'When using a chisel, you should always cut:',
-        options: ['Toward your body', 'Away from your body', 'Upward', 'In a circular motion'],
-        correct: 1
-      },
-      {
-        id: 'pre2_5',
-        question: 'What is a mallet used for?',
-        options: ['Driving nails', 'Driving chisels without damaging handles', 'Breaking wood', 'Measuring angles'],
-        correct: 1
-      }
+      { id: 'pre2_1', question: 'What is the golden rule of measuring?', options: ['Cut once measure once', 'Measure twice cut once', 'Always use a ruler', 'Mark with a marker'], correct: 1 },
+      { id: 'pre2_2', question: 'Which saw cuts along the grain?', options: ['Crosscut saw', 'Back saw', 'Rip saw', 'Hacksaw'], correct: 2 },
+      { id: 'pre2_3', question: 'What tool creates a consistent parallel line from an edge?', options: ['Try square', 'Marking gauge', 'Tape measure', 'Chalk line'], correct: 1 },
+      { id: 'pre2_4', question: 'When using a chisel, you should always cut:', options: ['Toward your body', 'Away from your body', 'Upward', 'In a circle'], correct: 1 },
+      { id: 'pre2_5', question: 'What is a mallet used for?', options: ['Driving nails', 'Driving chisels without damaging handles', 'Breaking wood', 'Measuring angles'], correct: 1 },
+      { id: 'pre2_6', question: 'A coping saw is used for:', options: ['Ripping long boards', 'Cutting curves and internal cutouts', 'Cutting metal', 'Making straight cuts only'], correct: 1 },
+      { id: 'pre2_7', question: 'Which plane is used for final surface preparation?', options: ['Jack plane', 'Block plane', 'Smoothing plane', 'Router plane'], correct: 2 },
+      { id: 'pre2_8', question: 'What should you always use with a file?', options: ['Gloves', 'A handle', 'Oil', 'A vise'], correct: 1 },
+      { id: 'pre2_9', question: 'Which hammer is most common in carpentry?', options: ['Framing hammer', 'Tack hammer', 'Claw hammer', 'Dead-blow hammer'], correct: 2 },
+      { id: 'pre2_10', question: 'Why should tools not be stored in a pile?', options: ['It wastes space', 'Edges chip and workers can be cut', 'It looks messy', 'Tools get lost'], correct: 1 },
+      { id: 'pre2_11', question: 'A marking knife is better than a pencil because:', options: ['It is cheaper', 'It scores wood fiber for cleaner cuts', 'It is more visible', 'It lasts longer'], correct: 1 },
+      { id: 'pre2_12', question: 'What angle is correct for sharpening a chisel bevel?', options: ['10-15 degrees', '25-30 degrees', '45 degrees', '60 degrees'], correct: 1 },
+      { id: 'pre2_13', question: 'A hacksaw is designed to cut:', options: ['Wood along grain', 'Curves in wood', 'Metal hardware', 'Joints'], correct: 2 },
+      { id: 'pre2_14', question: 'A cabinet scraper is superior to sandpaper because:', options: ['It is faster', 'It produces smooth surfaces without scratches or clogging', 'It is cheaper', 'It works on all materials'], correct: 1 },
+      { id: 'pre2_15', question: 'How should a saw be stored?', options: ['Teeth down in a box', 'Hanging so teeth do not contact other tools', 'In a drawer with other tools', 'Wrapped in cloth always'], correct: 1 }
     ],
     postTest: [
-      {
-        id: 'post2_1',
-        question: 'What is the difference between a crosscut saw and a rip saw?',
-        options: [
-          'No difference',
-          'Crosscut cuts across grain; rip saw cuts along grain',
-          'Rip saw cuts across grain; crosscut cuts along grain',
-          'Both cut at 45 degrees'
-        ],
-        correct: 1
-      },
-      {
-        id: 'post2_2',
-        question: 'Why should chisels be kept sharp?',
-        options: [
-          'Sharp chisels look professional',
-          'Sharp chisels are safer and more accurate than dull ones',
-          'Dull chisels cut faster',
-          'Sharpness does not matter for chisels'
-        ],
-        correct: 1
-      },
-      {
-        id: 'post2_3',
-        question: 'What does a marking knife do that a pencil cannot?',
-        options: [
-          'Makes thicker lines',
-          'Scores the wood fiber for cleaner, tear-out free cuts',
-          'Measures distance',
-          'Marks curves only'
-        ],
-        correct: 1
-      },
-      {
-        id: 'post2_4',
-        question: 'A block plane is best used for:',
-        options: ['Ripping long boards', 'Smoothing end grain and removing thin shavings', 'Cutting mortises', 'Marking parallel lines'],
-        correct: 1
-      },
-      {
-        id: 'post2_5',
-        question: 'What guides a back saw at precise angles like 45° and 90°?',
-        options: ['Marking gauge', 'Try square', 'Miter box', 'Combination square'],
-        correct: 2
-      }
+      { id: 'post2_1', question: 'What is the difference between a crosscut saw and a rip saw?', options: ['No difference', 'Crosscut cuts across grain; rip cuts along grain', 'Rip cuts across grain', 'Both cut at 45 degrees'], correct: 1 },
+      { id: 'post2_2', question: 'Why should chisels be kept sharp?', options: ['They look professional', 'Sharp chisels are safer and more accurate', 'Dull chisels cut faster', 'Sharpness does not matter'], correct: 1 },
+      { id: 'post2_3', question: 'What guides a back saw at precise angles?', options: ['Marking gauge', 'Try square', 'Miter box', 'Combination square'], correct: 2 },
+      { id: 'post2_4', question: 'A block plane is best used for:', options: ['Ripping long boards', 'Smoothing end grain', 'Cutting mortises', 'Marking lines'], correct: 1 },
+      { id: 'post2_5', question: 'What is the purpose of a scratch awl?', options: ['Marking deep lines', 'Creating dimples that prevent bit wandering', 'Carving decorative patterns', 'Measuring depth'], correct: 1 },
+      { id: 'post2_6', question: 'Which chisel type is used for cutting deep mortise pockets?', options: ['Paring chisel', 'Bench chisel', 'Mortise chisel', 'Skew chisel'], correct: 2 },
+      { id: 'post2_7', question: 'A spokeshave is used for:', options: ['Straight surfaces only', 'Shaping curved surfaces and chair legs', 'Cutting dovetails', 'Marking measurements'], correct: 1 },
+      { id: 'post2_8', question: 'What prevents rust on hand tools?', options: ['Storing them wet', 'Wiping with light oil after use and storing dry', 'Keeping them in a metal box', 'Washing with water'], correct: 1 },
+      { id: 'post2_9', question: 'A Phillips screwdriver should only be used with:', options: ['Any screw type', 'Phillips head screws specifically', 'Flat head screws', 'Torx screws'], correct: 1 },
+      { id: 'post2_10', question: 'The jack plane is used:', options: ['For final finishing', 'To flatten rough sawn lumber before smoothing', 'For end grain only', 'For curved surfaces'], correct: 1 },
+      { id: 'post2_11', question: 'Why is a rasp used before a file?', options: ['Rasps are cheaper', 'Rasps are more aggressive for rough shaping; files finish the surface', 'Files are less common', 'Order does not matter'], correct: 1 },
+      { id: 'post2_12', question: 'How do you test if a blade is truly sharp?', options: ['Press it against metal', 'It shaves arm hair cleanly', 'It reflects light', 'It makes a ringing sound'], correct: 1 },
+      { id: 'post2_13', question: 'A dead-blow mallet contains:', options: ['A metal head', 'Shot or sand inside that prevents bounce', 'A rubber tip only', 'Nothing — it is solid wood'], correct: 1 },
+      { id: 'post2_14', question: 'When using a file, you should:', options: ['Push and pull with equal force', 'Move in one direction and lift on return', 'Press harder on the return stroke', 'Use circular motion'], correct: 1 },
+      { id: 'post2_15', question: 'What is "cam-out" when using a screwdriver?', options: ['Stripping the screw head when the bit slips', 'Driving the screw too deep', 'Losing the screw', 'Using too much force'], correct: 0 },
+      { id: 'post2_16', question: 'The back of a chisel blade should be:', options: ['Curved for strength', 'Flat — honed flat on a sharpening stone', 'Rough for grip', 'Polished but not flat'], correct: 1 },
+      { id: 'post2_17', question: 'A brace is a type of:', options: ['Power drill', 'Manual hand drill for boring holes', 'Measuring tool', 'Clamp'], correct: 1 },
+      { id: 'post2_18', question: 'Chalk lines are used for:', options: ['Marking short measurements', 'Snapping straight reference lines over long distances', 'Marking curves', 'Checking level'], correct: 1 },
+      { id: 'post2_19', question: 'What is stropping after sharpening used for?', options: ['Removing material', 'Removing the wire edge for a refined sharp edge', 'Adding an edge bevel', 'Cleaning the stone'], correct: 1 },
+      { id: 'post2_20', question: 'A combination square can mark at:', options: ['90 degrees only', '45 degrees only', 'Both 90 and 45 degrees', 'Any angle freely'], correct: 2 },
+      { id: 'post2_21', question: 'Why use a wooden or fabric toolbox rather than metal?', options: ['Wood is cheaper', 'Metal promotes condensation which causes rust', 'Wood is lighter', 'Metal damages tools'], correct: 1 },
+      { id: 'post2_22', question: 'A tenon saw is a type of:', options: ['Rip saw', 'Back saw', 'Coping saw', 'Crosscut saw'], correct: 1 },
+      { id: 'post2_23', question: 'The correct grip for maximum hammer power is:', options: ['Near the head', 'In the middle', 'Near the end of the handle', 'Overhand grip only'], correct: 2 },
+      { id: 'post2_24', question: 'A cabinet scraper removes material using:', options: ['Abrasive particles', 'A burr edge that shaves thin ribbons', 'Chemical softening', 'Heat'], correct: 1 },
+      { id: 'post2_25', question: 'Edge protection on stored chisels prevents:', options: ['Rust only', 'Chipping of the cutting edge and injury to workers', 'Handle damage', 'Measurement errors'], correct: 1 }
     ]
   },
   {
@@ -289,147 +197,94 @@ Proper use, maintenance, and storage of hand tools ensures they last longer and 
     icon: '⚡',
     description: 'Learn to safely operate power tools used in modern carpentry.',
     color: '#c0392b',
-    intro: `Power tools dramatically increase productivity in carpentry but come with significantly higher risks than hand tools. A power tool can cause severe injury in a fraction of a second if used improperly.
-
-Before operating any power tool, you must understand its parts, safe operating procedures, and emergency shutoff. Always inspect tools before use and never operate a damaged tool.`,
+    intro: `Power tools dramatically increase productivity in carpentry but come with significantly higher risks than hand tools. A power tool can cause severe injury in a fraction of a second if used improperly.\n\nBefore operating any power tool, you must understand its parts, safe operating procedures, and emergency shutoff. Always inspect tools before use and never operate a damaged tool.`,
     lessons: [
       {
         id: 'l3_1',
-        title: 'Drills and Circular Saws',
-        content: `**Electric Drill / Driver**
-- Used for drilling holes and driving screws
-- Choose the correct bit for the material
-- Secure the workpiece — never hold it in your hand while drilling
-- Start slow, increase speed gradually
-- Pull the bit back frequently when drilling deep holes
-
-**Circular Saw**
-- Most common power saw for cutting lumber to length
-- Always let the blade reach full speed before cutting
-- Support both sides of the cut
-- Never reach under the workpiece
-- Let the blade stop completely before setting the saw down
-- Keep the blade guard in place at all times
-
-**Jigsaw**
-- Cuts curves and irregular shapes
-- Start the blade before contacting the wood
-- Use the correct blade for the material thickness
-
-**Safety Rules for All Power Tools:**
-1. Inspect before use — check cord, guard, blade
-2. Wear safety glasses and hearing protection
-3. Secure workpiece with clamps
-4. Disconnect power before changing blades or bits
-5. Never use a wet power tool`,
+        title: 'Drills and Drivers',
+        content: `**Electric Drill / Driver**\n- Used for drilling holes and driving screws\n- Choose the correct bit for the material\n- Secure the workpiece with clamps — never hold it by hand\n- Start slow, increase speed gradually\n- Pull the bit back frequently when drilling deep holes to clear chips\n\n**Drill Bit Types:**\n- **Twist bit** — general purpose for wood and metal\n- **Spade bit** — fast, rough holes in wood\n- **Forstner bit** — clean flat-bottomed holes\n- **Brad-point bit** — precise holes with center point\n- **Auger bit** — deep holes in thick timber\n\n**Impact Driver**\n- Delivers rotational impact force for driving large screws\n- Significantly more torque than a regular drill\n- Not suitable for drilling clean holes\n- Use with hex-shank bits only`,
         videoUrl: 'https://www.youtube.com/embed/QLvqkMDsZoA',
-        videoTitle: 'Power Tool Safety for Beginners'
+        videoTitle: 'Drills and Drivers Guide'
       },
       {
         id: 'l3_2',
-        title: 'Sanders and Routers',
-        content: `**Random Orbital Sander**
-- Best general-purpose sander for flat surfaces
-- Moves in random elliptical pattern — no swirl marks
-- Start with coarse grit, finish with fine grit
-- Always sand with dust collection or wear N95 mask
-
-**Belt Sander**
-- Aggressive material removal — use carefully
-- Keep moving — stopping in one place gouges the surface
-- Good for flattening large surfaces
-
-**Detail Sander (Mouse Sander)**
-- Gets into corners and tight spaces
-- Low power — not for heavy material removal
-
-**Router**
-- Cuts profiles, dadoes, rabbets, and decorative edges
-- Always move the router AGAINST the bit rotation (climb cutting is dangerous)
-- Take shallow passes — never try to remove too much in one pass
-- Use sharp bits — dull bits cause burning and tear-out
-- Secure workpiece firmly before routing
-
-**Biscuit Joiner**
-- Cuts slots for oval biscuits that align and strengthen joints
-- Simple to use — great for panel glue-ups`,
+        title: 'Circular Saw and Jigsaw',
+        content: `**Circular Saw**\n- Most common power saw for cutting lumber\n- Always let blade reach full speed before cutting\n- Support both sides of the cut\n- Never reach under workpiece while cutting\n- Let blade stop completely before setting saw down\n- Keep blade guard in place at all times\n- Depth: set blade 1/4" deeper than material thickness\n\n**Jigsaw**\n- Cuts curves and irregular shapes\n- Start blade before contacting wood\n- Use correct blade for material thickness\n- Support the workpiece close to the cut line\n- Slower feed rate = cleaner cut\n\n**Reciprocating Saw**\n- For demolition and rough cuts\n- Can cut in tight spaces\n- Not suitable for precision work`,
+        videoUrl: 'https://www.youtube.com/embed/QLvqkMDsZoA',
+        videoTitle: 'Circular Saw and Jigsaw Safety'
+      },
+      {
+        id: 'l3_3',
+        title: 'Sanders',
+        content: `**Random Orbital Sander**\n- Best general-purpose sander for flat surfaces\n- Moves in random elliptical pattern — no swirl marks\n- Start coarse, finish fine (80 → 120 → 180 → 220 grit)\n- Always use dust collection or wear N95 mask\n\n**Belt Sander**\n- Aggressive material removal\n- Keep moving — stopping gouges the surface\n- Good for flattening large surfaces and removing paint\n\n**Detail Sander (Mouse Sander)**\n- Gets into corners and tight spaces\n- Low power — not for heavy material removal\n\n**Disc Sander**\n- Stationary sander for end grain and small parts\n- Only use the downward half of the disc\n- Upward half throws workpiece toward user`,
         videoUrl: 'https://www.youtube.com/embed/Y7EUjFn3BBc',
-        videoTitle: 'Sanders and Routers Guide'
+        videoTitle: 'Power Sanders Guide'
+      },
+      {
+        id: 'l3_4',
+        title: 'Router',
+        content: `**What is a Router?**\n- Cuts profiles, dadoes, rabbets, and decorative edges\n- One of the most versatile power tools in woodworking\n\n**Types:**\n- **Fixed base** — depth set before use, stable for edge work\n- **Plunge base** — bit plunges into material mid-cut, for grooves\n- **Trim router** — compact, lightweight for light edge work\n\n**Safe Operation:**\n- Always move router AGAINST the bit rotation (climb cutting is dangerous)\n- Take shallow passes — never remove too much in one pass\n- Use sharp bits — dull bits cause burning and tear-out\n- Secure workpiece firmly before routing\n- Use a router table for better control on small pieces\n\n**Common Router Profiles:**\n- Roundover, chamfer, cove, ogee, rabbet, straight`,
+        videoUrl: 'https://www.youtube.com/embed/Y7EUjFn3BBc',
+        videoTitle: 'Router Basics and Safety'
+      },
+      {
+        id: 'l3_5',
+        title: 'Nail Guns and Staplers',
+        content: `**Pneumatic Nail Gun (Nailer)**\n- Drives nails rapidly using compressed air\n- Types: framing nailer, finish nailer, brad nailer, pin nailer\n- Always point away from people when loaded\n- Never carry with finger on trigger\n- Disconnect air before clearing jams\n- Use the correct nail gauge and length for the application\n\n**Finish Nailer**\n- Drives 15-16 gauge nails for trim and molding\n- Leaves small hole easily filled with putty\n\n**Brad Nailer**\n- Drives 18 gauge brads for light trim and thin stock\n- Minimal splitting risk on delicate pieces\n\n**Stapler**\n- Drives staples for upholstery, underlayment, and sheathing\n- Compressed air or electric versions available\n\n**Safety:**\n- Never point at yourself or others\n- Keep non-trigger hand clear of the muzzle\n- Use safety glasses — nails can ricochet`,
+        videoUrl: 'https://www.youtube.com/embed/QLvqkMDsZoA',
+        videoTitle: 'Nail Guns and Pneumatic Tools'
+      },
+      {
+        id: 'l3_6',
+        title: 'General Power Tool Safety',
+        content: `**Universal Safety Rules:**\n1. Inspect every tool before use — check cord, guard, blade/bit\n2. Wear appropriate PPE for every operation\n3. Secure workpiece with clamps — never hold with hands\n4. Disconnect power before changing blades or bits\n5. Never use a wet or damaged power tool\n6. Keep guards in place at all times\n7. Allow rotating parts to stop completely before setting tool down\n8. Keep cords away from cutting paths\n9. Never leave a running tool unattended\n10. Know the location of the power shutoff\n\n**Electrical Safety:**\n- Use GFCI outlets near water sources\n- Inspect cords for cracks and damage before use\n- Never carry a tool by its cord\n- Do not use extension cords that are too light for the tool\n\n**First Response to Power Tool Injury:**\n- Shut off the tool immediately\n- Apply pressure to bleeding wounds\n- Do not remove embedded objects\n- Call for emergency help`,
+        videoUrl: 'https://www.youtube.com/embed/QLvqkMDsZoA',
+        videoTitle: 'Power Tool Safety Rules'
       }
     ],
     preTest: [
-      {
-        id: 'pre3_1',
-        question: 'Before changing a blade on a circular saw, you must:',
-        options: ['Put on gloves', 'Disconnect the power source', 'Let the blade spin down', 'Ask for help'],
-        correct: 1
-      },
-      {
-        id: 'pre3_2',
-        question: 'When should the circular saw blade guard be removed?',
-        options: ['For every cut', 'When cutting thin wood', 'Never — it must stay in place', 'When making curved cuts'],
-        correct: 2
-      },
-      {
-        id: 'pre3_3',
-        question: 'What PPE should always be worn when using power tools?',
-        options: ['Only gloves', 'Safety glasses and hearing protection', 'Only a dust mask', 'No PPE needed for power tools'],
-        correct: 1
-      },
-      {
-        id: 'pre3_4',
-        question: 'How should a workpiece be secured when using a drill?',
-        options: ['Hold it with your hand', 'Have someone else hold it', 'Clamp it to a workbench', 'Place it on the floor'],
-        correct: 2
-      },
-      {
-        id: 'pre3_5',
-        question: 'Which sander is best for general flat surface finishing?',
-        options: ['Belt sander', 'Random orbital sander', 'Detail sander', 'Disc sander'],
-        correct: 1
-      }
+      { id: 'pre3_1', question: 'Before changing a blade, you must:', options: ['Put on gloves', 'Disconnect power source', 'Let it spin down', 'Ask for help'], correct: 1 },
+      { id: 'pre3_2', question: 'When should the circular saw guard be removed?', options: ['For every cut', 'When cutting thin wood', 'Never', 'For curved cuts'], correct: 2 },
+      { id: 'pre3_3', question: 'What PPE is always required for power tools?', options: ['Gloves only', 'Safety glasses and hearing protection', 'Dust mask only', 'No PPE needed'], correct: 1 },
+      { id: 'pre3_4', question: 'How should a workpiece be secured for drilling?', options: ['Hold by hand', 'Have someone hold it', 'Clamp to workbench', 'Place on floor'], correct: 2 },
+      { id: 'pre3_5', question: 'Which sander prevents swirl marks?', options: ['Belt sander', 'Random orbital sander', 'Detail sander', 'Disc sander'], correct: 1 },
+      { id: 'pre3_6', question: 'A router should be moved:', options: ['With bit rotation', 'Against bit rotation', 'In circles only', 'Direction does not matter'], correct: 1 },
+      { id: 'pre3_7', question: 'What drill bit creates clean flat-bottomed holes?', options: ['Twist bit', 'Spade bit', 'Forstner bit', 'Brad-point bit'], correct: 2 },
+      { id: 'pre3_8', question: 'A jigsaw is designed for:', options: ['Straight cuts only', 'Curves and irregular shapes', 'Metal only', 'Ripping lumber'], correct: 1 },
+      { id: 'pre3_9', question: 'An impact driver provides:', options: ['Less torque than a drill', 'Rotational impact force for large screws', 'Precise hole drilling', 'Sanding function'], correct: 1 },
+      { id: 'pre3_10', question: 'Why should cords be kept away from the cutting path?', options: ['Cords cause inaccuracy', 'Blade can cut the cord causing shock or fire', 'Cords get dirty', 'No real reason'], correct: 1 },
+      { id: 'pre3_11', question: 'A pneumatic nail gun uses:', options: ['Electric power', 'Compressed air', 'Battery power', 'Manual force'], correct: 1 },
+      { id: 'pre3_12', question: 'Which nailer is used for fine trim and molding?', options: ['Framing nailer', 'Roofing nailer', 'Finish nailer', 'Pin nailer'], correct: 2 },
+      { id: 'pre3_13', question: 'GFCI outlets protect against:', options: ['Overvoltage', 'Electrical shock near water', 'Overloading circuits', 'Power surges'], correct: 1 },
+      { id: 'pre3_14', question: 'What is the correct blade depth for a circular saw?', options: ['Same as material thickness', '1/4 inch deeper than material', '1 inch deeper than material', 'Half the material thickness'], correct: 1 },
+      { id: 'pre3_15', question: 'What should you do first if a power tool is injured someone?', options: ['Continue working', 'Shut off the tool immediately', 'Remove the blade', 'Call the manufacturer'], correct: 1 }
     ],
     postTest: [
-      {
-        id: 'post3_1',
-        question: 'When using a circular saw, when should you start the cut?',
-        options: [
-          'As soon as the blade touches the wood',
-          'After the blade reaches full speed',
-          'While the blade is still accelerating',
-          'It does not matter'
-        ],
-        correct: 1
-      },
-      {
-        id: 'post3_2',
-        question: 'What does a random orbital sander prevent compared to other sanders?',
-        options: ['Dust production', 'Swirl marks on the surface', 'Noise', 'Overheating'],
-        correct: 1
-      },
-      {
-        id: 'post3_3',
-        question: 'When using a router, you should move it:',
-        options: ['With the bit rotation', 'Against the bit rotation', 'In circles only', 'Direction does not matter'],
-        correct: 1
-      },
-      {
-        id: 'post3_4',
-        question: 'Why should you never use a wet power tool?',
-        options: ['It damages the wood', 'Risk of electric shock', 'It slows the motor', 'It rusts the blade'],
-        correct: 1
-      },
-      {
-        id: 'post3_5',
-        question: 'What is the purpose of a biscuit joiner?',
-        options: [
-          'Cuts decorative profiles on edges',
-          'Cuts slots for oval biscuits that align and strengthen joints',
-          'Joins metal pieces',
-          'Sands curved surfaces'
-        ],
-        correct: 1
-      }
+      { id: 'post3_1', question: 'When should a circular saw start the cut?', options: ['As soon as it touches wood', 'After blade reaches full speed', 'While still accelerating', 'Any time'], correct: 1 },
+      { id: 'post3_2', question: 'What does a random orbital sander prevent?', options: ['Dust', 'Swirl marks', 'Noise', 'Overheating'], correct: 1 },
+      { id: 'post3_3', question: 'A router should move against bit rotation to prevent:', options: ['Blade dulling', 'Climb cutting which is dangerous and uncontrolled', 'Vibration', 'Cord tangling'], correct: 1 },
+      { id: 'post3_4', question: 'Why never use a wet power tool?', options: ['It damages wood', 'Risk of electric shock', 'It slows the motor', 'It rusts the blade'], correct: 1 },
+      { id: 'post3_5', question: 'A biscuit joiner cuts slots for:', options: ['Decorative profiles', 'Oval biscuits that align and strengthen joints', 'Metal fasteners', 'Curved cuts'], correct: 1 },
+      { id: 'post3_6', question: 'The disc sander — which half of the disc should you use?', options: ['Upper half', 'Downward half only', 'Either half equally', 'The center only'], correct: 1 },
+      { id: 'post3_7', question: 'Forstner bits are chosen when you need:', options: ['Fast rough holes', 'Clean flat-bottomed holes', 'Deep holes in timber', 'General purpose holes'], correct: 1 },
+      { id: 'post3_8', question: 'Why pull a drill bit back frequently during deep drilling?', options: ['To cool the bit', 'To clear chips and prevent binding', 'To measure depth', 'To change speed'], correct: 1 },
+      { id: 'post3_9', question: 'A plunge router base allows:', options: ['Only edge work', 'The bit to plunge into material mid-cut', 'Faster rotation speed', 'Built-in dust collection'], correct: 1 },
+      { id: 'post3_10', question: 'An 18-gauge brad nailer is best for:', options: ['Framing walls', 'Light trim and thin delicate stock', 'Roofing shingles', 'Heavy furniture joints'], correct: 1 },
+      { id: 'post3_11', question: 'A belt sander must keep moving because:', options: ['It overheats quickly', 'Stopping in one place gouges the surface', 'It is less accurate when still', 'The motor requires movement'], correct: 1 },
+      { id: 'post3_12', question: 'What is the purpose of GFCI protection?', options: ['Prevents overvoltage', 'Cuts power if current leak detected — prevents shock near water', 'Boosts power output', 'Protects tool motor'], correct: 1 },
+      { id: 'post3_13', question: 'Dull router bits cause:', options: ['Faster cuts', 'Burning and tear-out on wood', 'Smoother profiles', 'Less vibration'], correct: 1 },
+      { id: 'post3_14', question: 'Never carry a power tool by:', options: ['The handle', 'Its cord', 'The base', 'With two hands'], correct: 1 },
+      { id: 'post3_15', question: 'A reciprocating saw is primarily used for:', options: ['Fine joinery', 'Demolition and rough cuts in tight spaces', 'Precision dadoes', 'Sanding curves'], correct: 1 },
+      { id: 'post3_16', question: 'What grit sequence is correct for sanding?', options: ['220 → 120 → 80', '80 → 120 → 180 → 220', '180 → 80 → 220', 'Any order works'], correct: 1 },
+      { id: 'post3_17', question: 'An impact driver differs from a drill because:', options: ['It has less torque', 'It delivers rotational impact for high-torque applications', 'It drills cleaner holes', 'It is battery-free'], correct: 1 },
+      { id: 'post3_18', question: 'When clearing a nail gun jam, first:', options: ['Use fingers to clear it', 'Disconnect the air supply', 'Pull the trigger repeatedly', 'Shake the gun'], correct: 1 },
+      { id: 'post3_19', question: 'The correct extension cord for a power tool must:', options: ['Be as long as possible', 'Match or exceed the tool\'s power rating', 'Be any available cord', 'Be a flat cord type'], correct: 1 },
+      { id: 'post3_20', question: 'A detail sander (mouse sander) is designed for:', options: ['Heavy material removal', 'Corners and tight spaces', 'Large flat surfaces', 'Metal sanding'], correct: 1 },
+      { id: 'post3_21', question: 'What prevents cord damage during power tool use?', options: ['Using longer cords', 'Keeping cords away from cutting paths and sharp edges', 'Wrapping cords tightly', 'Running cords under rugs'], correct: 1 },
+      { id: 'post3_22', question: 'A trim router is:', options: ['The largest router type', 'Compact and lightweight for light edge work', 'Only for plunge cuts', 'Battery-powered always'], correct: 1 },
+      { id: 'post3_23', question: 'Framing nailers drive nails for:', options: ['Fine trim work', 'Structural framing applications', 'Upholstery', 'Cabinet assembly'], correct: 1 },
+      { id: 'post3_24', question: 'When should a power tool never be left running?', options: ['During breaks only', 'It should never be left running unattended', 'Only when unsupervised by students', 'Only near water'], correct: 1 },
+      { id: 'post3_25', question: 'Inspect a power tool cord before use for:', options: ['Correct color', 'Cracks, damage, and exposed wires', 'Length only', 'Brand marking'], correct: 1 }
     ]
   },
   {
@@ -438,145 +293,94 @@ Before operating any power tool, you must understand its parts, safe operating p
     icon: '🏭',
     description: 'Understand stationary woodworking machines and their safe operation.',
     color: '#27ae60',
-    intro: `Woodworking machines are stationary power tools found in professional shops and school workshops. They are capable of processing large volumes of material quickly and precisely.
-
-These machines are more powerful and more dangerous than handheld power tools. Strict safety procedures, proper setup, and adequate training are required before operating any woodworking machine.`,
+    intro: `Woodworking machines are stationary power tools found in professional shops and school workshops. They process large volumes of material quickly and precisely.\n\nThese machines are more powerful and more dangerous than handheld power tools. Strict safety procedures, proper setup, and adequate training are required before operating any woodworking machine.`,
     lessons: [
       {
         id: 'l4_1',
-        title: 'Table Saw and Band Saw',
-        content: `**Table Saw**
-- Most versatile and most dangerous machine in the shop
-- Used for ripping (along grain) and crosscutting (across grain)
-- Always use the rip fence for rip cuts
-- Always use the miter gauge for crosscuts — never both at the same time
-- Keep the blade guard and riving knife in place
-- Use a push stick when ripping narrow pieces (less than 6 inches)
-- Never reach over or behind the spinning blade
-- Stand to the side, not directly behind the blade (kickback danger)
-
-**Band Saw**
-- Used for curved cuts and resawing thick lumber
-- Safer than the table saw for most operations
-- Adjust blade tension and guides before use
-- Keep fingers at least 2 inches from the blade
-- Feed rate: slow and steady
-- Let the blade stop before removing cut-off pieces`,
+        title: 'Table Saw',
+        content: `**The Table Saw — Most Versatile and Most Dangerous**\n\n- Used for ripping (along grain) and crosscutting (across grain)\n- Always use the rip fence for rip cuts\n- Always use the miter gauge for crosscuts\n- Never use both fence and miter gauge simultaneously — causes kickback\n\n**Safety Rules:**\n- Keep blade guard and riving knife in place\n- Use a push stick for pieces narrower than 6 inches\n- Never reach over or behind the spinning blade\n- Stand to the side — never directly behind the blade (kickback)\n- Let blade come to complete stop before adjusting\n- Never leave the saw running unattended\n\n**Kickback:**\n- Most dangerous table saw hazard\n- Occurs when wood pinches the blade and is thrown back\n- Prevention: use riving knife, stand to the side, keep wood flat on table`,
         videoUrl: 'https://www.youtube.com/embed/6PQO2sXLk_s',
-        videoTitle: 'Table Saw and Band Saw Safety'
+        videoTitle: 'Table Saw Safety and Operation'
       },
       {
         id: 'l4_2',
-        title: 'Planer, Jointer and Drill Press',
-        content: `**Thickness Planer**
-- Makes boards a uniform thickness
-- Never plane end grain
-- Maximum depth of cut: 1/16" per pass
-- Always feed boards with the grain direction
-- Stand to the side — boards can be ejected at high speed
-
-**Jointer**
-- Flattens one face and one edge of a board
-- Creates a reference surface for subsequent operations
-- Keep fingers away from the cutter head — use push blocks
-- Take light passes (1/32" to 1/16")
-- Never joint pieces shorter than 12 inches
-
-**Drill Press**
-- Drills perfectly perpendicular holes at consistent depth
-- Clamp workpiece — never hold by hand
-- Set depth stop before drilling
-- Use correct speed for bit size and material:
-  - Large bits = slow speed
-  - Small bits = high speed
-- Lower the quill slowly and smoothly
-
-**Scroll Saw**
-- For intricate curved cuts and patterns
-- Light cuts only — not for thick stock
-- Keep fingers clear of the blade path`,
+        title: 'Band Saw',
+        content: `**Band Saw — Curved Cuts and Resawing**\n\n- Continuous blade loop around two wheels\n- Safer than the table saw for most curved operations\n- Used for: curved cuts, resawing thick lumber, cutting irregular shapes\n\n**Setup:**\n- Adjust blade tension before use\n- Set blade guides close to the material\n- Adjust upper guide post to just above the material\n\n**Operation:**\n- Keep fingers at least 2 inches from blade\n- Feed rate: slow and steady\n- Let blade stop before removing cut-off pieces\n- Do not back out of a cut while blade is moving\n\n**Blade Selection:**\n- Wide blades for straight/gentle curves\n- Narrow blades for tight curves\n- More teeth per inch = smoother cut but slower`,
+        videoUrl: 'https://www.youtube.com/embed/6PQO2sXLk_s',
+        videoTitle: 'Band Saw Operation and Safety'
+      },
+      {
+        id: 'l4_3',
+        title: 'Thickness Planer and Jointer',
+        content: `**Thickness Planer**\n- Makes boards a uniform thickness\n- Never plane end grain\n- Maximum depth per pass: 1/16 inch\n- Feed boards with the grain direction\n- Stand to the side — boards can be ejected at high speed\n- Keep hands away from infeed and outfeed tables while board is in machine\n\n**Jointer**\n- Flattens one face and one edge of a board\n- Creates the reference surface for all subsequent operations\n- Keep fingers away from cutter head — use push blocks\n- Take light passes (1/32 to 1/16 inch)\n- Never joint pieces shorter than 12 inches\n- Sequence: joint face → joint edge → plane to thickness → rip to width`,
         videoUrl: 'https://www.youtube.com/embed/8Q4sPLLnMcM',
-        videoTitle: 'Workshop Machines: Planer, Jointer, Drill Press'
+        videoTitle: 'Planer and Jointer Operation'
+      },
+      {
+        id: 'l4_4',
+        title: 'Drill Press and Scroll Saw',
+        content: `**Drill Press**\n- Drills perfectly perpendicular holes at consistent depth\n- Clamp workpiece — NEVER hold by hand\n- Set depth stop before drilling\n- Speed selection:\n  - Large bits = slow speed\n  - Small bits = high speed\n  - Hard materials = slow speed\n- Lower the quill slowly and smoothly\n- Clear chips frequently\n\n**Scroll Saw**\n- For intricate curved cuts and decorative patterns\n- Light cuts only — not for thick stock\n- Keep fingers clear of blade path\n- Blade should be tensioned correctly\n- Blade teeth point downward\n- Feed rate: very slow for tight curves`,
+        videoUrl: 'https://www.youtube.com/embed/8Q4sPLLnMcM',
+        videoTitle: 'Drill Press and Scroll Saw'
+      },
+      {
+        id: 'l4_5',
+        title: 'Lathe',
+        content: `**Wood Lathe — Turning Cylindrical Forms**\n\n- Rotates wood against a stationary cutting tool\n- Used for: table legs, bowls, spindles, handles, decorative turnings\n\n**Setup:**\n- Mount workpiece securely between centers or in a chuck\n- Check workpiece is balanced — irregular pieces can fly off\n- Start at slow speed and increase only when balanced\n- Adjust tool rest close to workpiece before starting\n\n**Safety Rules:**\n- Never wear loose clothing or gloves near a lathe\n- Stand to the side during startup in case workpiece flies off\n- Remove tool rest before sanding on the lathe\n- Use a face shield (not just glasses) for turning\n- Keep tools sharp — dull tools catch and cause dig-ins\n\n**Basic Cuts:**\n- Roughing gouge — rapid material removal\n- Spindle gouge — shaping details\n- Skew chisel — smooth finishing cuts`,
+        videoUrl: 'https://www.youtube.com/embed/8Q4sPLLnMcM',
+        videoTitle: 'Wood Lathe Basics and Safety'
+      },
+      {
+        id: 'l4_6',
+        title: 'Workshop Layout and Machine Maintenance',
+        content: `**Safe Workshop Layout**\n\n- Machines should have adequate outfeed space (at least the length of longest boards)\n- Walkways must be clear and marked\n- Adequate lighting above each machine\n- Dust collection connected to each machine\n- Fire extinguisher within reach of all machines\n- Emergency stop buttons accessible\n\n**Preventive Maintenance:**\n- **Daily:** Clean sawdust from tables and guards, check blade/bit for damage\n- **Weekly:** Lubricate moving parts, check blade tension and alignment\n- **Monthly:** Inspect electrical cords and connections, calibrate fences and miter gauges\n- **Annually:** Have machines professionally serviced\n\n**Blade and Bit Care:**\n- Dull blades require more force — increasing injury risk\n- Clean resin buildup with blade cleaner\n- Replace when teeth are chipped, missing, or heavily worn\n- Never use a cracked blade`,
+        videoUrl: 'https://www.youtube.com/embed/6PQO2sXLk_s',
+        videoTitle: 'Workshop Layout and Machine Maintenance'
       }
     ],
     preTest: [
-      {
-        id: 'pre4_1',
-        question: 'What is the most dangerous machine in a woodworking shop?',
-        options: ['Band saw', 'Drill press', 'Table saw', 'Scroll saw'],
-        correct: 2
-      },
-      {
-        id: 'pre4_2',
-        question: 'When ripping a narrow piece on the table saw, you should use:',
-        options: ['Your bare hand to guide it', 'A push stick', 'The miter gauge', 'A clamp'],
-        correct: 1
-      },
-      {
-        id: 'pre4_3',
-        question: 'What does a thickness planer do?',
-        options: ['Cuts curves', 'Makes boards a uniform thickness', 'Drills holes', 'Cuts joints'],
-        correct: 1
-      },
-      {
-        id: 'pre4_4',
-        question: 'Where should you stand when operating a table saw?',
-        options: ['Directly behind the blade', 'To the side of the blade', 'In front of the blade', 'Position does not matter'],
-        correct: 1
-      },
-      {
-        id: 'pre4_5',
-        question: 'What is the jointer used for?',
-        options: [
-          'Cutting curves',
-          'Drilling holes',
-          'Flattening one face and edge of a board',
-          'Sanding surfaces'
-        ],
-        correct: 2
-      }
+      { id: 'pre4_1', question: 'The most dangerous machine in a woodworking shop is:', options: ['Band saw', 'Drill press', 'Table saw', 'Scroll saw'], correct: 2 },
+      { id: 'pre4_2', question: 'When ripping a narrow piece on the table saw use:', options: ['Bare hand', 'Push stick', 'Miter gauge', 'Clamp'], correct: 1 },
+      { id: 'pre4_3', question: 'A thickness planer makes boards:', options: ['Curved', 'Uniform thickness', 'Perfectly flat on one face', 'Shorter'], correct: 1 },
+      { id: 'pre4_4', question: 'Where should you stand when using a table saw?', options: ['Behind the blade', 'To the side', 'In front', 'Position does not matter'], correct: 1 },
+      { id: 'pre4_5', question: 'The jointer is used for:', options: ['Cutting curves', 'Drilling holes', 'Flattening one face and edge', 'Sanding surfaces'], correct: 2 },
+      { id: 'pre4_6', question: 'Maximum depth per pass on a thickness planer:', options: ['1/4 inch', '1/8 inch', '1/16 inch', '1/2 inch'], correct: 2 },
+      { id: 'pre4_7', question: 'On a drill press, large bits require:', options: ['High speed', 'Low speed', 'Maximum speed', 'Speed does not matter'], correct: 1 },
+      { id: 'pre4_8', question: 'Minimum length for jointing a board:', options: ['6 inches', '8 inches', '12 inches', '18 inches'], correct: 2 },
+      { id: 'pre4_9', question: 'Band saw cut-off pieces should be removed:', options: ['While blade moves', 'After blade fully stops', 'As cut finishes', 'After turning off but before stopping'], correct: 1 },
+      { id: 'pre4_10', question: 'A lathe rotates wood against:', options: ['Another rotating bit', 'A stationary cutting tool', 'A moving blade', 'An abrasive wheel'], correct: 1 },
+      { id: 'pre4_11', question: 'Why should you never use rip fence and miter gauge together?', options: ['Both are fine to use', 'Can cause kickback and binding', 'It dulls the blade', 'It wastes wood'], correct: 1 },
+      { id: 'pre4_12', question: 'A scroll saw is used for:', options: ['Heavy structural cuts', 'Intricate curved decorative cuts', 'Resawing thick lumber', 'Flattening surfaces'], correct: 1 },
+      { id: 'pre4_13', question: 'Kickback on a table saw is caused by:', options: ['Blade being too sharp', 'Wood pinching the blade and being thrown back', 'Standing to the side', 'Using a push stick'], correct: 1 },
+      { id: 'pre4_14', question: 'On a lathe, you should start at:', options: ['Highest speed', 'Low speed increasing as balanced', 'Medium speed always', 'Speed does not matter'], correct: 1 },
+      { id: 'pre4_15', question: 'Workshop machines need outfeed space of at least:', options: ['2 feet', '4 feet', 'The length of the longest boards worked', '10 feet always'], correct: 2 }
     ],
     postTest: [
-      {
-        id: 'post4_1',
-        question: 'Why should you never use the rip fence and miter gauge at the same time on a table saw?',
-        options: [
-          'It is fine to use both',
-          'It can cause kickback and binding',
-          'It dulls the blade',
-          'It wastes wood'
-        ],
-        correct: 1
-      },
-      {
-        id: 'post4_2',
-        question: 'What is the maximum recommended depth of cut per pass on a thickness planer?',
-        options: ['1/4 inch', '1/8 inch', '1/16 inch', '1/2 inch'],
-        correct: 2
-      },
-      {
-        id: 'post4_3',
-        question: 'For a drill press, large drill bits require:',
-        options: ['High speed', 'Low speed', 'Maximum speed', 'Speed does not matter'],
-        correct: 1
-      },
-      {
-        id: 'post4_4',
-        question: 'What is the minimum length of a board that should be jointed?',
-        options: ['6 inches', '8 inches', '12 inches', '18 inches'],
-        correct: 2
-      },
-      {
-        id: 'post4_5',
-        question: 'On a band saw, when should you remove a cut-off piece?',
-        options: [
-          'While the blade is still moving',
-          'After the blade has completely stopped',
-          'As soon as the cut is finished',
-          'After turning off the machine but before it stops'
-        ],
-        correct: 1
-      }
+      { id: 'post4_1', question: 'Why is the riving knife important on a table saw?', options: ['It measures cut depth', 'It prevents wood from pinching the blade and causing kickback', 'It guides the fence', 'It catches sawdust'], correct: 1 },
+      { id: 'post4_2', question: 'Band saw blade width: narrow blades are for:', options: ['Straight cuts', 'Tight curves', 'Resawing only', 'Large diameter curves'], correct: 1 },
+      { id: 'post4_3', question: 'The correct milling sequence using machines is:', options: ['Rip → plane → joint → crosscut', 'Joint face → joint edge → plane → rip to width', 'Plane → joint → rip → joint', 'Any order is fine'], correct: 1 },
+      { id: 'post4_4', question: 'Why stand to the side of a lathe at startup?', options: ['Better visibility', 'In case unbalanced workpiece flies off', 'To avoid chips', 'To reach the controls'], correct: 1 },
+      { id: 'post4_5', question: 'A roughing gouge on a lathe is used for:', options: ['Smooth finishing cuts', 'Rapid material removal', 'Detailed shaping', 'Cutting off the end'], correct: 1 },
+      { id: 'post4_6', question: 'Drill press speed: hard materials require:', options: ['High speed', 'Low speed', 'Maximum speed', 'Speed does not matter'], correct: 1 },
+      { id: 'post4_7', question: 'What prevents workpiece ejection on the jointer?', options: ['Faster feed rate', 'Push blocks keeping fingers from cutter head', 'Heavier cuts', 'Using the fence only'], correct: 1 },
+      { id: 'post4_8', question: 'Band saw blade guides should be set:', options: ['Far from material', 'Close to the material being cut', 'At maximum height always', 'Below the table'], correct: 1 },
+      { id: 'post4_9', question: 'Dust collection on machines is important because:', options: ['It keeps the shop tidy only', 'Wood dust is a carcinogen and reduces visibility', 'It is optional for experienced workers', 'It improves machine speed'], correct: 1 },
+      { id: 'post4_10', question: 'Never plane end grain on a thickness planer because:', options: ['It wastes material', 'It can cause kickback and machine damage', 'End grain is too hard', 'It produces uneven results only'], correct: 1 },
+      { id: 'post4_11', question: 'The tool rest on a lathe must be removed before:', options: ['Starting the lathe', 'Sanding on the lathe', 'Making roughing cuts', 'Turning thin spindles'], correct: 1 },
+      { id: 'post4_12', question: 'A skew chisel on a lathe produces:', options: ['Rough removal cuts', 'Smooth finishing cuts', 'Deep grooves', 'Parting cuts only'], correct: 1 },
+      { id: 'post4_13', question: 'Table saw blade should be set to:', options: ['Same height as material', '1/4 inch above the material', '1 inch above the material', 'Maximum height'], correct: 1 },
+      { id: 'post4_14', question: 'Machine maintenance should include daily:', options: ['Full disassembly', 'Cleaning sawdust and checking blades for damage', 'Lubrication of all parts', 'Calibration of all fences'], correct: 1 },
+      { id: 'post4_15', question: 'Why should you never back out of a band saw cut while blade moves?', options: ['It wastes the kerf', 'The blade can deflect and cause loss of control', 'It dulls the blade faster', 'It is not a safety concern'], correct: 1 },
+      { id: 'post4_16', question: 'Scroll saw blade teeth should point:', options: ['Upward', 'Downward', 'To the left', 'Any direction'], correct: 1 },
+      { id: 'post4_17', question: 'A chipped table saw blade should be:', options: ['Used carefully', 'Replaced immediately', 'Repaired by sharpening', 'Used for rough cuts only'], correct: 1 },
+      { id: 'post4_18', question: 'For lathe work, a face shield is preferred over glasses because:', options: ['It is cheaper', 'It protects the entire face from flying chips during turning', 'Glasses fog up', 'Face shields are required by law'], correct: 1 },
+      { id: 'post4_19', question: 'The depth stop on a drill press ensures:', options: ['Correct bit speed', 'Consistent hole depth across multiple pieces', 'The bit stays sharp', 'The workpiece is clamped'], correct: 1 },
+      { id: 'post4_20', question: 'An unbalanced workpiece on a lathe should be:', options: ['Turned at high speed to balance it', 'Removed and balanced before turning', 'Turned with extra care', 'Left as is if small'], correct: 1 },
+      { id: 'post4_21', question: 'Resin buildup on saw blades should be removed with:', options: ['Water', 'Blade cleaner solution', 'Sandpaper', 'A wire brush'], correct: 1 },
+      { id: 'post4_22', question: 'The jointer\'s reference surface allows:', options: ['Decorative cuts', 'All subsequent cuts to be made square and accurate', 'Faster material removal', 'Longer boards to be processed'], correct: 1 },
+      { id: 'post4_23', question: 'Emergency stop buttons in a workshop must be:', options: ['Hidden for safety', 'Accessible from all machine positions', 'Only at the entrance', 'Only on the main panel'], correct: 1 },
+      { id: 'post4_24', question: 'More teeth per inch on a band saw blade means:', options: ['Faster cutting', 'Smoother cut but slower feed', 'Wider curves only', 'Less blade tension needed'], correct: 1 },
+      { id: 'post4_25', question: 'Machine fences and miter gauges should be calibrated:', options: ['Only when bought new', 'Monthly as part of maintenance', 'Never — they are factory set', 'Only after repair'], correct: 1 }
     ]
   },
   {
@@ -585,155 +389,94 @@ These machines are more powerful and more dangerous than handheld power tools. S
     icon: '🪵',
     description: 'Learn how to create strong, accurate wood joints for quality carpentry.',
     color: '#8e44ad',
-    intro: `Wood joinery is the art and craft of connecting pieces of wood together. The strength, appearance, and durability of any woodworking project depends heavily on the quality of its joints.
-
-Different joints are suited to different applications — from simple butt joints in rough construction to elegant dovetails in fine furniture. Understanding the purpose, method, and appropriate use of each joint is a core carpentry skill.`,
+    intro: `Wood joinery is the art and craft of connecting pieces of wood together. The strength, appearance, and durability of any woodworking project depends heavily on the quality of its joints.\n\nDifferent joints are suited to different applications — from simple butt joints in rough construction to elegant dovetails in fine furniture. Understanding the purpose, method, and appropriate use of each joint is a core carpentry skill.`,
     lessons: [
       {
         id: 'l5_1',
-        title: 'Basic Wood Joints',
-        content: `**Butt Joint**
-- Simplest joint — end of one piece meets the face of another
-- Weak without reinforcement
-- Reinforced with nails, screws, dowels, or glue
-- Used in: rough framing, box construction
-
-**Lap Joint**
-- Half the thickness is removed from each piece so they sit flush
-- Much stronger than a butt joint
-- Types: full lap, half lap, cross lap
-- Used in: frames, grids, light furniture
-
-**Rabbet Joint**
-- An L-shaped notch along the edge or end of a board
-- Stronger than a butt joint, easy to cut
-- Used in: drawer backs, cabinet backs, box corners
-- Cut with: table saw, router, or rabbet plane
-
-**Dado Joint**
-- A channel cut across the grain of a board
-- Another board fits into the channel
-- Very strong for shelving applications
-- Cut with: dado blade on table saw or router
-
-**Groove Joint**
-- Same as a dado but cut WITH the grain
-- Used for: drawer bottoms, cabinet backs sliding into frames`,
+        title: 'Simple Joints',
+        content: `**Butt Joint**\n- Simplest joint — end of one piece meets the face/edge of another\n- Weak without reinforcement\n- Reinforced with: nails, screws, dowels, pocket screws, or glue\n- Used in: rough framing, box construction, shelving\n\n**Lap Joint**\n- Half the thickness removed from each piece so they sit flush\n- Much stronger than a butt joint\n- Types: full lap, half lap, cross lap, end lap\n- Used in: frames, grids, light furniture\n\n**Miter Joint**\n- Both pieces cut at 45° to form a 90° corner\n- Clean appearance — hides end grain\n- Weak without reinforcement (spline, biscuit, or nail)\n- Used in: picture frames, moldings, cabinet face frames`,
         videoUrl: 'https://www.youtube.com/embed/j9lQzFJSFCQ',
-        videoTitle: 'Basic Wood Joints Explained'
+        videoTitle: 'Simple Wood Joints'
       },
       {
         id: 'l5_2',
-        title: 'Advanced Wood Joints',
-        content: `**Mortise and Tenon Joint**
-- One of the strongest traditional joints
-- Tenon (rectangular tongue) fits into the mortise (rectangular pocket)
-- Used in: furniture legs, door frames, timber framing
-- Can be reinforced with wooden pegs or wedges
-
-**Dovetail Joint**
-- Interlocking fan-shaped tails and pins
-- Mechanically locks together — resists pulling apart
-- Used in: drawer construction, box corners, fine furniture
-- Hand-cut dovetails are the mark of fine craftsmanship
-
-**Finger Joint (Box Joint)**
-- Interlocking square fingers cut with a table saw jig
-- Very strong glue surface area
-- Used in: boxes, light drawers, cabinet corners
-- Easier to cut than dovetails
-
-**Pocket Screw Joint**
-- Modern fast joinery using a jig (e.g. Kreg Jig) and special screws
-- Fast and strong for face frames and furniture assembly
-- Not as traditional but very practical
-
-**Biscuit Joint**
-- Oval compressed wood biscuits in matching slots
-- Primarily for alignment, adds some strength
-- Good for panel glue-ups and edge joints`,
+        title: 'Housing Joints — Dado and Rabbet',
+        content: `**Dado Joint**\n- A channel cut across the grain of a board\n- Another board fits into the channel\n- Very strong for shelving — resists downward force\n- Cut with: dado blade on table saw or router with straight bit\n- Blind dado: stopped before the front edge (hides joint)\n\n**Rabbet Joint**\n- An L-shaped notch along the edge or end of a board\n- Stronger than a butt joint\n- Used in: drawer backs, cabinet backs, box corners\n- Cut with: table saw, router, or rabbet plane\n\n**Groove Joint**\n- Same as a dado but cut WITH the grain\n- Used for: drawer bottoms and cabinet backs sliding into frames\n- The bottom panel floats in the groove — allows wood movement\n\n**Housing Joint**\n- Full width of one board sits in a dado in another\n- Used for: shelving in bookcases, stair treads`,
+        videoUrl: 'https://www.youtube.com/embed/j9lQzFJSFCQ',
+        videoTitle: 'Dado and Rabbet Joints'
+      },
+      {
+        id: 'l5_3',
+        title: 'Mortise and Tenon',
+        content: `**The Strongest Traditional Joint**\n\nOne of the oldest and most reliable joints in woodworking.\n\n**Parts:**\n- **Tenon** — rectangular tongue cut on one piece\n- **Mortise** — rectangular pocket cut in the other piece\n\n**Proportions:**\n- Tenon thickness: 1/3 the thickness of the mortise piece\n- Tenon length: 2/3 the thickness of the mortise piece\n\n**Types:**\n- **Through tenon** — tenon passes completely through the mortise piece\n- **Blind tenon** — tenon stops inside the mortise (hidden)\n- **Wedged tenon** — wooden wedges lock the tenon permanently\n- **Drawbored** — offset hole drives peg to pull joint tight\n\n**Used in:**\nFurniture legs, door frames, chair construction, timber framing`,
         videoUrl: 'https://www.youtube.com/embed/5QsUs0lSXPo',
-        videoTitle: 'Advanced Wood Joinery Techniques'
+        videoTitle: 'Mortise and Tenon Joint'
+      },
+      {
+        id: 'l5_4',
+        title: 'Dovetail and Finger Joints',
+        content: `**Dovetail Joint**\n- Interlocking fan-shaped tails and pins\n- Exceptional resistance to pulling apart — mechanical lock\n- The hallmark of quality furniture and drawer construction\n- Requires careful layout and precise cutting\n\n**Types:**\n- **Through dovetail** — joint visible from both sides\n- **Half-blind dovetail** — joint hidden from front (used for drawer fronts)\n- **Full-blind dovetail** — joint completely hidden from outside\n\n**Cutting Methods:**\n- Hand-cut with a dovetail saw and chisels\n- Router with a dovetail jig (faster but less flexible)\n\n**Finger Joint (Box Joint)**\n- Interlocking square fingers\n- Very strong glue surface area\n- Easier to cut than dovetails using a table saw jig\n- Used in: boxes, drawers, light cabinet corners`,
+        videoUrl: 'https://www.youtube.com/embed/5QsUs0lSXPo',
+        videoTitle: 'Dovetail and Finger Joints'
+      },
+      {
+        id: 'l5_5',
+        title: 'Modern Joinery Methods',
+        content: `**Pocket Screw Joint**\n- Uses a jig (e.g. Kreg Jig) and special angled screws\n- Fast and practical for face frames, furniture assembly\n- Not as traditional but very strong in shear\n- Best for interior joinery — screws can be seen from one side\n\n**Biscuit Joint**\n- Oval compressed wood biscuits in matching slots\n- Primarily for alignment, adds some strength\n- Good for panel glue-ups and edge joints\n- Cut with a biscuit joiner (plate joiner)\n\n**Domino Joint**\n- Like a biscuit but uses floating tenons\n- Significantly stronger than biscuits\n- Cut with a Festool Domino machine\n\n**Dowel Joint**\n- Round wooden dowels align and reinforce joints\n- Used for: face frames, table aprons, chair rungs\n- Dowel centers help transfer hole positions accurately`,
+        videoUrl: 'https://www.youtube.com/embed/j9lQzFJSFCQ',
+        videoTitle: 'Modern Wood Joinery Methods'
+      },
+      {
+        id: 'l5_6',
+        title: 'Gluing and Assembling Joints',
+        content: `**Choosing the Right Glue**\n- **PVA (Titebond)** — most common, strong, sandable, water cleanup\n- **Epoxy** — gap-filling, waterproof, for oily woods and outdoor use\n- **Polyurethane** — expands, waterproof, messy if it contacts surfaces\n- **CA Glue** — instant bond, good for small repairs and dry fitting\n\n**Gluing Process:**\n1. Dry-fit all pieces before applying glue\n2. Apply even thin coat to BOTH mating surfaces\n3. Assemble quickly — open time is 5-10 minutes for PVA\n4. Apply clamp pressure evenly across the joint\n5. Check for square immediately after clamping\n6. Wipe squeeze-out with damp cloth before it dries\n\n**Checking for Square:**\n- Measure diagonals — equal diagonals = square\n- Correct by applying clamp diagonally across longer diagonal\n\n**Clamping Rules:**\n- One clamp every 6-8 inches along a glue line\n- Cauls distribute pressure evenly\n- Do not over-clamp — starves the joint of glue`,
+        videoUrl: 'https://www.youtube.com/embed/RYoMlOzIFoE',
+        videoTitle: 'Gluing and Assembly Techniques'
       }
     ],
     preTest: [
-      {
-        id: 'pre5_1',
-        question: 'Which joint is the simplest but weakest without reinforcement?',
-        options: ['Dovetail joint', 'Mortise and tenon', 'Butt joint', 'Dado joint'],
-        correct: 2
-      },
-      {
-        id: 'pre5_2',
-        question: 'A dado joint is a channel cut in which direction relative to the grain?',
-        options: ['With the grain', 'Across the grain', 'At 45 degrees', 'Diagonally'],
-        correct: 1
-      },
-      {
-        id: 'pre5_3',
-        question: 'Which joint is known as the mark of fine craftsmanship in drawer making?',
-        options: ['Butt joint', 'Pocket screw joint', 'Dovetail joint', 'Lap joint'],
-        correct: 2
-      },
-      {
-        id: 'pre5_4',
-        question: 'In a mortise and tenon joint, what is the tenon?',
-        options: ['The pocket cut into one piece', 'The rectangular tongue that fits into the mortise', 'The glue used', 'The peg that locks the joint'],
-        correct: 1
-      },
-      {
-        id: 'pre5_5',
-        question: 'What is the difference between a dado and a groove?',
-        options: [
-          'No difference',
-          'Dado is cut across the grain; groove is cut with the grain',
-          'Groove is cut across the grain; dado is cut with the grain',
-          'Both are cut at 45 degrees'
-        ],
-        correct: 1
-      }
+      { id: 'pre5_1', question: 'Which joint is the simplest but weakest without reinforcement?', options: ['Dovetail', 'Mortise and tenon', 'Butt joint', 'Dado joint'], correct: 2 },
+      { id: 'pre5_2', question: 'A dado joint is cut in which direction?', options: ['With the grain', 'Across the grain', 'At 45 degrees', 'Diagonally'], correct: 1 },
+      { id: 'pre5_3', question: 'The dovetail joint is known for:', options: ['Speed of cutting', 'Exceptional resistance to pulling apart', 'Being the weakest joint', 'Requiring no tools'], correct: 1 },
+      { id: 'pre5_4', question: 'In a mortise and tenon, the tenon is:', options: ['The pocket', 'The rectangular tongue', 'The glue', 'The peg'], correct: 1 },
+      { id: 'pre5_5', question: 'Difference between a dado and a groove?', options: ['No difference', 'Dado across grain; groove with grain', 'Groove across grain; dado with grain', 'Both at 45 degrees'], correct: 1 },
+      { id: 'pre5_6', question: 'A miter joint cuts both pieces at:', options: ['90 degrees', '45 degrees', '30 degrees', '60 degrees'], correct: 1 },
+      { id: 'pre5_7', question: 'Pocket screw joints use a special:', options: ['Dovetail saw', 'Jig and angled screws', 'Biscuit cutter', 'Mortising machine'], correct: 1 },
+      { id: 'pre5_8', question: 'PVA glue is best cleaned up with:', options: ['Solvent', 'Water', 'Sandpaper', 'Heat'], correct: 1 },
+      { id: 'pre5_9', question: 'Biscuit joints are primarily used for:', options: ['Heavy structures', 'Alignment and panel glue-ups', 'Outdoor furniture', 'Curved cuts'], correct: 1 },
+      { id: 'pre5_10', question: 'A through tenon is one that:', options: ['Stops inside the mortise', 'Passes completely through the mortise piece', 'Uses wedges', 'Is hidden from view'], correct: 1 },
+      { id: 'pre5_11', question: 'Dovetail tails are shaped like:', options: ['Squares', 'Fan shapes — wider at the end', 'Triangles pointing inward', 'Circles'], correct: 1 },
+      { id: 'pre5_12', question: 'How is square checked after glue-up?', options: ['Using a level', 'Equal diagonal measurements corner to corner', 'Pressing corners by hand', 'Using a compass'], correct: 1 },
+      { id: 'pre5_13', question: 'Finger joints and box joints are:', options: ['The same thing — interlocking square fingers', 'Completely different joints', 'Types of dovetail', 'Mortise and tenon variations'], correct: 0 },
+      { id: 'pre5_14', question: 'A lap joint removes material from each piece so they:', options: ['Overlap thickly', 'Sit flush with each other', 'Create a rabbet', 'Form a miter'], correct: 1 },
+      { id: 'pre5_15', question: 'Tenon thickness should be approximately:', options: ['Same as full board thickness', '1/3 the thickness of the mortise piece', '2/3 the board thickness', 'Half the board thickness'], correct: 1 }
     ],
     postTest: [
-      {
-        id: 'post5_1',
-        question: 'What makes the dovetail joint resist pulling apart?',
-        options: [
-          'The glue used',
-          'The interlocking fan-shaped tails and pins',
-          'Metal fasteners inside',
-          'The wood species used'
-        ],
-        correct: 1
-      },
-      {
-        id: 'post5_2',
-        question: 'A rabbet joint has what shape?',
-        options: ['T-shape', 'L-shape', 'Square channel', 'Diagonal cut'],
-        correct: 1
-      },
-      {
-        id: 'post5_3',
-        question: 'What is the main advantage of a pocket screw joint?',
-        options: [
-          'It is the strongest joint',
-          'It is the most decorative',
-          'It is fast and practical for assembly',
-          'It needs no fasteners'
-        ],
-        correct: 2
-      },
-      {
-        id: 'post5_4',
-        question: 'Biscuit joints are primarily used for:',
-        options: ['Heavy structural connections', 'Alignment and panel glue-ups', 'Outdoor furniture', 'Cutting curves'],
-        correct: 1
-      },
-      {
-        id: 'post5_5',
-        question: 'Which joint uses interlocking square fingers cut with a table saw jig?',
-        options: ['Dovetail joint', 'Mortise and tenon', 'Finger joint', 'Lap joint'],
-        correct: 2
-      }
+      { id: 'post5_1', question: 'What makes the dovetail joint resist pulling apart?', options: ['Glue only', 'Interlocking fan-shaped tails and pins', 'Metal fasteners', 'Wood species'], correct: 1 },
+      { id: 'post5_2', question: 'A rabbet joint has what shape cross-section?', options: ['T-shape', 'L-shape', 'Square channel', 'Diagonal'], correct: 1 },
+      { id: 'post5_3', question: 'The main advantage of a pocket screw joint is:', options: ['Strongest joint', 'Most decorative', 'Fast and practical for assembly', 'Needs no fasteners'], correct: 2 },
+      { id: 'post5_4', question: 'Biscuit joints primarily serve for:', options: ['Heavy load bearing', 'Alignment and panel glue-ups', 'Outdoor furniture', 'Curved work'], correct: 1 },
+      { id: 'post5_5', question: 'Finger joints use interlocking:', options: ['Fan-shaped tails', 'Square fingers', 'Dowels', 'Tenons'], correct: 1 },
+      { id: 'post5_6', question: 'A blind dado is:', options: ['A dado that goes all the way through', 'A dado stopped before the front edge — hiding the joint', 'A dado cut with grain', 'A decorative dado'], correct: 1 },
+      { id: 'post5_7', question: 'Drawboring a mortise and tenon means:', options: ['Widening the mortise', 'Offset peg hole that pulls joint tight when driven', 'Cutting the tenon through the piece', 'Adding wedges from the top'], correct: 1 },
+      { id: 'post5_8', question: 'A half-blind dovetail is used for:', options: ['Visible corner joints', 'Drawer fronts where joint is hidden from the front', 'Rough construction', 'Box lids'], correct: 1 },
+      { id: 'post5_9', question: 'Epoxy glue is best for:', options: ['General indoor joinery', 'Oily woods and outdoor waterproof joints', 'Fast assembly always', 'Non-porous surfaces only'], correct: 1 },
+      { id: 'post5_10', question: 'A groove joint allows the panel inside to:', options: ['Be glued solidly', 'Float — allowing wood movement with humidity changes', 'Be pinned in place', 'Be removed easily'], correct: 1 },
+      { id: 'post5_11', question: 'Domino joints use:', options: ['Round dowels', 'Oval biscuits only', 'Floating rectangular tenons', 'Pocket screws'], correct: 2 },
+      { id: 'post5_12', question: 'PVA glue open time is approximately:', options: ['30 seconds', '5-10 minutes', '1 hour', '24 hours'], correct: 1 },
+      { id: 'post5_13', question: 'Cauls in a glue-up serve to:', options: ['Apply heat to speed curing', 'Distribute clamp pressure evenly', 'Measure alignment', 'Prevent over-clamping only'], correct: 1 },
+      { id: 'post5_14', question: 'The miter joint hides:', options: ['Face grain', 'End grain for a clean appearance', 'Edge grain', 'Nothing'], correct: 1 },
+      { id: 'post5_15', question: 'A housing joint differs from a dado because:', options: ['No difference', 'Full width of one board sits in the dado channel', 'Housing joints are always blind', 'Housing joints use glue only'], correct: 1 },
+      { id: 'post5_16', question: 'Tenon length should be:', options: ['Same as board width', '2/3 the thickness of the mortise piece', 'As long as possible', 'Equal to tenon thickness'], correct: 1 },
+      { id: 'post5_17', question: 'What is the purpose of a rub joint?', options: ['To remove material', 'Edge-to-edge gluing without clamps by rubbing surfaces together', 'A type of rabbet', 'Decorative surface treatment'], correct: 1 },
+      { id: 'post5_18', question: 'A wedged tenon is permanently locked by:', options: ['Metal pins', 'Wooden wedges driven into kerfs in the tenon', 'Expanding glue', 'Friction only'], correct: 1 },
+      { id: 'post5_19', question: 'Dowel centers are used to:', options: ['Measure dowel diameter', 'Transfer hole positions between mating pieces accurately', 'Center the lathe work', 'Mark center of boards'], correct: 1 },
+      { id: 'post5_20', question: 'Squeeze-out from glue should be removed:', options: ['After fully cured with a chisel', 'Immediately with a damp cloth before it dries', 'By sanding only', 'It does not need removal'], correct: 1 },
+      { id: 'post5_21', question: 'The cross lap joint connects:', options: ['End to end', 'Two pieces that cross each other in the middle', 'End to face', 'Face to face'], correct: 1 },
+      { id: 'post5_22', question: 'Over-clamping a glue joint:', options: ['Makes it stronger', 'Squeezes out too much glue — starving the joint', 'Has no effect', 'Speeds curing time'], correct: 1 },
+      { id: 'post5_23', question: 'A full-blind dovetail is:', options: ['Visible from one side', 'Completely hidden from the outside', 'The same as a through dovetail', 'Used for rough work'], correct: 1 },
+      { id: 'post5_24', question: 'Polyurethane glue expands when curing — this means:', options: ['Gaps are filled but excess must be cleaned off surfaces', 'It shrinks joints tight', 'It is the cleanest glue to use', 'Expansion means stronger bonds always'], correct: 0 },
+      { id: 'post5_25', question: 'The end lap joint connects:', options: ['Middle of two pieces', 'The ends of two pieces in a flat L or T shape', 'Face to face only', 'Two boards along their length'], correct: 1 }
     ]
   }
 ];
