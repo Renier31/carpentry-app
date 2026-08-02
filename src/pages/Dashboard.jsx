@@ -36,7 +36,7 @@ export default function Dashboard() {
       {/* Header */}
       <div style={styles.header}>
         <div>
-          <div style={styles.logo}>🪚 CarpentryPro</div>
+          <div style={styles.logo}>🪚 Compass</div>
           <div style={styles.welcome}>Welcome, {currentUser?.displayName || 'Student'}</div>
         </div>
         <div style={styles.headerRight}>

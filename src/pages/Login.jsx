@@ -27,7 +27,7 @@ export default function Login() {
     <div style={styles.bg}>
       <div style={styles.card}>
         <div style={styles.logo}>🪚</div>
-        <h1 style={styles.title}>CarpentryPro</h1>
+        <h1 style={styles.title}>Compass</h1>
         <p style={styles.subtitle}>Your Digital Carpentry Classroom</p>
         {error && <div style={styles.error}>{error}</div>}
         <form onSubmit={handleSubmit} style={styles.form}>

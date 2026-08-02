@@ -9,8 +9,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
-        name: 'CarpentryPro',
-        short_name: 'CarpentryPro',
+        name: 'Compass',
+        short_name: 'Compass',
         description: 'Your digital carpentry classroom — lessons, quizzes, and more',
         theme_color: '#2c1810',
         background_color: '#f5f0eb',
