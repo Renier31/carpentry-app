@@ -1,0 +1,5 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="80" fill="#2c1810"/>
+  <text x="256" y="340" font-size="300" text-anchor="middle" font-family="Arial">🪚</text>
+  <text x="256" y="470" font-size="56" text-anchor="middle" font-family="Arial,sans-serif" fill="#d4a574" font-weight="bold">CarpentryPro</text>
+</svg>
