@@ -7,6 +7,8 @@ import {
   updateProfile
 } from 'firebase/auth';
 import { auth } from '../firebase';
+import { isAdmin } from '../utils/admin';
+import { seedOwnerAdmin } from '../utils/seedAdmin';
 
 const AuthContext = createContext();
 
@@ -16,6 +18,7 @@ export function useAuth() {
 
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState(null);
+  const [userIsAdmin, setUserIsAdmin] = useState(false);
   const [loading, setLoading] = useState(true);
 
   function register(email, password, username) {
@@ -33,14 +36,21 @@ export function AuthProvider({ children }) {
   }
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (user) => {
+    const unsub = onAuthStateChanged(auth, async (user) => {
       setCurrentUser(user);
+      if (user) {
+        await seedOwnerAdmin(); // seeds owner on first ever login
+        const adminStatus = await isAdmin(user.uid);
+        setUserIsAdmin(adminStatus);
+      } else {
+        setUserIsAdmin(false);
+      }
       setLoading(false);
     });
     return unsub;
   }, []);
 
-  const value = { currentUser, register, login, logout };
+  const value = { currentUser, userIsAdmin, register, login, logout };
 
   return (
     <AuthContext.Provider value={value}>

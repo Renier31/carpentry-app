@@ -6,7 +6,7 @@ import { modules } from '../data/modules';
 import { getUserProgress } from '../utils/progress';
 
 export default function Dashboard() {
-  const { currentUser, logout } = useAuth();
+  const { currentUser, logout, userIsAdmin } = useAuth();
   const { dark, setDark } = useTheme();
   const navigate = useNavigate();
   const [progress, setProgress] = useState({});
@@ -111,6 +111,11 @@ export default function Dashboard() {
         <button style={{ ...styles.feedbackBtn, background: '#1d4ed8' }} onClick={() => navigate('/leaderboard')} aria-label="Leaderboard">
           🏆 Leaderboard
         </button>
+        {userIsAdmin && (
+          <button style={{ ...styles.feedbackBtn, background: '#166534' }} onClick={() => navigate('/instructor')} aria-label="Instructor panel">
+            🎓 Instructor Panel
+          </button>
+        )}
       </div>
     </div>
   );
