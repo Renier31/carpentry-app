@@ -1,6 +1,13 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { ThemeProvider } from './context/ThemeContext';
+import Maintenance from './pages/Maintenance';
+
+// ─── MAINTENANCE MODE ───────────────────────────────────────────────────────
+// Set to true to show maintenance page, false to restore normal operation
+const MAINTENANCE_MODE = true;
+// ────────────────────────────────────────────────────────────────────────────
+
 import PrivateRoute from './components/PrivateRoute';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -13,6 +20,10 @@ import Certificate from './pages/Certificate';
 import InstructorDashboard from './pages/InstructorDashboard';
 
 export default function App() {
+  if (MAINTENANCE_MODE) {
+    return <Maintenance />;
+  }
+
   return (
     <ThemeProvider>
       <AuthProvider>
