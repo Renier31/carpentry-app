@@ -5,7 +5,7 @@ import Maintenance from './pages/Maintenance';
 
 // ─── MAINTENANCE MODE ───────────────────────────────────────────────────────
 // Set to true to show maintenance page, false to restore normal operation
-const MAINTENANCE_MODE = true;
+const MAINTENANCE_MODE = false;
 // ────────────────────────────────────────────────────────────────────────────
 
 import PrivateRoute from './components/PrivateRoute';
