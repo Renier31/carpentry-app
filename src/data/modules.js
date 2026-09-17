@@ -478,5 +478,102 @@ export const modules = [
       { id: 'post5_24', question: 'Polyurethane glue expands when curing — this means:', options: ['Gaps are filled but excess must be cleaned off surfaces', 'It shrinks joints tight', 'It is the cleanest glue to use', 'Expansion means stronger bonds always'], correct: 0 },
       { id: 'post5_25', question: 'The end lap joint connects:', options: ['Middle of two pieces', 'The ends of two pieces in a flat L or T shape', 'Face to face only', 'Two boards along their length'], correct: 1 }
     ]
+  },
+  {
+    id: 6,
+    title: 'Building a Stool — Project Module',
+    icon: '🪑',
+    description: 'Apply your carpentry skills by measuring, cutting, and assembling a wooden stool from scratch.',
+    color: '#16a085',
+    intro: `This is a practical project module where you will apply everything you have learned about measuring, cutting, and assembly to build a simple wooden stool.\n\nBuilding a stool covers all fundamental carpentry skills — accurate measurement, straight cuts, joint-making, drilling, gluing, and finishing. It is an ideal beginner project that produces a functional, real-world result.\n\nFollow each step carefully, work safely, and take your time with measurements. A well-built stool is a source of pride and a demonstration of your carpentry competence.`,
+    lessons: [
+      {
+        id: 'l6_1',
+        title: 'Materials, Tools and Planning',
+        content: `**What You Will Build**\n\nA simple 4-legged wooden stool with:\n- 1 square or round seat (top)\n- 4 legs\n- 4 apron rails connecting the legs for stability\n\n**Materials Needed:**\n- **Seat:** 1 piece of 3/4" plywood or solid wood — 12" x 12"\n- **Legs:** 4 pieces of 1.5" x 1.5" square timber — 18" long each\n- **Apron rails:** 4 pieces of 3/4" x 2" timber — 9" long each\n- Wood glue (PVA/Titebond)\n- 1.5" wood screws (for aprons)\n- Sandpaper: 80, 120, 180 grit\n- Wood finish (paint, stain, or varnish)\n\n**Tools Required:**\n- Tape measure and pencil\n- Try square\n- Hand saw or circular saw\n- Drill and bits\n- Clamps (at least 4)\n- Mallet\n- Sandpaper or sander\n\n**Planning:**\n1. Sketch your stool on paper with dimensions\n2. Make a cut list — list every piece with its length\n3. Mark all pieces on the timber before cutting\n4. Double-check all measurements before any cut`,
+        videoUrl: 'https://www.youtube.com/embed/XqEpMPtObQg',
+        videoTitle: 'How to Build a Simple Wooden Stool'
+      },
+      {
+        id: 'l6_2',
+        title: 'Measuring and Marking the Wood',
+        content: `**Step 1 — Measure and Mark All Pieces**\n\nAccurate marking is the foundation of a well-built stool. Any error here multiplies through the entire project.\n\n**Marking the Legs:**\n1. Hook tape measure on the end of the timber\n2. Mark 18" from the end with a sharp pencil\n3. Use a try square to draw a perfectly straight line across the timber\n4. Mark "WASTE" on the cut-off side\n5. Repeat for all 4 legs\n\n**Marking the Apron Rails:**\n1. Mark 9" lengths on the 3/4" x 2" timber\n2. Use your try square to ensure 90° lines\n3. Mark all 4 apron pieces\n\n**Marking the Seat:**\n1. Mark a 12" x 12" square on your plywood or solid board\n2. Use a try square at all corners to ensure they are truly 90°\n3. Check the diagonal measurements are equal — confirms a true square\n\n**Key Rules:**\n- Always mark on the waste side of the line\n- Use a sharp pencil — thick lines cause inaccuracy\n- Measure twice before making any mark\n- Label each piece (Leg 1, Leg 2, Rail A, etc.)`,
+        videoUrl: 'https://www.youtube.com/embed/XqEpMPtObQg',
+        videoTitle: 'Measuring and Marking Wood for a Stool'
+      },
+      {
+        id: 'l6_3',
+        title: 'Cutting the Parts',
+        content: `**Step 2 — Cut All Parts to Size**\n\nSafety first — wear safety glasses and ensure workpiece is secure before any cut.\n\n**Cutting the Legs:**\n1. Secure the timber in a vise or with clamps on a workbench\n2. Start the cut with a backstroke to create a starting notch (kerf)\n3. Use long, smooth strokes — let the saw do the work\n4. Keep the saw on the waste side of the line\n5. Support the cut-off piece as you finish — prevents splitting\n6. Cut all 4 legs and check they are equal in length\n\n**Cutting the Apron Rails:**\n1. Same technique as the legs\n2. Cut all 4 apron rails\n3. Check they are equal — mismatched rails cause a wobbly stool\n\n**Cutting the Seat:**\n1. If using a circular saw, clamp a straightedge guide along the cut line\n2. If using a hand saw, clamp the board securely\n3. Cut two sides of the square seat\n\n**After Cutting:**\n- Check all pieces against your cut list\n- Sand end grain smooth with 80-grit sandpaper\n- Label pieces clearly if not already done`,
+        videoUrl: 'https://www.youtube.com/embed/XqEpMPtObQg',
+        videoTitle: 'Cutting Wood Parts for a Stool'
+      },
+      {
+        id: 'l6_4',
+        title: 'Drilling and Joining the Frame',
+        content: `**Step 3 — Build the Leg and Apron Frame**\n\nThe frame consists of 4 legs connected by 4 apron rails to form a strong rectangular base.\n\n**Marking the Apron Position on Legs:**\n1. Mark 1.5" from the top of each leg (this is where the apron rail will sit)\n2. The apron rail should be flush with the top of the leg or slightly below\n\n**Drilling Pilot Holes:**\n1. Mark screw positions on apron rails — 2 screws per joint\n2. Drill pilot holes through the apron into the leg\n3. Use a bit slightly smaller than your screw diameter\n4. Pilot holes prevent wood splitting\n\n**Assembly:**\n1. Apply wood glue to the end of the apron rail\n2. Press it against the leg at the marked position\n3. Drive screws through pilot holes to clamp the joint tight\n4. Check the joint is square with a try square\n5. Build two side frames (2 legs + 1 apron each)\n6. Connect the two side frames with the remaining 2 apron rails\n7. Check all corners are square and the frame sits flat\n8. Allow glue to cure for at least 1 hour before proceeding`,
+        videoUrl: 'https://www.youtube.com/embed/XqEpMPtObQg',
+        videoTitle: 'Assembling the Stool Frame'
+      },
+      {
+        id: 'l6_5',
+        title: 'Attaching the Seat and Finishing',
+        content: `**Step 4 — Attach the Seat**\n\n1. Place the seat board centered on top of the leg frame\n2. Mark the center of each apron rail onto the seat from below\n3. Drill pilot holes down through the seat into the apron rails (or up from below)\n4. Apply glue to the top edges of the apron rails\n5. Position seat and drive 4 screws — one into each apron rail\n6. Check the seat is centered and even on all sides\n7. Wipe off any glue squeeze-out immediately with a damp cloth\n\n**Step 5 — Sanding**\n1. Sand all surfaces starting with 80 grit\n2. Remove all rough spots, pencil marks, and mill marks\n3. Progress to 120 grit then 180 grit\n4. Sand in the direction of the grain\n5. Round over all sharp corners and edges slightly — prevents splinters\n6. Wipe with a slightly damp cloth to raise the grain, let dry, sand with 220 grit\n\n**Step 6 — Finishing**\n- **Paint** — prime first, then 2 coats of topcoat\n- **Stain + varnish** — stain first, let dry, apply 2 coats of polyurethane\n- **Oil finish** — wipe on, wipe off, repeat 3-4 coats\n- Sand lightly between coats with 320 grit for smooth results`,
+        videoUrl: 'https://www.youtube.com/embed/XqEpMPtObQg',
+        videoTitle: 'Attaching Seat and Finishing the Stool'
+      },
+      {
+        id: 'l6_6',
+        title: 'Quality Check and Troubleshooting',
+        content: `**Step 7 — Inspecting Your Stool**\n\n**Stability Check:**\n- Place stool on a flat surface\n- It should not rock or wobble\n- If it wobbles, one leg is too long — find the high leg and trim slightly\n\n**Squareness Check:**\n- Look down from above — the seat should be perfectly centered\n- All four legs should be at equal angles\n- Use a square on the leg-to-apron joints — should be 90°\n\n**Surface Check:**\n- Run your hand over all surfaces — no rough spots\n- Check corners are smooth and slightly rounded\n- No visible glue spots (if so, sand them off before finishing)\n\n**Common Problems and Solutions:**\n\n| Problem | Cause | Solution |\n|---|---|---|\n| Stool wobbles | Uneven legs | Identify high leg, trim slightly |\n| Gaps in joints | Inaccurate cuts | Fill with wood filler, clamp tighter next time |\n| Seat not centered | Marking error | Re-drill and reattach |\n| Finish peeling | Surface not sanded smooth | Sand back and reapply |\n| Screws splitting wood | No pilot holes | Always pre-drill pilot holes |\n\n**Final Inspection:**\nTest the stool by sitting on it carefully. A well-built stool should support weight without creaking, flexing, or wobbling.`,
+        videoUrl: 'https://www.youtube.com/embed/XqEpMPtObQg',
+        videoTitle: 'Stool Quality Check and Troubleshooting'
+      }
+    ],
+    preTest: [
+      { id: 'pre6_1', question: 'How many legs does a standard simple stool have?', options: ['2', '3', '4', '6'], correct: 2 },
+      { id: 'pre6_2', question: 'What is the first step before cutting any wood?', options: ['Apply glue', 'Measure and mark accurately', 'Sand the surface', 'Drill pilot holes'], correct: 1 },
+      { id: 'pre6_3', question: 'What do apron rails do in a stool?', options: ['Support the seat from above', 'Connect the legs and add stability', 'Decorate the stool', 'Hold the finish coat'], correct: 1 },
+      { id: 'pre6_4', question: 'Why are pilot holes drilled before screwing?', options: ['To make the screw look neat', 'To prevent wood from splitting', 'To measure depth', 'To apply glue inside'], correct: 1 },
+      { id: 'pre6_5', question: 'What tool checks that corners are exactly 90°?', options: ['Tape measure', 'Try square', 'Marking gauge', 'Chalk line'], correct: 1 },
+      { id: 'pre6_6', question: 'What grit sandpaper should you start with?', options: ['220 grit', '180 grit', '80 grit', '400 grit'], correct: 2 },
+      { id: 'pre6_7', question: 'How do you check if the seat is a true square?', options: ['Measure all 4 sides only', 'Measure both diagonals — equal = square', 'Use a protractor', 'Check by eye'], correct: 1 },
+      { id: 'pre6_8', question: 'Glue squeeze-out should be removed:', options: ['After it fully cures', 'Immediately with a damp cloth', 'By sanding only', 'It does not need removal'], correct: 1 },
+      { id: 'pre6_9', question: 'What is the purpose of a cut list?', options: ['A decorative plan', 'A list of every piece needed with dimensions', 'A shopping list for tools', 'A finishing schedule'], correct: 1 },
+      { id: 'pre6_10', question: 'How should you start a hand saw cut?', options: ['Full forward stroke immediately', 'Backstroke first to create a starting kerf', 'Pressing hard from the start', 'Tapping with a mallet first'], correct: 1 },
+      { id: 'pre6_11', question: 'What PPE must always be worn when cutting wood?', options: ['Gloves only', 'Safety glasses', 'Earmuffs only', 'Apron only'], correct: 1 },
+      { id: 'pre6_12', question: 'Why should all 4 legs be equal in length?', options: ['For aesthetics only', 'To prevent the stool from wobbling', 'To make finishing easier', 'To save material'], correct: 1 },
+      { id: 'pre6_13', question: 'What should you do before applying finish?', options: ['Wet the wood', 'Sand progressively through grits ending at 180-220', 'Apply glue first', 'Heat the surface'], correct: 1 },
+      { id: 'pre6_14', question: 'Raising the grain before final sanding involves:', options: ['Applying oil', 'Wiping with a damp cloth, letting dry, then sanding with 220 grit', 'Heating the surface', 'Applying varnish first'], correct: 1 },
+      { id: 'pre6_15', question: 'What is the best way to fix a wobbly stool after assembly?', options: ['Add more glue', 'Identify the high leg and trim it slightly', 'Add rubber feet immediately', 'Disassemble and start over'], correct: 1 }
+    ],
+    postTest: [
+      { id: 'post6_1', question: 'What are the three main structural components of a simple stool?', options: ['Seat, rails, bolts', 'Seat, legs, apron rails', 'Frame, top, dowels', 'Base, column, seat'], correct: 1 },
+      { id: 'post6_2', question: 'Standard leg length for a simple stool project is:', options: ['12 inches', '18 inches', '24 inches', '30 inches'], correct: 1 },
+      { id: 'post6_3', question: 'The seat size for the project stool is:', options: ['6" x 6"', '10" x 10"', '12" x 12"', '16" x 16"'], correct: 2 },
+      { id: 'post6_4', question: 'Two side frames are built first, then:', options: ['The seat is attached immediately', 'Connected with the remaining apron rails', 'Sanded before connecting', 'Finished before connecting'], correct: 1 },
+      { id: 'post6_5', question: 'How many screws are recommended per apron-to-leg joint?', options: ['1', '2', '4', '6'], correct: 1 },
+      { id: 'post6_6', question: 'When should glue squeeze-out be wiped off?', options: ['After 1 hour', 'After fully cured', 'Immediately with a damp cloth', 'After sanding'], correct: 2 },
+      { id: 'post6_7', question: 'What confirms the seat is a perfect square?', options: ['All 4 sides equal length only', 'Equal diagonal measurements corner to corner', 'The square fits inside a template', 'Checking by eye'], correct: 1 },
+      { id: 'post6_8', question: 'Sharp corners on the stool should be:', options: ['Left sharp for appearance', 'Slightly rounded to prevent splinters', 'Filled with putty', 'Painted over only'], correct: 1 },
+      { id: 'post6_9', question: 'The apron rail position is marked at what distance from the top of each leg?', options: ['0.5 inch', '1.5 inch', '3 inches', '6 inches'], correct: 1 },
+      { id: 'post6_10', question: 'For a paint finish, what must be applied first?', options: ['Varnish', 'Stain', 'Primer', 'Oil'], correct: 2 },
+      { id: 'post6_11', question: 'What is the correct sanding progression for the stool?', options: ['220 → 80 → 180', '80 → 120 → 180 → 220', '120 → 80 → 220', 'Any order works'], correct: 1 },
+      { id: 'post6_12', question: 'Between finish coats, you should sand with:', options: ['80 grit', '120 grit', '180 grit', '320 grit'], correct: 3 },
+      { id: 'post6_13', question: 'A stool wobbles after assembly. What should you do?', options: ['Add a rubber foot', 'Identify the high leg and trim it slightly', 'Add more glue to joints', 'Disassemble completely'], correct: 1 },
+      { id: 'post6_14', question: 'Gaps in joints are caused by:', options: ['Too much glue', 'Inaccurate cuts', 'Using pilot holes', 'Over-clamping'], correct: 1 },
+      { id: 'post6_15', question: 'What material is used for the seat in this project?', options: ['Metal sheet', '3/4" plywood or solid wood', 'Particleboard', 'MDF only'], correct: 1 },
+      { id: 'post6_16', question: 'Why must the saw cut be made on the waste side of the line?', options: ['For safety only', 'To preserve the correct dimension — the kerf removes material', 'To make a cleaner cut', 'Waste side does not matter'], correct: 1 },
+      { id: 'post6_17', question: 'After cutting all parts, what should you do before assembly?', options: ['Apply finish immediately', 'Check all pieces against the cut list and sand end grain', 'Start drilling immediately', 'Apply glue to all surfaces'], correct: 1 },
+      { id: 'post6_18', question: 'Glue should be applied to which surfaces before joining?', options: ['One surface only', 'Both mating surfaces', 'Neither — screws alone are enough', 'Only to end grain'], correct: 1 },
+      { id: 'post6_19', question: 'How long should you wait for glue to cure before stress testing?', options: ['5 minutes', '30 minutes', 'At least 1 hour', '24 hours minimum always'], correct: 2 },
+      { id: 'post6_20', question: 'A sketch with dimensions before building is important because:', options: ['It is required by law', 'It helps plan cuts, avoid waste, and catch errors before cutting', 'Sketches are only for professionals', 'It is just decoration'], correct: 1 },
+      { id: 'post6_21', question: 'To check stability, the finished stool should be placed on:', options: ['A soft surface', 'A flat surface to check for rocking', 'An uneven surface', 'A tilted board'], correct: 1 },
+      { id: 'post6_22', question: 'Raising the grain before the final sand coat results in:', options: ['A rougher surface', 'A smoother final finish', 'Faster drying time', 'No difference'], correct: 1 },
+      { id: 'post6_23', question: 'The apron rails in the stool connect:', options: ['Seat to floor directly', 'Adjacent legs to form a rigid frame', 'The seat halves together', 'The legs to the seat directly'], correct: 1 },
+      { id: 'post6_24', question: 'Oil finish application method is:', options: ['Thick coat brushed on and left', 'Wipe on, wipe off, repeat multiple coats', 'Spray only', 'Applied once and allowed to absorb fully without wiping'], correct: 1 },
+      { id: 'post6_25', question: 'Labeling each piece of wood before cutting helps to:', options: ['Make it look professional', 'Avoid confusion during assembly and prevent miscuts', 'Speed up drying of finish', 'Nothing significant'], correct: 1 }
+    ]
   }
 ];
+
