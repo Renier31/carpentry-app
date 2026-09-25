@@ -5,6 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 import { saveProgress } from '../utils/progress';
 import ResultScreen from '../components/ResultScreen';
+import PagedQuizPanel from '../components/PagedQuizPanel';
 
 // Stages: intro → pretest → lessons → posttest → done
 const PASSING_SCORE = 80; // percent
@@ -59,34 +60,23 @@ export default function Module() {
       <div style={styles.body}>
         {stage === 'intro' && <Intro mod={mod} dark={dark} cardBg={cardBg} text={text} sub={sub} onNext={() => setStage('pretest')} />}
         {stage === 'pretest' && (
-          <QuizPanel
+          <PagedQuizPanel
             title="📋 Pre-Test"
-            subtitle="Answer these questions before starting the lessons. Don't worry — this is just to check your prior knowledge."
+            subtitle="Answer these questions before starting the lessons. 5 questions per page — Don't worry, this is just to check your prior knowledge."
             questions={mod.preTest}
-            answers={preAnswers}
-            setAnswers={setPreAnswers}
-            submitted={preSubmitted}
-            onSubmit={() => {
-              const score = mod.preTest.filter((q) => preAnswers[q.id] === q.correct).length;
+            mod={mod} dark={dark} cardBg={cardBg} text={text} sub={sub}
+            onSubmit={(answers) => {
+              const score = mod.preTest.filter((q) => answers[q.id] === q.correct).length;
               setPreScore(score);
               setPreSubmitted(true);
               setShowPreResult(true);
             }}
             onNext={() => { setShowPreResult(false); setStage('lessons'); }}
-            nextLabel="Start Lessons →"
-            mod={mod} dark={dark} cardBg={cardBg} text={text} sub={sub}
-            showScore={false}
+            onRetry={() => { setPreSubmitted(false); setShowPreResult(false); }}
             showResult={showPreResult}
             isPreTest={true}
             postScore={preScore}
             postTotal={mod.preTest.length}
-            nextMod={null}
-            onRetry={() => {
-              setPreSubmitted(false);
-              setPreAnswers({});
-              setShowPreResult(false);
-            }}
-            onNextModule={() => { setShowPreResult(false); setStage('lessons'); }}
           />
         )}
         {stage === 'lessons' && (
