@@ -36,27 +36,6 @@ export default function Module() {
 
   return (
     <div style={{ ...styles.container, background: bg }}>
-      {showResult && (
-        <ResultScreen
-          score={postScore}
-          total={mod.postTest.length}
-          modColor={mod.color}
-          modId={mod.id}
-          modules={modules}
-          onRetry={() => {
-            setShowResult(false);
-            setPostSubmitted(false);
-            setPostAnswers({});
-            setStage('lessons');
-            setActiveLesson(0);
-          }}
-          onNext={() => {
-            setShowResult(false);
-            if (nextMod) navigate(`/module/${nextMod.id}`);
-            else navigate('/dashboard');
-          }}
-        />
-      )}
       <div style={{ ...styles.header, background: mod.color }}>
         <button style={styles.back} onClick={() => navigate('/dashboard')} aria-label="Back">← Dashboard</button>
         <div style={styles.headerTitle}>{mod.icon} {mod.title}</div>
@@ -107,6 +86,7 @@ export default function Module() {
             answers={postAnswers}
             setAnswers={setPostAnswers}
             submitted={postSubmitted}
+            showResult={showResult}
             onSubmit={async () => {
               const score = mod.postTest.filter((q) => postAnswers[q.id] === q.correct).length;
               setPostScore(score);
@@ -122,12 +102,21 @@ export default function Module() {
             onRetry={() => {
               setPostSubmitted(false);
               setPostAnswers({});
+              setShowResult(false);
               setStage('lessons');
               setActiveLesson(0);
+            }}
+            onNextModule={() => {
+              setShowResult(false);
+              if (nextMod) navigate(`/module/${nextMod.id}`);
+              else navigate('/dashboard');
             }}
             nextLabel="Back to Dashboard"
             mod={mod} dark={dark} cardBg={cardBg} text={text} sub={sub}
             showScore={true} score={postScore}
+            postScore={postScore}
+            postTotal={mod.postTest.length}
+            nextMod={nextMod}
           />
         )}
       </div>
@@ -202,7 +191,7 @@ function LessonsPanel({ mod, dark, cardBg, text, sub, activeLesson, setActiveLes
   );
 }
 
-function QuizPanel({ title, subtitle, questions, answers, setAnswers, submitted, onSubmit, onNext, onRetry, nextLabel, mod, dark, cardBg, text, sub, showScore, score }) {
+function QuizPanel({ title, subtitle, questions, answers, setAnswers, submitted, onSubmit, onNext, onRetry, onNextModule, nextLabel, mod, dark, cardBg, text, sub, showScore, score, showResult, postScore, postTotal, nextMod }) {
   const correctCount = questions.filter((q) => answers[q.id] === q.correct).length;
   const percent = Math.round((correctCount / questions.length) * 100);
 
@@ -210,33 +199,6 @@ function QuizPanel({ title, subtitle, questions, answers, setAnswers, submitted,
     <div style={{ ...styles.card, background: cardBg }}>
       <h2 style={{ ...styles.lessonTitle, color: text }}>{title}</h2>
       <p style={{ color: sub, fontSize: '14px', marginBottom: '20px', lineHeight: 1.6 }}>{subtitle}</p>
-
-      {submitted && showScore && (
-        <div style={{
-          ...styles.resultBox,
-          background: percent >= 95 ? '#f3e8ff' : percent >= PASSING_SCORE ? '#dcfce7' : '#fee2e2',
-          border: `3px solid ${percent >= 95 ? '#7c3aed' : percent >= PASSING_SCORE ? '#22c55e' : '#ef4444'}`
-        }}>
-          <div style={{ fontSize: '56px', marginBottom: '8px' }}>
-            {percent >= 95 ? '🏆' : percent >= PASSING_SCORE ? '🎉👏' : '😔'}
-          </div>
-          <div style={styles.resultScore}>{correctCount}/{questions.length}</div>
-          <div style={{ fontSize: '28px', fontWeight: '800', color: percent >= 95 ? '#7c3aed' : percent >= PASSING_SCORE ? '#166534' : '#dc2626', marginBottom: '8px' }}>
-            {percent}%
-          </div>
-          <div style={{
-            display: 'inline-block', padding: '8px 20px', borderRadius: '20px', fontWeight: '700', fontSize: '16px',
-            background: percent >= 95 ? '#7c3aed' : percent >= PASSING_SCORE ? '#22c55e' : '#ef4444', color: '#fff', marginBottom: '12px'
-          }}>
-            {percent >= 95 ? '🏆 OUTSTANDING! Perfect work!' : percent >= 80 ? '🎉 EXCELLENT! You passed!' : '❌ FAILED — Score below 80%'}
-          </div>
-          <div style={{ fontSize: '14px', color: '#555', lineHeight: 1.6 }}>
-            {percent >= PASSING_SCORE
-              ? '✅ Module unlocked! You can proceed to the next module.'
-              : `❌ You need ${PASSING_SCORE}% to pass. Review the lessons and try again.`}
-          </div>
-        </div>
-      )}
 
       {submitted && !showScore && (
         <div style={{ ...styles.resultBox, background: '#dbeafe' }}>
@@ -287,23 +249,26 @@ function QuizPanel({ title, subtitle, questions, answers, setAnswers, submitted,
             }}>
             Submit ({Object.keys(answers).length}/{questions.length} answered)
           </button>
-        ) : showScore ? (
-          percent >= PASSING_SCORE ? (
-            <button style={{ ...styles.btn, background: '#22c55e', marginLeft: 'auto' }} onClick={onNext}>
-              {nextLabel}
-            </button>
-          ) : (
-            <button style={{ ...styles.btn, background: mod.color, marginLeft: 'auto' }}
-              onClick={onRetry}>
-              🔄 Retry Module
-            </button>
-          )
-        ) : (
+        ) : !showScore ? (
           <button style={{ ...styles.btn, background: '#22c55e', marginLeft: 'auto' }} onClick={onNext}>
             {nextLabel}
           </button>
-        )}
+        ) : null}
       </div>
+
+      {/* Animated result appears inline at bottom after submit */}
+      {showResult && showScore && (
+        <ResultScreen
+          score={postScore}
+          total={postTotal}
+          modColor={mod.color}
+          modId={mod.id}
+          modules={[]}
+          onRetry={onRetry}
+          onNext={onNextModule}
+          nextMod={nextMod}
+        />
+      )}
     </div>
   );
 }
