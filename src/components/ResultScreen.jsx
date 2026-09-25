@@ -65,9 +65,9 @@ function ScoreBar({ percent, passed }) {
   );
 }
 
-export default function ResultScreen({ score, total, onRetry, onNext, modColor, modId, modules }) {
+export default function ResultScreen({ score, total, onRetry, onNext, modColor, modId, modules, isPreTest }) {
   const percent = Math.round((score / total) * 100);
-  const passed = percent >= PASSING_SCORE;
+  const passed = isPreTest ? true : percent >= PASSING_SCORE; // pretest always "passes"
   const [visible, setVisible] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
   const ref = useRef(null);
@@ -85,14 +85,19 @@ export default function ResultScreen({ score, total, onRetry, onNext, modColor, 
   }, [passed]);
 
   const getBadge = () => {
+    if (isPreTest) {
+      if (percent >= 80) return { label: '🌟 Great Prior Knowledge!', bg: '#3b82f6', msg: 'Impressive! You already know a lot. Now let\'s strengthen your understanding through the lessons.' };
+      if (percent >= 50) return { label: '📘 Some Prior Knowledge', bg: '#f59e0b', msg: 'Good start! The lessons will fill in the gaps and deepen your understanding.' };
+      return { label: '📖 Ready to Learn!', bg: '#8B4513', msg: 'No worries — that\'s what the lessons are for! Let\'s get started.' };
+    }
     if (percent >= 95) return { label: '🏆 OUTSTANDING!', bg: '#7c3aed', msg: 'Absolutely perfect! You have mastered this module!' };
     if (percent >= 80) return { label: '🎉 EXCELLENT!', bg: '#22c55e', msg: 'Great work! You passed and unlocked the next module!' };
     return { label: '❌ NOT PASSED', bg: '#ef4444', msg: `You need ${PASSING_SCORE}% to pass. Review the lessons and try again!` };
   };
 
   const badge = getBadge();
-  const emoji = percent >= 95 ? '🏆' : passed ? '🎉' : '😔';
-  const stars = percent >= 80 ? '⭐⭐⭐' : percent >= 60 ? '⭐⭐' : '⭐';
+  const emoji = isPreTest ? (percent >= 80 ? '🌟' : percent >= 50 ? '📘' : '📖') : (percent >= 95 ? '🏆' : passed ? '🎉' : '😔');
+  const stars = isPreTest ? '⭐'.repeat(percent >= 80 ? 3 : percent >= 50 ? 2 : 1) : (percent >= 80 ? '⭐⭐⭐' : percent >= 60 ? '⭐⭐' : '⭐');
 
   const currentIndex = modules ? modules.findIndex(m => m.id === modId) : -1;
   const nextMod = modules && currentIndex >= 0 && currentIndex < modules.length - 1 ? modules[currentIndex + 1] : null;
@@ -156,21 +161,28 @@ export default function ResultScreen({ score, total, onRetry, onNext, modColor, 
 
         {/* Buttons */}
         <div style={styles.btnRow}>
-          <button style={{ ...styles.btn, background: '#6b7280' }} onClick={onRetry} aria-label="Retry module">
-            🔄 Retry
-          </button>
-          {passed && nextMod && (
-            <button
-              style={{ ...styles.btn, background: modColor, animation: 'pulseBtn 1.5s infinite' }}
-              onClick={onNext}
-              aria-label="Go to next module"
-            >
-              Next Module →
+          {isPreTest ? (
+            <button style={{ ...styles.btn, background: modColor, animation: 'pulseBtn 1.5s infinite' }}
+              onClick={onNext} aria-label="Start lessons">
+              📚 Start Lessons →
             </button>
+          ) : (
+            <>
+              <button style={{ ...styles.btn, background: '#6b7280' }} onClick={onRetry} aria-label="Retry module">
+                🔄 Retry
+              </button>
+              {passed && onNext && (
+                <button style={{ ...styles.btn, background: modColor, animation: 'pulseBtn 1.5s infinite' }}
+                  onClick={onNext} aria-label="Next">
+                  Next Module →
+                </button>
+              )}
+              <button style={{ ...styles.btn, background: '#2c1810' }}
+                onClick={() => window.location.href = '/dashboard'} aria-label="Dashboard">
+                🏠 Dashboard
+              </button>
+            </>
           )}
-          <button style={{ ...styles.btn, background: '#2c1810' }} onClick={() => window.location.href = '/dashboard'} aria-label="Dashboard">
-            🏠 Dashboard
-          </button>
         </div>
       </div>
 

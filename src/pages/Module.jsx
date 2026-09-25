@@ -23,6 +23,8 @@ export default function Module() {
   const [postSubmitted, setPostSubmitted] = useState(false);
   const [postScore, setPostScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
+  const [preScore, setPreScore] = useState(0);
+  const [showPreResult, setShowPreResult] = useState(false);
 
   const bg = dark ? '#1a1a1a' : '#f5f0eb';
   const cardBg = dark ? '#2a2a2a' : '#fff';
@@ -64,11 +66,27 @@ export default function Module() {
             answers={preAnswers}
             setAnswers={setPreAnswers}
             submitted={preSubmitted}
-            onSubmit={() => setPreSubmitted(true)}
-            onNext={() => setStage('lessons')}
+            onSubmit={() => {
+              const score = mod.preTest.filter((q) => preAnswers[q.id] === q.correct).length;
+              setPreScore(score);
+              setPreSubmitted(true);
+              setShowPreResult(true);
+            }}
+            onNext={() => { setShowPreResult(false); setStage('lessons'); }}
             nextLabel="Start Lessons →"
             mod={mod} dark={dark} cardBg={cardBg} text={text} sub={sub}
             showScore={false}
+            showResult={showPreResult}
+            isPreTest={true}
+            postScore={preScore}
+            postTotal={mod.preTest.length}
+            nextMod={null}
+            onRetry={() => {
+              setPreSubmitted(false);
+              setPreAnswers({});
+              setShowPreResult(false);
+            }}
+            onNextModule={() => { setShowPreResult(false); setStage('lessons'); }}
           />
         )}
         {stage === 'lessons' && (
@@ -191,7 +209,7 @@ function LessonsPanel({ mod, dark, cardBg, text, sub, activeLesson, setActiveLes
   );
 }
 
-function QuizPanel({ title, subtitle, questions, answers, setAnswers, submitted, onSubmit, onNext, onRetry, onNextModule, nextLabel, mod, dark, cardBg, text, sub, showScore, score, showResult, postScore, postTotal, nextMod }) {
+function QuizPanel({ title, subtitle, questions, answers, setAnswers, submitted, onSubmit, onNext, onRetry, onNextModule, nextLabel, mod, dark, cardBg, text, sub, showScore, score, showResult, postScore, postTotal, nextMod, isPreTest }) {
   const correctCount = questions.filter((q) => answers[q.id] === q.correct).length;
   const percent = Math.round((correctCount / questions.length) * 100);
 
@@ -200,7 +218,7 @@ function QuizPanel({ title, subtitle, questions, answers, setAnswers, submitted,
       <h2 style={{ ...styles.lessonTitle, color: text }}>{title}</h2>
       <p style={{ color: sub, fontSize: '14px', marginBottom: '20px', lineHeight: 1.6 }}>{subtitle}</p>
 
-      {submitted && !showScore && (
+      {submitted && !showScore && !isPreTest && (
         <div style={{ ...styles.resultBox, background: '#dbeafe' }}>
           <div style={{ fontSize: '16px', color: '#1e40af', fontWeight: '600' }}>
             ✅ Pre-test recorded! You answered {correctCount}/{questions.length} correctly.
@@ -257,13 +275,14 @@ function QuizPanel({ title, subtitle, questions, answers, setAnswers, submitted,
       </div>
 
       {/* Animated result appears inline at bottom after submit */}
-      {showResult && showScore && (
+      {showResult && (showScore || isPreTest) && (
         <ResultScreen
           score={postScore}
           total={postTotal}
           modColor={mod.color}
           modId={mod.id}
           modules={[]}
+          isPreTest={isPreTest}
           onRetry={onRetry}
           onNext={onNextModule}
           nextMod={nextMod}
