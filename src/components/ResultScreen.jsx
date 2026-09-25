@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const PASSING_SCORE = 80;
 
@@ -66,6 +67,7 @@ function ScoreBar({ percent, passed }) {
 }
 
 export default function ResultScreen({ score, total, onRetry, onNext, modColor, modId, modules, isPreTest }) {
+  const navigate = useNavigate();
   const percent = Math.round((score / total) * 100);
   const passed = isPreTest ? true : percent >= PASSING_SCORE; // pretest always "passes"
   const [visible, setVisible] = useState(false);
@@ -178,7 +180,7 @@ export default function ResultScreen({ score, total, onRetry, onNext, modColor, 
                 </button>
               )}
               <button style={{ ...styles.btn, background: '#2c1810' }}
-                onClick={() => window.location.href = '/dashboard'} aria-label="Dashboard">
+                onClick={() => navigate('/dashboard')} aria-label="Dashboard">
                 🏠 Dashboard
               </button>
             </>
