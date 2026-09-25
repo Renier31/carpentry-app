@@ -6,6 +6,8 @@ import { useTheme } from '../context/ThemeContext';
 import { saveProgress } from '../utils/progress';
 
 // Stages: intro → pretest → lessons → posttest → done
+const PASSING_SCORE = 80; // percent
+
 export default function Module() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -173,11 +175,28 @@ function QuizPanel({ title, subtitle, questions, answers, setAnswers, submitted,
       <p style={{ color: sub, fontSize: '14px', marginBottom: '20px', lineHeight: 1.6 }}>{subtitle}</p>
 
       {submitted && showScore && (
-        <div style={{ ...styles.resultBox, background: percent >= 80 ? '#dcfce7' : percent >= 50 ? '#fef9c3' : '#fee2e2' }}>
+        <div style={{
+          ...styles.resultBox,
+          background: percent >= 95 ? '#f3e8ff' : percent >= PASSING_SCORE ? '#dcfce7' : '#fee2e2',
+          border: `3px solid ${percent >= 95 ? '#7c3aed' : percent >= PASSING_SCORE ? '#22c55e' : '#ef4444'}`
+        }}>
+          <div style={{ fontSize: '56px', marginBottom: '8px' }}>
+            {percent >= 95 ? '🏆' : percent >= PASSING_SCORE ? '🎉👏' : '😔'}
+          </div>
           <div style={styles.resultScore}>{correctCount}/{questions.length}</div>
-          <div style={{ fontSize: '20px', color: '#555', fontWeight: '600' }}>{percent}%</div>
-          <div style={{ fontSize: '16px', marginTop: '8px', color: '#444' }}>
-            {percent >= 80 ? '🎉 Excellent! Outstanding work!' : percent >= 60 ? '👍 Good job! Keep it up!' : '📚 Review the lessons and try again!'}
+          <div style={{ fontSize: '28px', fontWeight: '800', color: percent >= 95 ? '#7c3aed' : percent >= PASSING_SCORE ? '#166534' : '#dc2626', marginBottom: '8px' }}>
+            {percent}%
+          </div>
+          <div style={{
+            display: 'inline-block', padding: '8px 20px', borderRadius: '20px', fontWeight: '700', fontSize: '16px',
+            background: percent >= 95 ? '#7c3aed' : percent >= PASSING_SCORE ? '#22c55e' : '#ef4444', color: '#fff', marginBottom: '12px'
+          }}>
+            {percent >= 95 ? '🏆 OUTSTANDING! Perfect work!' : percent >= 80 ? '🎉 EXCELLENT! You passed!' : '❌ FAILED — Score below 80%'}
+          </div>
+          <div style={{ fontSize: '14px', color: '#555', lineHeight: 1.6 }}>
+            {percent >= PASSING_SCORE
+              ? '✅ Module unlocked! You can proceed to the next module.'
+              : `❌ You need ${PASSING_SCORE}% to pass. Review the lessons and try again.`}
           </div>
         </div>
       )}
@@ -230,6 +249,17 @@ function QuizPanel({ title, subtitle, questions, answers, setAnswers, submitted,
             }}>
             Submit
           </button>
+        ) : showScore ? (
+          percent >= PASSING_SCORE ? (
+            <button style={{ ...styles.btn, background: '#22c55e', marginLeft: 'auto' }} onClick={onNext}>
+              {nextLabel}
+            </button>
+          ) : (
+            <button style={{ ...styles.btn, background: mod.color, marginLeft: 'auto' }}
+              onClick={() => window.location.reload()}>
+              🔄 Retry Module
+            </button>
+          )
         ) : (
           <button style={{ ...styles.btn, background: '#22c55e', marginLeft: 'auto' }} onClick={onNext}>
             {nextLabel}
