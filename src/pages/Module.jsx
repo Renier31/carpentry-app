@@ -84,8 +84,12 @@ export default function Module() {
             onSubmit={async () => {
               const score = mod.postTest.filter((q) => postAnswers[q.id] === q.correct).length;
               setPostScore(score);
-              await saveProgress(currentUser?.uid, mod.id, score, mod.postTest.length);
-              setPostSubmitted(true);
+              setPostSubmitted(true); // set immediately so UI updates
+              try {
+                await saveProgress(currentUser?.uid, mod.id, score, mod.postTest.length);
+              } catch (e) {
+                console.error('Save progress failed:', e);
+              }
             }}
             onNext={() => navigate('/dashboard')}
             nextLabel="Back to Dashboard"
@@ -242,12 +246,13 @@ function QuizPanel({ title, subtitle, questions, answers, setAnswers, submitted,
           <button style={{ ...styles.btn, background: mod.color, marginLeft: 'auto' }}
             onClick={() => {
               if (Object.keys(answers).length < questions.length) {
-                alert('Please answer all questions first.');
+                const unanswered = questions.length - Object.keys(answers).length;
+                alert(`Please answer all questions. You have ${unanswered} question(s) remaining.`);
                 return;
               }
               onSubmit();
             }}>
-            Submit
+            Submit ({Object.keys(answers).length}/{questions.length} answered)
           </button>
         ) : showScore ? (
           percent >= PASSING_SCORE ? (
