@@ -48,6 +48,7 @@ export default function Module() {
             setPostSubmitted(false);
             setPostAnswers({});
             setStage('lessons');
+            setActiveLesson(0);
           }}
           onNext={() => {
             setShowResult(false);
@@ -109,8 +110,8 @@ export default function Module() {
             onSubmit={async () => {
               const score = mod.postTest.filter((q) => postAnswers[q.id] === q.correct).length;
               setPostScore(score);
-              setPostSubmitted(true); // set immediately so UI updates
-              setShowResult(true); // show animated result screen
+              setPostSubmitted(true);
+              setShowResult(true);
               try {
                 await saveProgress(currentUser?.uid, mod.id, score, mod.postTest.length);
               } catch (e) {
@@ -118,6 +119,12 @@ export default function Module() {
               }
             }}
             onNext={() => navigate('/dashboard')}
+            onRetry={() => {
+              setPostSubmitted(false);
+              setPostAnswers({});
+              setStage('lessons');
+              setActiveLesson(0);
+            }}
             nextLabel="Back to Dashboard"
             mod={mod} dark={dark} cardBg={cardBg} text={text} sub={sub}
             showScore={true} score={postScore}
@@ -195,7 +202,7 @@ function LessonsPanel({ mod, dark, cardBg, text, sub, activeLesson, setActiveLes
   );
 }
 
-function QuizPanel({ title, subtitle, questions, answers, setAnswers, submitted, onSubmit, onNext, nextLabel, mod, dark, cardBg, text, sub, showScore, score }) {
+function QuizPanel({ title, subtitle, questions, answers, setAnswers, submitted, onSubmit, onNext, onRetry, nextLabel, mod, dark, cardBg, text, sub, showScore, score }) {
   const correctCount = questions.filter((q) => answers[q.id] === q.correct).length;
   const percent = Math.round((correctCount / questions.length) * 100);
 
@@ -287,7 +294,7 @@ function QuizPanel({ title, subtitle, questions, answers, setAnswers, submitted,
             </button>
           ) : (
             <button style={{ ...styles.btn, background: mod.color, marginLeft: 'auto' }}
-              onClick={() => window.location.reload()}>
+              onClick={onRetry}>
               🔄 Retry Module
             </button>
           )
