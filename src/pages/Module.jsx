@@ -4,6 +4,7 @@ import { modules } from '../data/modules';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 import { saveProgress } from '../utils/progress';
+import ResultScreen from '../components/ResultScreen';
 
 // Stages: intro → pretest → lessons → posttest → done
 const PASSING_SCORE = 80; // percent
@@ -21,6 +22,7 @@ export default function Module() {
   const [preSubmitted, setPreSubmitted] = useState(false);
   const [postSubmitted, setPostSubmitted] = useState(false);
   const [postScore, setPostScore] = useState(0);
+  const [showResult, setShowResult] = useState(false);
 
   const bg = dark ? '#1a1a1a' : '#f5f0eb';
   const cardBg = dark ? '#2a2a2a' : '#fff';
@@ -29,8 +31,31 @@ export default function Module() {
 
   if (!mod) return <div style={{ padding: 40 }}>Module not found.</div>;
 
+  const currentModIndex = modules.findIndex(m => m.id === mod.id);
+  const nextMod = currentModIndex < modules.length - 1 ? modules[currentModIndex + 1] : null;
+
   return (
     <div style={{ ...styles.container, background: bg }}>
+      {showResult && (
+        <ResultScreen
+          score={postScore}
+          total={mod.postTest.length}
+          modColor={mod.color}
+          modId={mod.id}
+          modules={modules}
+          onRetry={() => {
+            setShowResult(false);
+            setPostSubmitted(false);
+            setPostAnswers({});
+            setStage('lessons');
+          }}
+          onNext={() => {
+            setShowResult(false);
+            if (nextMod) navigate(`/module/${nextMod.id}`);
+            else navigate('/dashboard');
+          }}
+        />
+      )}
       <div style={{ ...styles.header, background: mod.color }}>
         <button style={styles.back} onClick={() => navigate('/dashboard')} aria-label="Back">← Dashboard</button>
         <div style={styles.headerTitle}>{mod.icon} {mod.title}</div>
@@ -85,6 +110,7 @@ export default function Module() {
               const score = mod.postTest.filter((q) => postAnswers[q.id] === q.correct).length;
               setPostScore(score);
               setPostSubmitted(true); // set immediately so UI updates
+              setShowResult(true); // show animated result screen
               try {
                 await saveProgress(currentUser?.uid, mod.id, score, mod.postTest.length);
               } catch (e) {
