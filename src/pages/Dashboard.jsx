@@ -25,9 +25,10 @@ export default function Dashboard() {
     }
   }, [currentUser]);
 
-  // A module is unlocked if it's the first one, or the previous module was passed
+  // A module is unlocked if it's the first one, last one (module 6), or the previous module was passed
   function isUnlocked(index) {
     if (index === 0) return true;
+    if (index === modules.length - 1) return true; // Module 6 always unlocked
     const prevMod = modules[index - 1];
     const prevProgress = progress[prevMod.id];
     return prevProgress && prevProgress.percent >= PASSING_SCORE;
