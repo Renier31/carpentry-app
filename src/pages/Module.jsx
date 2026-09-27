@@ -151,30 +151,63 @@ function Intro({ mod, dark, cardBg, text, sub, onNext }) {
 }
 
 function LessonsPanel({ mod, dark, cardBg, text, sub, activeLesson, setActiveLesson, onNext }) {
+  const [activeVideo, setActiveVideo] = useState(0);
+  const lesson = mod.lessons[activeLesson];
+  const videos = lesson.videos || [{ url: lesson.videoUrl, title: lesson.videoTitle }];
+
+  // Reset video selection when lesson changes
+  const handleLessonChange = (i) => {
+    setActiveLesson(i);
+    setActiveVideo(0);
+  };
+
   return (
     <div>
       <div style={styles.tabs}>
-        {mod.lessons.map((lesson, i) => (
-          <button key={lesson.id}
+        {mod.lessons.map((l, i) => (
+          <button key={l.id}
             style={i === activeLesson
               ? { ...styles.tab, background: mod.color, color: '#fff', borderColor: mod.color }
               : { ...styles.tab, background: cardBg, color: text }}
-            onClick={() => setActiveLesson(i)}>
-            {i + 1}. {lesson.title}
+            onClick={() => handleLessonChange(i)}>
+            {i + 1}. {l.title}
           </button>
         ))}
       </div>
       <div style={{ ...styles.card, background: cardBg }}>
-        <h2 style={{ ...styles.lessonTitle, color: text }}>{mod.lessons[activeLesson].title}</h2>
+        <h2 style={{ ...styles.lessonTitle, color: text }}>{lesson.title}</h2>
+
+        {/* Video selector tabs */}
+        {videos.length > 1 && (
+          <div style={{ display: 'flex', gap: '6px', marginBottom: '10px', flexWrap: 'wrap' }}>
+            {videos.map((v, i) => (
+              <button key={i}
+                onClick={() => setActiveVideo(i)}
+                style={{
+                  padding: '6px 12px',
+                  borderRadius: '8px',
+                  border: `1.5px solid ${i === activeVideo ? mod.color : (dark ? '#555' : '#ddd')}`,
+                  background: i === activeVideo ? mod.color : (dark ? '#333' : '#f5f5f5'),
+                  color: i === activeVideo ? '#fff' : text,
+                  fontSize: '12px',
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                }}>
+                Video {i + 1}
+              </button>
+            ))}
+          </div>
+        )}
+
         <div style={styles.videoWrap}>
           <iframe style={styles.video}
-            src={mod.lessons[activeLesson].videoUrl}
-            title={mod.lessons[activeLesson].videoTitle}
+            src={videos[activeVideo].url}
+            title={videos[activeVideo].title}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen />
         </div>
         <div>
-          {mod.lessons[activeLesson].content.split('\n\n').map((para, i) => (
+          {lesson.content.split('\n\n').map((para, i) => (
             <p key={i} style={{ color: sub, fontSize: '15px', lineHeight: 1.7, marginBottom: '14px' }}
               dangerouslySetInnerHTML={{
                 __html: para.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br/>')
@@ -184,11 +217,11 @@ function LessonsPanel({ mod, dark, cardBg, text, sub, activeLesson, setActiveLes
         <div style={styles.navRow}>
           {activeLesson > 0 && (
             <button style={{ ...styles.navBtn, background: dark ? '#444' : '#e0d8d0', color: text }}
-              onClick={() => setActiveLesson(activeLesson - 1)}>← Previous</button>
+              onClick={() => handleLessonChange(activeLesson - 1)}>← Previous</button>
           )}
           {activeLesson < mod.lessons.length - 1 ? (
             <button style={{ ...styles.navBtn, marginLeft: 'auto', background: mod.color, color: '#fff' }}
-              onClick={() => setActiveLesson(activeLesson + 1)}>Next Lesson →</button>
+              onClick={() => handleLessonChange(activeLesson + 1)}>Next Lesson →</button>
           ) : (
             <button style={{ ...styles.navBtn, marginLeft: 'auto', background: '#22c55e', color: '#fff' }}
               onClick={onNext}>Take Post-Test →</button>
