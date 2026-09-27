@@ -153,7 +153,11 @@ function Intro({ mod, dark, cardBg, text, sub, onNext }) {
 function LessonsPanel({ mod, dark, cardBg, text, sub, activeLesson, setActiveLesson, onNext }) {
   const [activeVideo, setActiveVideo] = useState(0);
   const lesson = mod.lessons[activeLesson];
-  const videos = lesson.videos || [{ url: lesson.videoUrl, title: lesson.videoTitle }];
+  const videos = lesson.videos
+    ? lesson.videos
+    : lesson.videoUrl
+      ? [{ url: lesson.videoUrl, title: lesson.videoTitle }]
+      : [];
 
   // Reset video selection when lesson changes
   const handleLessonChange = (i) => {
@@ -199,13 +203,16 @@ function LessonsPanel({ mod, dark, cardBg, text, sub, activeLesson, setActiveLes
           </div>
         )}
 
-        <div style={styles.videoWrap}>
-          <iframe style={styles.video}
-            src={videos[activeVideo].url}
-            title={videos[activeVideo].title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen />
-        </div>
+        {/* Video player - only shown if videos exist */}
+        {videos.length > 0 && (
+          <div style={styles.videoWrap}>
+            <iframe style={styles.video}
+              src={videos[activeVideo].url}
+              title={videos[activeVideo].title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen />
+          </div>
+        )}
         <div>
           {lesson.content.split('\n\n').map((para, i) => (
             <p key={i} style={{ color: sub, fontSize: '15px', lineHeight: 1.7, marginBottom: '14px' }}
