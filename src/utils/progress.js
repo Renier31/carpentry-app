@@ -17,7 +17,7 @@ export async function saveProgress(userId, moduleId, score, total) {
 // Get progress for one user across all modules
 export async function getUserProgress(userId) {
   const results = {};
-  for (let i = 1; i <= 4; i++) {
+  for (let i = 1; i <= 6; i++) {
     const ref = doc(db, 'progress', `${userId}_module_${i}`);
     const snap = await getDoc(ref);
     if (snap.exists()) results[i] = snap.data();

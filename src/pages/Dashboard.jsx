@@ -27,11 +27,10 @@ export default function Dashboard() {
 
   // A module is unlocked if it's the first one, or the previous module was passed
   function isUnlocked(index) {
-    return true; // TEMP: all unlocked for testing
-    // if (index === 0) return true;
-    // const prevMod = modules[index - 1];
-    // const prevProgress = progress[prevMod.id];
-    // return prevProgress && prevProgress.percent >= PASSING_SCORE;
+    if (index === 0) return true;
+    const prevMod = modules[index - 1];
+    const prevProgress = progress[prevMod.id];
+    return prevProgress && prevProgress.percent >= PASSING_SCORE;
   }
 
   function getBadge(p) {
