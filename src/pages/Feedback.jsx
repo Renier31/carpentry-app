@@ -10,9 +10,9 @@ import { saveFeedback } from '../utils/progress';
 // 2. Add a Gmail service and connect your Gmail
 // 3. Create a template with: {{from_name}}, {{from_email}}, {{subject}}, {{message}}
 // 4. Replace these three values with your actual IDs:
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID  = 'service_uioud7o';
+const EMAILJS_TEMPLATE_ID = 'template_tdr3xt7';
+const EMAILJS_PUBLIC_KEY  = 'bOtiTZijKmmvpna4d';
 
 export default function Feedback() {
   const { currentUser } = useAuth();
