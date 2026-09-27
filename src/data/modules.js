@@ -11,42 +11,42 @@ export const modules = [
         id: 'l1_1',
         title: 'Eye and Face Protection',
         content: `**Safety Glasses and Face Shields**\n\nEye injuries are among the most common in woodworking. Flying wood chips, sawdust, and tool fragments can cause permanent damage.\n\n**Types of Eye Protection:**\n- **Safety glasses** — basic protection for general work\n- **Safety goggles** — sealed protection against dust and fine particles\n- **Face shield** — full-face protection for grinding and turning\n\n**When to wear:**\n- Any cutting or sawing operation\n- Using power tools\n- Chiseling or hammering\n- Sanding and finishing\n\nAlways choose eyewear marked with ANSI Z87.1 or equivalent safety standard.`,
-        videoUrl: 'https://www.youtube.com/embed/0Lyb0NZNBVY',
+        videoUrl: 'https://www.youtube.com/embed/E_URVDwGKpM',
         videoTitle: 'Eye Protection in Woodworking'
       },
       {
         id: 'l1_2',
         title: 'Hearing and Respiratory Protection',
         content: `**Hearing Protection**\n\nPower tools generate noise above 85 decibels — prolonged exposure causes permanent hearing loss.\n\n- **Earplugs** — disposable foam, reduce noise 25-33 dB\n- **Earmuffs** — cover entire ear, good for extended use\n- Rule: If you must shout to be heard, wear hearing protection\n\n**Respiratory Protection**\n\nWood dust is classified as a carcinogen.\n\n- **N95 dust mask** — filters fine particles from sanding and sawing\n- **Respirator** — for finishing work with chemicals, stains, varnishes\n- Always check the filter rating matches the hazard`,
-        videoUrl: 'https://www.youtube.com/embed/8HlqAb2RkCk',
+        videoUrl: 'https://www.youtube.com/embed/E_URVDwGKpM',
         videoTitle: 'Hearing and Respiratory PPE'
       },
       {
         id: 'l1_3',
         title: 'Body and Hand Protection',
         content: `**Body Protection**\n\n- **Workshop apron** — protects against cuts and splinters\n- **Work gloves** — for handling rough lumber, NOT for operating spinning tools\n- **Steel-toed boots** — protect feet from dropped lumber and tools\n- **Avoid loose clothing** — can catch in rotating machinery\n- **Remove jewelry** — rings, bracelets, and watches can catch on tools\n\n**Important Rules:**\n1. Never wear gloves when operating a drill press, lathe, or table saw\n2. Long hair must be tied back or covered\n3. Always wear closed-toe shoes in the shop — sandals are prohibited`,
-        videoUrl: 'https://www.youtube.com/embed/8HlqAb2RkCk',
+        videoUrl: 'https://www.youtube.com/embed/E_URVDwGKpM',
         videoTitle: 'Body Protection in the Workshop'
       },
       {
         id: 'l1_4',
         title: 'PPE Inspection and Maintenance',
         content: `**Inspecting PPE Before Use**\n\nPPE that is damaged provides false security and may fail when needed most.\n\n**Safety Glasses/Goggles:**\n- Check for cracks, scratches, and loose frames\n- Replace if lenses are heavily scratched — visibility is reduced\n- Clean with lens-safe wipes only\n\n**Dust Masks/Respirators:**\n- Check for tears, damaged straps, and bent nose pieces\n- Replace N95 masks when breathing becomes difficult\n- Store in a clean dry place away from dust\n\n**Hearing Protection:**\n- Earplugs: replace if compressed and won't spring back\n- Earmuffs: check cushions for cracks and proper seal\n\n**General Rules:**\n- Never share PPE between workers without sanitizing\n- Store PPE in designated clean areas\n- Report damaged PPE to your supervisor immediately`,
-        videoUrl: 'https://www.youtube.com/embed/0Lyb0NZNBVY',
+        videoUrl: 'https://www.youtube.com/embed/E_URVDwGKpM',
         videoTitle: 'PPE Inspection and Maintenance'
       },
       {
         id: 'l1_5',
         title: 'PPE Standards and Regulations',
         content: `**Why Standards Matter**\n\nPPE standards ensure equipment provides consistent, tested levels of protection.\n\n**Key Standards:**\n- **ANSI Z87.1** — Eye and face protection\n- **ANSI S3.19** — Hearing protection noise reduction rating\n- **NIOSH N95** — Respiratory particle filtration\n- **ASTM F2413** — Safety footwear\n\n**Workplace Requirements:**\n- Employers must provide PPE at no cost to workers\n- Workers must be trained on correct use and limitations\n- PPE must be properly maintained and replaced when worn\n\n**Hierarchy of Controls:**\n1. Elimination — remove the hazard entirely\n2. Substitution — replace with less hazardous option\n3. Engineering controls — guards and ventilation\n4. Administrative controls — training and procedures\n5. PPE — last line of defense\n\nPPE should always be the LAST resort, not the first solution.`,
-        videoUrl: 'https://www.youtube.com/embed/0Lyb0NZNBVY',
+        videoUrl: 'https://www.youtube.com/embed/E_URVDwGKpM',
         videoTitle: 'PPE Standards and Workplace Safety'
       },
       {
         id: 'l1_6',
         title: 'Emergency Procedures and First Aid',
         content: `**What to Do When PPE Fails**\n\n**Eye Injury:**\n- Do NOT rub the eye\n- Flush immediately with clean water for 15 minutes\n- Seek medical attention even if pain subsides\n\n**Hearing Damage:**\n- Remove from noisy environment immediately\n- Ringing after exposure indicates damage — see a doctor\n\n**Respiratory Exposure:**\n- Move to fresh air immediately\n- If breathing difficulty persists, call emergency services\n\n**Cut or Laceration:**\n- Apply firm pressure with clean cloth\n- Elevate the injured limb\n- Seek medical attention for deep cuts\n\n**First Aid Kit Contents for a Workshop:**\n- Bandages and sterile gauze\n- Eye wash station or saline solution\n- Burn treatment gel\n- Emergency contact numbers posted visibly\n- First aider must be designated in every workshop`,
-        videoUrl: 'https://www.youtube.com/embed/8HlqAb2RkCk',
+        videoUrl: 'https://www.youtube.com/embed/E_URVDwGKpM',
         videoTitle: 'Workshop First Aid and Emergency Procedures'
       }
     ],
@@ -107,42 +107,42 @@ export const modules = [
         id: 'l2_1',
         title: 'Measuring and Marking Tools',
         content: `**Tape Measure**\n- Most essential carpentry tool\n- Read fractions carefully — measure twice, cut once\n- Hook the end on the material edge before measuring\n\n**Try Square and Combination Square**\n- Marks perpendicular (90°) and 45° lines\n- Check your square is actually square before trusting it\n\n**Marking Gauge**\n- Sets a consistent parallel line from an edge\n- Used for joinery layout and ripping lines\n\n**Marking Knife**\n- Scores a crisp line across wood grain\n- Gives cleaner cuts than a pencil\n\n**Chalk Line**\n- Snaps a straight reference line over long distances\n- Essential for flooring and framing`,
-        videoUrl: 'https://www.youtube.com/embed/ZSHqpCMDLnk',
+        videoUrl: 'https://www.youtube.com/embed/sBnRbPvpgQU',
         videoTitle: 'Measuring and Marking Tools'
       },
       {
         id: 'l2_2',
         title: 'Cutting Tools — Saws',
         content: `**Hand Saw**\n- **Crosscut saw** — cuts across the grain (most common)\n- **Rip saw** — cuts along the grain (fewer, larger teeth)\n- Technique: Let the saw do the work, use long smooth strokes\n- Start the cut with a backstroke to create a kerf\n\n**Back Saw and Miter Box**\n- Fine-toothed saw for accurate joinery cuts\n- Miter box guides at 45° or 90°\n- Tenon saw is a type of back saw for larger joints\n\n**Coping Saw**\n- Thin blade for cutting curves and internal cutouts\n- Blade can be rotated to cut at any angle\n- Used for decorative work and fitting moldings\n\n**Hacksaw**\n- Cuts metal hardware like bolts and screws\n- Fine-toothed blade, cuts on the push stroke`,
-        videoUrl: 'https://www.youtube.com/embed/HNmSLCBxHKI',
+        videoUrl: 'https://www.youtube.com/embed/sBnRbPvpgQU',
         videoTitle: 'Hand Saws for Carpentry'
       },
       {
         id: 'l2_3',
         title: 'Chisels and Planes',
         content: `**Chisels**\n- Used for paring wood, cutting mortises, and cleaning joints\n- Types: bench chisel, mortise chisel, paring chisel\n- Always cut AWAY from your body\n- Keep razor sharp — a dull chisel is more dangerous than a sharp one\n- Drive with a mallet, not a steel hammer (damages handles)\n\n**Block Plane**\n- Smooths end grain and removes thin shavings\n- Set blade depth shallow for best results\n- Essential for fitting joints and trimming doors\n\n**Jack Plane**\n- Flattens rough sawn lumber\n- Used before the smoothing plane\n- Set for a heavier cut\n\n**Smoothing Plane**\n- Final surface preparation before finishing\n- Set for very thin shavings\n- Sharp iron (blade) is critical for glass-smooth results`,
-        videoUrl: 'https://www.youtube.com/embed/HNmSLCBxHKI',
+        videoUrl: 'https://www.youtube.com/embed/sBnRbPvpgQU',
         videoTitle: 'Chisels and Hand Planes'
       },
       {
         id: 'l2_4',
         title: 'Shaping and Finishing Tools',
         content: `**Rasp and File**\n- **Rasp** — aggressive shaping with coarse teeth\n- **File** — smoother finishing after the rasp\n- Always use a handle on a file — the tang can stab your palm\n- Move in one direction only — lift on the return stroke\n\n**Spokeshave**\n- Shapes curved surfaces and chair legs\n- Two handles for controlled two-hand operation\n- Can be used with or against the grain depending on curve direction\n\n**Cabinet Scraper**\n- Removes thin shavings with a burr edge\n- Superior to sandpaper for hardwoods — no clogging\n- Produces glass-smooth surfaces without scratches\n\n**Scratch Awl**\n- Marks starting points for screws and nails\n- Creates a small dimple that prevents bit wandering`,
-        videoUrl: 'https://www.youtube.com/embed/HNmSLCBxHKI',
+        videoUrl: 'https://www.youtube.com/embed/sBnRbPvpgQU',
         videoTitle: 'Shaping and Finishing Hand Tools'
       },
       {
         id: 'l2_5',
         title: 'Fastening Tools',
         content: `**Hammers**\n- **Claw hammer** — most common; driving nails and pulling them\n- Grip near the end of handle for maximum power\n- Keep face clean — a dirty face causes glancing blows\n- **Framing hammer** — heavier, for structural work\n- **Tack hammer** — light, for upholstery and small nails\n\n**Screwdrivers**\n- Match the tip exactly to the screw head — prevents cam-out\n- Types: Phillips, flat, Torx, Robertson (square)\n- Use the correct length — short screwdrivers strip heads more easily\n\n**Mallet**\n- Used with chisels to prevent handle damage\n- Also used for driving wooden joints together without marking\n- Types: wooden, rubber, dead-blow\n\n**Hand Drill (Brace)**\n- Manual drill for boring holes without electricity\n- Still useful for controlled, quiet drilling in fieldwork`,
-        videoUrl: 'https://www.youtube.com/embed/HNmSLCBxHKI',
+        videoUrl: 'https://www.youtube.com/embed/sBnRbPvpgQU',
         videoTitle: 'Fastening Hand Tools'
       },
       {
         id: 'l2_6',
         title: 'Tool Care and Storage',
         content: `**Sharpening Hand Tools**\n\nSharp tools are safer, more accurate, and less tiring to use.\n\n**Sharpening Process:**\n1. Flatten the back of the blade on a sharpening stone\n2. Hone the bevel at the correct angle (25-30° for chisels and plane irons)\n3. Strop on leather to remove the wire edge\n4. Test — a sharp blade shaves arm hair cleanly\n\n**Preventing Rust:**\n- Wipe metal surfaces with a light coat of oil after use\n- Store tools in a dry environment\n- Use a tool roll or wooden toolbox — not a metal box that promotes condensation\n\n**Storage Best Practices:**\n- Hang saws so teeth don't contact other tools\n- Store chisels in a roll or rack with edge protection\n- Never throw tools into a pile — edges chip and workers get cut\n- Label and organize tools — missing tools cause accidents`,
-        videoUrl: 'https://www.youtube.com/embed/ZSHqpCMDLnk',
+        videoUrl: 'https://www.youtube.com/embed/sBnRbPvpgQU',
         videoTitle: 'Hand Tool Care and Storage'
       }
     ],
@@ -203,42 +203,42 @@ export const modules = [
         id: 'l3_1',
         title: 'Drills and Drivers',
         content: `**Electric Drill / Driver**\n- Used for drilling holes and driving screws\n- Choose the correct bit for the material\n- Secure the workpiece with clamps — never hold it by hand\n- Start slow, increase speed gradually\n- Pull the bit back frequently when drilling deep holes to clear chips\n\n**Drill Bit Types:**\n- **Twist bit** — general purpose for wood and metal\n- **Spade bit** — fast, rough holes in wood\n- **Forstner bit** — clean flat-bottomed holes\n- **Brad-point bit** — precise holes with center point\n- **Auger bit** — deep holes in thick timber\n\n**Impact Driver**\n- Delivers rotational impact force for driving large screws\n- Significantly more torque than a regular drill\n- Not suitable for drilling clean holes\n- Use with hex-shank bits only`,
-        videoUrl: 'https://www.youtube.com/embed/QLvqkMDsZoA',
+        videoUrl: 'https://www.youtube.com/embed/vcBq5rTbpWI',
         videoTitle: 'Drills and Drivers Guide'
       },
       {
         id: 'l3_2',
         title: 'Circular Saw and Jigsaw',
         content: `**Circular Saw**\n- Most common power saw for cutting lumber\n- Always let blade reach full speed before cutting\n- Support both sides of the cut\n- Never reach under workpiece while cutting\n- Let blade stop completely before setting saw down\n- Keep blade guard in place at all times\n- Depth: set blade 1/4" deeper than material thickness\n\n**Jigsaw**\n- Cuts curves and irregular shapes\n- Start blade before contacting wood\n- Use correct blade for material thickness\n- Support the workpiece close to the cut line\n- Slower feed rate = cleaner cut\n\n**Reciprocating Saw**\n- For demolition and rough cuts\n- Can cut in tight spaces\n- Not suitable for precision work`,
-        videoUrl: 'https://www.youtube.com/embed/QLvqkMDsZoA',
+        videoUrl: 'https://www.youtube.com/embed/vcBq5rTbpWI',
         videoTitle: 'Circular Saw and Jigsaw Safety'
       },
       {
         id: 'l3_3',
         title: 'Sanders',
         content: `**Random Orbital Sander**\n- Best general-purpose sander for flat surfaces\n- Moves in random elliptical pattern — no swirl marks\n- Start coarse, finish fine (80 → 120 → 180 → 220 grit)\n- Always use dust collection or wear N95 mask\n\n**Belt Sander**\n- Aggressive material removal\n- Keep moving — stopping gouges the surface\n- Good for flattening large surfaces and removing paint\n\n**Detail Sander (Mouse Sander)**\n- Gets into corners and tight spaces\n- Low power — not for heavy material removal\n\n**Disc Sander**\n- Stationary sander for end grain and small parts\n- Only use the downward half of the disc\n- Upward half throws workpiece toward user`,
-        videoUrl: 'https://www.youtube.com/embed/Y7EUjFn3BBc',
+        videoUrl: 'https://www.youtube.com/embed/vcBq5rTbpWI',
         videoTitle: 'Power Sanders Guide'
       },
       {
         id: 'l3_4',
         title: 'Router',
         content: `**What is a Router?**\n- Cuts profiles, dadoes, rabbets, and decorative edges\n- One of the most versatile power tools in woodworking\n\n**Types:**\n- **Fixed base** — depth set before use, stable for edge work\n- **Plunge base** — bit plunges into material mid-cut, for grooves\n- **Trim router** — compact, lightweight for light edge work\n\n**Safe Operation:**\n- Always move router AGAINST the bit rotation (climb cutting is dangerous)\n- Take shallow passes — never remove too much in one pass\n- Use sharp bits — dull bits cause burning and tear-out\n- Secure workpiece firmly before routing\n- Use a router table for better control on small pieces\n\n**Common Router Profiles:**\n- Roundover, chamfer, cove, ogee, rabbet, straight`,
-        videoUrl: 'https://www.youtube.com/embed/Y7EUjFn3BBc',
+        videoUrl: 'https://www.youtube.com/embed/vcBq5rTbpWI',
         videoTitle: 'Router Basics and Safety'
       },
       {
         id: 'l3_5',
         title: 'Nail Guns and Staplers',
         content: `**Pneumatic Nail Gun (Nailer)**\n- Drives nails rapidly using compressed air\n- Types: framing nailer, finish nailer, brad nailer, pin nailer\n- Always point away from people when loaded\n- Never carry with finger on trigger\n- Disconnect air before clearing jams\n- Use the correct nail gauge and length for the application\n\n**Finish Nailer**\n- Drives 15-16 gauge nails for trim and molding\n- Leaves small hole easily filled with putty\n\n**Brad Nailer**\n- Drives 18 gauge brads for light trim and thin stock\n- Minimal splitting risk on delicate pieces\n\n**Stapler**\n- Drives staples for upholstery, underlayment, and sheathing\n- Compressed air or electric versions available\n\n**Safety:**\n- Never point at yourself or others\n- Keep non-trigger hand clear of the muzzle\n- Use safety glasses — nails can ricochet`,
-        videoUrl: 'https://www.youtube.com/embed/QLvqkMDsZoA',
+        videoUrl: 'https://www.youtube.com/embed/vcBq5rTbpWI',
         videoTitle: 'Nail Guns and Pneumatic Tools'
       },
       {
         id: 'l3_6',
         title: 'General Power Tool Safety',
         content: `**Universal Safety Rules:**\n1. Inspect every tool before use — check cord, guard, blade/bit\n2. Wear appropriate PPE for every operation\n3. Secure workpiece with clamps — never hold with hands\n4. Disconnect power before changing blades or bits\n5. Never use a wet or damaged power tool\n6. Keep guards in place at all times\n7. Allow rotating parts to stop completely before setting tool down\n8. Keep cords away from cutting paths\n9. Never leave a running tool unattended\n10. Know the location of the power shutoff\n\n**Electrical Safety:**\n- Use GFCI outlets near water sources\n- Inspect cords for cracks and damage before use\n- Never carry a tool by its cord\n- Do not use extension cords that are too light for the tool\n\n**First Response to Power Tool Injury:**\n- Shut off the tool immediately\n- Apply pressure to bleeding wounds\n- Do not remove embedded objects\n- Call for emergency help`,
-        videoUrl: 'https://www.youtube.com/embed/QLvqkMDsZoA',
+        videoUrl: 'https://www.youtube.com/embed/vcBq5rTbpWI',
         videoTitle: 'Power Tool Safety Rules'
       }
     ],
@@ -299,42 +299,42 @@ export const modules = [
         id: 'l4_1',
         title: 'Table Saw',
         content: `**The Table Saw — Most Versatile and Most Dangerous**\n\n- Used for ripping (along grain) and crosscutting (across grain)\n- Always use the rip fence for rip cuts\n- Always use the miter gauge for crosscuts\n- Never use both fence and miter gauge simultaneously — causes kickback\n\n**Safety Rules:**\n- Keep blade guard and riving knife in place\n- Use a push stick for pieces narrower than 6 inches\n- Never reach over or behind the spinning blade\n- Stand to the side — never directly behind the blade (kickback)\n- Let blade come to complete stop before adjusting\n- Never leave the saw running unattended\n\n**Kickback:**\n- Most dangerous table saw hazard\n- Occurs when wood pinches the blade and is thrown back\n- Prevention: use riving knife, stand to the side, keep wood flat on table`,
-        videoUrl: 'https://www.youtube.com/embed/6PQO2sXLk_s',
+        videoUrl: 'https://www.youtube.com/embed/pXnfuSHLx0A',
         videoTitle: 'Table Saw Safety and Operation'
       },
       {
         id: 'l4_2',
         title: 'Band Saw',
         content: `**Band Saw — Curved Cuts and Resawing**\n\n- Continuous blade loop around two wheels\n- Safer than the table saw for most curved operations\n- Used for: curved cuts, resawing thick lumber, cutting irregular shapes\n\n**Setup:**\n- Adjust blade tension before use\n- Set blade guides close to the material\n- Adjust upper guide post to just above the material\n\n**Operation:**\n- Keep fingers at least 2 inches from blade\n- Feed rate: slow and steady\n- Let blade stop before removing cut-off pieces\n- Do not back out of a cut while blade is moving\n\n**Blade Selection:**\n- Wide blades for straight/gentle curves\n- Narrow blades for tight curves\n- More teeth per inch = smoother cut but slower`,
-        videoUrl: 'https://www.youtube.com/embed/6PQO2sXLk_s',
+        videoUrl: 'https://www.youtube.com/embed/pXnfuSHLx0A',
         videoTitle: 'Band Saw Operation and Safety'
       },
       {
         id: 'l4_3',
         title: 'Thickness Planer and Jointer',
         content: `**Thickness Planer**\n- Makes boards a uniform thickness\n- Never plane end grain\n- Maximum depth per pass: 1/16 inch\n- Feed boards with the grain direction\n- Stand to the side — boards can be ejected at high speed\n- Keep hands away from infeed and outfeed tables while board is in machine\n\n**Jointer**\n- Flattens one face and one edge of a board\n- Creates the reference surface for all subsequent operations\n- Keep fingers away from cutter head — use push blocks\n- Take light passes (1/32 to 1/16 inch)\n- Never joint pieces shorter than 12 inches\n- Sequence: joint face → joint edge → plane to thickness → rip to width`,
-        videoUrl: 'https://www.youtube.com/embed/8Q4sPLLnMcM',
+        videoUrl: 'https://www.youtube.com/embed/pXnfuSHLx0A',
         videoTitle: 'Planer and Jointer Operation'
       },
       {
         id: 'l4_4',
         title: 'Drill Press and Scroll Saw',
         content: `**Drill Press**\n- Drills perfectly perpendicular holes at consistent depth\n- Clamp workpiece — NEVER hold by hand\n- Set depth stop before drilling\n- Speed selection:\n  - Large bits = slow speed\n  - Small bits = high speed\n  - Hard materials = slow speed\n- Lower the quill slowly and smoothly\n- Clear chips frequently\n\n**Scroll Saw**\n- For intricate curved cuts and decorative patterns\n- Light cuts only — not for thick stock\n- Keep fingers clear of blade path\n- Blade should be tensioned correctly\n- Blade teeth point downward\n- Feed rate: very slow for tight curves`,
-        videoUrl: 'https://www.youtube.com/embed/8Q4sPLLnMcM',
+        videoUrl: 'https://www.youtube.com/embed/pXnfuSHLx0A',
         videoTitle: 'Drill Press and Scroll Saw'
       },
       {
         id: 'l4_5',
         title: 'Lathe',
         content: `**Wood Lathe — Turning Cylindrical Forms**\n\n- Rotates wood against a stationary cutting tool\n- Used for: table legs, bowls, spindles, handles, decorative turnings\n\n**Setup:**\n- Mount workpiece securely between centers or in a chuck\n- Check workpiece is balanced — irregular pieces can fly off\n- Start at slow speed and increase only when balanced\n- Adjust tool rest close to workpiece before starting\n\n**Safety Rules:**\n- Never wear loose clothing or gloves near a lathe\n- Stand to the side during startup in case workpiece flies off\n- Remove tool rest before sanding on the lathe\n- Use a face shield (not just glasses) for turning\n- Keep tools sharp — dull tools catch and cause dig-ins\n\n**Basic Cuts:**\n- Roughing gouge — rapid material removal\n- Spindle gouge — shaping details\n- Skew chisel — smooth finishing cuts`,
-        videoUrl: 'https://www.youtube.com/embed/8Q4sPLLnMcM',
+        videoUrl: 'https://www.youtube.com/embed/pXnfuSHLx0A',
         videoTitle: 'Wood Lathe Basics and Safety'
       },
       {
         id: 'l4_6',
         title: 'Workshop Layout and Machine Maintenance',
         content: `**Safe Workshop Layout**\n\n- Machines should have adequate outfeed space (at least the length of longest boards)\n- Walkways must be clear and marked\n- Adequate lighting above each machine\n- Dust collection connected to each machine\n- Fire extinguisher within reach of all machines\n- Emergency stop buttons accessible\n\n**Preventive Maintenance:**\n- **Daily:** Clean sawdust from tables and guards, check blade/bit for damage\n- **Weekly:** Lubricate moving parts, check blade tension and alignment\n- **Monthly:** Inspect electrical cords and connections, calibrate fences and miter gauges\n- **Annually:** Have machines professionally serviced\n\n**Blade and Bit Care:**\n- Dull blades require more force — increasing injury risk\n- Clean resin buildup with blade cleaner\n- Replace when teeth are chipped, missing, or heavily worn\n- Never use a cracked blade`,
-        videoUrl: 'https://www.youtube.com/embed/6PQO2sXLk_s',
+        videoUrl: 'https://www.youtube.com/embed/pXnfuSHLx0A',
         videoTitle: 'Workshop Layout and Machine Maintenance'
       }
     ],
@@ -395,42 +395,42 @@ export const modules = [
         id: 'l5_1',
         title: 'Simple Joints',
         content: `**Butt Joint**\n- Simplest joint — end of one piece meets the face/edge of another\n- Weak without reinforcement\n- Reinforced with: nails, screws, dowels, pocket screws, or glue\n- Used in: rough framing, box construction, shelving\n\n**Lap Joint**\n- Half the thickness removed from each piece so they sit flush\n- Much stronger than a butt joint\n- Types: full lap, half lap, cross lap, end lap\n- Used in: frames, grids, light furniture\n\n**Miter Joint**\n- Both pieces cut at 45° to form a 90° corner\n- Clean appearance — hides end grain\n- Weak without reinforcement (spline, biscuit, or nail)\n- Used in: picture frames, moldings, cabinet face frames`,
-        videoUrl: 'https://www.youtube.com/embed/j9lQzFJSFCQ',
+        videoUrl: 'https://www.youtube.com/embed/UCBCkVf0pCg',
         videoTitle: 'Simple Wood Joints'
       },
       {
         id: 'l5_2',
         title: 'Housing Joints — Dado and Rabbet',
         content: `**Dado Joint**\n- A channel cut across the grain of a board\n- Another board fits into the channel\n- Very strong for shelving — resists downward force\n- Cut with: dado blade on table saw or router with straight bit\n- Blind dado: stopped before the front edge (hides joint)\n\n**Rabbet Joint**\n- An L-shaped notch along the edge or end of a board\n- Stronger than a butt joint\n- Used in: drawer backs, cabinet backs, box corners\n- Cut with: table saw, router, or rabbet plane\n\n**Groove Joint**\n- Same as a dado but cut WITH the grain\n- Used for: drawer bottoms and cabinet backs sliding into frames\n- The bottom panel floats in the groove — allows wood movement\n\n**Housing Joint**\n- Full width of one board sits in a dado in another\n- Used for: shelving in bookcases, stair treads`,
-        videoUrl: 'https://www.youtube.com/embed/j9lQzFJSFCQ',
+        videoUrl: 'https://www.youtube.com/embed/UCBCkVf0pCg',
         videoTitle: 'Dado and Rabbet Joints'
       },
       {
         id: 'l5_3',
         title: 'Mortise and Tenon',
         content: `**The Strongest Traditional Joint**\n\nOne of the oldest and most reliable joints in woodworking.\n\n**Parts:**\n- **Tenon** — rectangular tongue cut on one piece\n- **Mortise** — rectangular pocket cut in the other piece\n\n**Proportions:**\n- Tenon thickness: 1/3 the thickness of the mortise piece\n- Tenon length: 2/3 the thickness of the mortise piece\n\n**Types:**\n- **Through tenon** — tenon passes completely through the mortise piece\n- **Blind tenon** — tenon stops inside the mortise (hidden)\n- **Wedged tenon** — wooden wedges lock the tenon permanently\n- **Drawbored** — offset hole drives peg to pull joint tight\n\n**Used in:**\nFurniture legs, door frames, chair construction, timber framing`,
-        videoUrl: 'https://www.youtube.com/embed/5QsUs0lSXPo',
+        videoUrl: 'https://www.youtube.com/embed/UCBCkVf0pCg',
         videoTitle: 'Mortise and Tenon Joint'
       },
       {
         id: 'l5_4',
         title: 'Dovetail and Finger Joints',
         content: `**Dovetail Joint**\n- Interlocking fan-shaped tails and pins\n- Exceptional resistance to pulling apart — mechanical lock\n- The hallmark of quality furniture and drawer construction\n- Requires careful layout and precise cutting\n\n**Types:**\n- **Through dovetail** — joint visible from both sides\n- **Half-blind dovetail** — joint hidden from front (used for drawer fronts)\n- **Full-blind dovetail** — joint completely hidden from outside\n\n**Cutting Methods:**\n- Hand-cut with a dovetail saw and chisels\n- Router with a dovetail jig (faster but less flexible)\n\n**Finger Joint (Box Joint)**\n- Interlocking square fingers\n- Very strong glue surface area\n- Easier to cut than dovetails using a table saw jig\n- Used in: boxes, drawers, light cabinet corners`,
-        videoUrl: 'https://www.youtube.com/embed/5QsUs0lSXPo',
+        videoUrl: 'https://www.youtube.com/embed/UCBCkVf0pCg',
         videoTitle: 'Dovetail and Finger Joints'
       },
       {
         id: 'l5_5',
         title: 'Modern Joinery Methods',
         content: `**Pocket Screw Joint**\n- Uses a jig (e.g. Kreg Jig) and special angled screws\n- Fast and practical for face frames, furniture assembly\n- Not as traditional but very strong in shear\n- Best for interior joinery — screws can be seen from one side\n\n**Biscuit Joint**\n- Oval compressed wood biscuits in matching slots\n- Primarily for alignment, adds some strength\n- Good for panel glue-ups and edge joints\n- Cut with a biscuit joiner (plate joiner)\n\n**Domino Joint**\n- Like a biscuit but uses floating tenons\n- Significantly stronger than biscuits\n- Cut with a Festool Domino machine\n\n**Dowel Joint**\n- Round wooden dowels align and reinforce joints\n- Used for: face frames, table aprons, chair rungs\n- Dowel centers help transfer hole positions accurately`,
-        videoUrl: 'https://www.youtube.com/embed/j9lQzFJSFCQ',
+        videoUrl: 'https://www.youtube.com/embed/UCBCkVf0pCg',
         videoTitle: 'Modern Wood Joinery Methods'
       },
       {
         id: 'l5_6',
         title: 'Gluing and Assembling Joints',
         content: `**Choosing the Right Glue**\n- **PVA (Titebond)** — most common, strong, sandable, water cleanup\n- **Epoxy** — gap-filling, waterproof, for oily woods and outdoor use\n- **Polyurethane** — expands, waterproof, messy if it contacts surfaces\n- **CA Glue** — instant bond, good for small repairs and dry fitting\n\n**Gluing Process:**\n1. Dry-fit all pieces before applying glue\n2. Apply even thin coat to BOTH mating surfaces\n3. Assemble quickly — open time is 5-10 minutes for PVA\n4. Apply clamp pressure evenly across the joint\n5. Check for square immediately after clamping\n6. Wipe squeeze-out with damp cloth before it dries\n\n**Checking for Square:**\n- Measure diagonals — equal diagonals = square\n- Correct by applying clamp diagonally across longer diagonal\n\n**Clamping Rules:**\n- One clamp every 6-8 inches along a glue line\n- Cauls distribute pressure evenly\n- Do not over-clamp — starves the joint of glue`,
-        videoUrl: 'https://www.youtube.com/embed/RYoMlOzIFoE',
+        videoUrl: 'https://www.youtube.com/embed/UCBCkVf0pCg',
         videoTitle: 'Gluing and Assembly Techniques'
       }
     ],
@@ -576,4 +576,10 @@ export const modules = [
     ]
   }
 ];
+
+
+
+
+
+
 
