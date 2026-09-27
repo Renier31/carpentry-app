@@ -2,10 +2,12 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { ThemeProvider } from './context/ThemeContext';
 import Maintenance from './pages/Maintenance';
+import { useEffect, useState } from 'react';
+import { checkMaintenance } from './utils/maintenance';
 
-// ─── MAINTENANCE MODE ───────────────────────────────────────────────────────
-// Set to true to show maintenance page, false to restore normal operation
-const MAINTENANCE_MODE = false;
+// ─── LOCAL MAINTENANCE OVERRIDE ────────────────────────────────────────────
+// Set to true to force maintenance page locally (overrides Firebase flag)
+const LOCAL_MAINTENANCE = false;
 // ────────────────────────────────────────────────────────────────────────────
 
 import PrivateRoute from './components/PrivateRoute';
@@ -20,7 +22,31 @@ import Certificate from './pages/Certificate';
 import InstructorDashboard from './pages/InstructorDashboard';
 
 export default function App() {
-  if (MAINTENANCE_MODE) {
+  const [maintenance, setMaintenance] = useState(LOCAL_MAINTENANCE);
+  const [checking, setChecking] = useState(!LOCAL_MAINTENANCE);
+
+  useEffect(() => {
+    if (LOCAL_MAINTENANCE) return;
+    checkMaintenance().then((isOn) => {
+      setMaintenance(isOn);
+      setChecking(false);
+    });
+  }, []);
+
+  // Show blank while checking Firebase (very brief)
+  if (checking) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        background: 'linear-gradient(135deg, #2c1810 0%, #8B4513 100%)',
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+      }}>
+        <div style={{ fontSize: '56px' }}>🪚</div>
+      </div>
+    );
+  }
+
+  if (maintenance) {
     return <Maintenance />;
   }
 
