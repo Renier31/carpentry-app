@@ -6,6 +6,14 @@ export const modules = [
     description: 'Learn about essential safety gear required in carpentry and woodworking.',
     color: '#e67e22',
     intro: `Personal Protective Equipment (PPE) is any gear worn to minimize exposure to hazards that cause workplace injuries. In carpentry, PPE is your first line of defense against cuts, dust, noise, and eye injuries.\n\nWearing the correct PPE is not optional — it is a professional and legal requirement in any woodworking environment. Understanding when and how to use each piece of equipment can prevent life-altering injuries.`,
+    objectives: [
+      'Identify and correctly use eye and face protection equipment in a woodworking environment.',
+      'Select appropriate hearing and respiratory protection for different workshop tasks.',
+      'Demonstrate proper use of body and hand protection, including when NOT to wear gloves.',
+      'Inspect and maintain PPE before each use to ensure it provides reliable protection.',
+      'Interpret PPE safety standards (ANSI, NIOSH, ASTM) and explain workplace PPE requirements.',
+      'Describe emergency procedures and first aid responses when PPE fails or an injury occurs.',
+    ],
     lessons: [
       {
         id: 'l1_1',
@@ -102,6 +110,14 @@ export const modules = [
     description: 'Identify and properly use essential hand tools in carpentry.',
     color: '#2980b9',
     intro: `Hand tools are the foundation of carpentry. Before power tools existed, all woodworking was done by hand. Understanding hand tools improves your skill, precision, and safety.\n\nProper use, maintenance, and storage of hand tools ensures they last longer and perform better. A sharp, well-maintained tool is always safer than a dull or damaged one.`,
+    objectives: [
+      'Use measuring and marking tools accurately to lay out cuts and joinery.',
+      'Identify and safely operate a variety of hand saws for different types of cuts.',
+      'Demonstrate proper technique with chisels and planes to pare and smooth wood.',
+      'Shape and finish wood surfaces using rasps, files, spokeshaves, and cabinet scrapers.',
+      'Select and correctly use fastening tools including hammers, screwdrivers, and mallets.',
+      'Sharpen, maintain, and store hand tools to keep them safe and effective.',
+    ],
     lessons: [
       {
         id: 'l2_1',
@@ -198,6 +214,14 @@ export const modules = [
     description: 'Learn to safely operate power tools used in modern carpentry.',
     color: '#c0392b',
     intro: `Power tools dramatically increase productivity in carpentry but come with significantly higher risks than hand tools. A power tool can cause severe injury in a fraction of a second if used improperly.\n\nBefore operating any power tool, you must understand its parts, safe operating procedures, and emergency shutoff. Always inspect tools before use and never operate a damaged tool.`,
+    objectives: [
+      'Safely set up and operate drills, drivers, and impact drivers for a variety of tasks.',
+      'Use a circular saw and jigsaw correctly, applying all required safety procedures.',
+      'Select the right sander for each task and sand a surface through proper grit sequences.',
+      'Set up and operate a router safely, avoiding climb cutting and using correct bit direction.',
+      'Load, operate, and clear jams on pneumatic nail guns and staplers without injury.',
+      'Apply universal power tool safety rules including electrical safety and injury first response.',
+    ],
     lessons: [
       {
         id: 'l3_1',
@@ -294,6 +318,14 @@ export const modules = [
     description: 'Understand stationary woodworking machines and their safe operation.',
     color: '#27ae60',
     intro: `Woodworking machines are stationary power tools found in professional shops and school workshops. They process large volumes of material quickly and precisely.\n\nThese machines are more powerful and more dangerous than handheld power tools. Strict safety procedures, proper setup, and adequate training are required before operating any woodworking machine.`,
+    objectives: [
+      'Set up and safely operate a table saw for ripping and crosscutting, preventing kickback.',
+      'Use a band saw for straight cuts, resawing, and curves while following all safety rules.',
+      'Operate a thickness planer and jointer to mill lumber to flat, square reference surfaces.',
+      'Drill accurate perpendicular holes on a drill press and cut intricate patterns on a scroll saw.',
+      'Mount and turn wood on a lathe safely, using correct tool rest position and speed selection.',
+      'Plan a safe workshop layout and perform routine preventive maintenance on woodworking machines.',
+    ],
     lessons: [
       {
         id: 'l4_1',
@@ -390,6 +422,14 @@ export const modules = [
     description: 'Learn how to create strong, accurate wood joints for quality carpentry.',
     color: '#8e44ad',
     intro: `Wood joinery is the art and craft of connecting pieces of wood together. The strength, appearance, and durability of any woodworking project depends heavily on the quality of its joints.\n\nDifferent joints are suited to different applications — from simple butt joints in rough construction to elegant dovetails in fine furniture. Understanding the purpose, method, and appropriate use of each joint is a core carpentry skill.`,
+    objectives: [
+      'Cut and reinforce simple joints including butt, lap, and miter joints for appropriate applications.',
+      'Cut dado, rabbet, groove, and housing joints using a table saw or router.',
+      'Lay out and cut a mortise and tenon joint to correct proportions for strong furniture connections.',
+      'Cut dovetail and finger joints by hand or with a jig for drawer and box construction.',
+      'Apply modern joinery methods including pocket screws, biscuits, dominoes, and dowels.',
+      'Select the correct glue, apply it properly, and assemble and check a glued-up joint for square.',
+    ],
     lessons: [
       {
         id: 'l5_1',
@@ -486,6 +526,14 @@ export const modules = [
     description: 'Apply your carpentry skills by measuring, cutting, and assembling a wooden stool from scratch.',
     color: '#16a085',
     intro: `This is a practical project module where you will apply everything you have learned about measuring, cutting, and assembly to build a simple wooden stool.\n\nBuilding a stool covers all fundamental carpentry skills — accurate measurement, straight cuts, joint-making, drilling, gluing, and finishing. It is an ideal beginner project that produces a functional, real-world result.\n\nFollow each step carefully, work safely, and take your time with measurements. A well-built stool is a source of pride and a demonstration of your carpentry competence.`,
+    objectives: [
+      'Create a cut list and plan a stool project by identifying all required materials and tools.',
+      'Accurately measure, mark, and label all stool components before cutting.',
+      'Cut legs, apron rails, and a seat to precise dimensions using correct hand or power saw technique.',
+      'Drill pilot holes and assemble the leg-and-apron frame square using glue and screws.',
+      'Attach the seat, sand all surfaces through progressive grits, and apply a wood finish.',
+      'Inspect a completed stool for stability and squareness, and troubleshoot common assembly problems.',
+    ],
     lessons: [
       {
         id: 'l6_1',

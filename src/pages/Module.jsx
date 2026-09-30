@@ -7,7 +7,7 @@ import { saveProgress } from '../utils/progress';
 import ResultScreen from '../components/ResultScreen';
 import PagedQuizPanel from '../components/PagedQuizPanel';
 
-// Stages: intro → pretest → lessons → posttest → done
+// Stages: intro → pretest → objectives → lessons → posttest → done
 const PASSING_SCORE = 80; // percent
 
 export default function Module() {
@@ -16,7 +16,7 @@ export default function Module() {
   const { currentUser } = useAuth();
   const { dark } = useTheme();
   const mod = modules.find((m) => m.id === parseInt(id));
-  const [stage, setStage] = useState('intro'); // intro | pretest | lessons | posttest | done
+  const [stage, setStage] = useState('intro'); // intro | pretest | objectives | lessons | posttest | done
   const [activeLesson, setActiveLesson] = useState(0);
   const [preAnswers, setPreAnswers] = useState({});
   const [postAnswers, setPostAnswers] = useState({});
@@ -46,8 +46,8 @@ export default function Module() {
 
       {/* Stage indicator */}
       <div style={styles.stageBar}>
-        {['Intro', 'Pre-Test', 'Lessons', 'Post-Test'].map((s, i) => {
-          const stageKeys = ['intro', 'pretest', 'lessons', 'posttest'];
+        {['Intro', 'Pre-Test', 'Objectives', 'Lessons', 'Post-Test'].map((s, i) => {
+          const stageKeys = ['intro', 'pretest', 'objectives', 'lessons', 'posttest'];
           const current = stageKeys.indexOf(stage);
           return (
             <div key={s} style={{ ...styles.stageStep, background: i <= current ? mod.color : (dark ? '#444' : '#ddd') }}>
@@ -71,13 +71,16 @@ export default function Module() {
               setPreSubmitted(true);
               setShowPreResult(true);
             }}
-            onNext={() => { setShowPreResult(false); setStage('lessons'); }}
+            onNext={() => { setShowPreResult(false); setStage('objectives'); }}
             onRetry={() => { setPreSubmitted(false); setShowPreResult(false); }}
             showResult={showPreResult}
             isPreTest={true}
             postScore={preScore}
             postTotal={mod.preTest.length}
           />
+        )}
+        {stage === 'objectives' && (
+          <ObjectivesPanel mod={mod} dark={dark} cardBg={cardBg} text={text} sub={sub} onNext={() => setStage('lessons')} />
         )}
         {stage === 'lessons' && (
           <LessonsPanel
@@ -135,6 +138,40 @@ function Intro({ mod, dark, cardBg, text, sub, onNext }) {
       </div>
       <button style={{ ...styles.btn, background: mod.color }} onClick={onNext}>
         Take Pre-Test →
+      </button>
+    </div>
+  );
+}
+
+function ObjectivesPanel({ mod, dark, cardBg, text, sub, onNext }) {
+  return (
+    <div style={{ ...styles.card, background: cardBg }}>
+      <div style={{ fontSize: '48px', marginBottom: '12px' }}>🎯</div>
+      <h2 style={{ ...styles.lessonTitle, color: text }}>Learning Objectives</h2>
+      <div style={{ ...styles.introBadge, background: mod.color }}>What You Will Learn</div>
+      <p style={{ color: sub, fontSize: '14px', margin: '16px 0', lineHeight: 1.6 }}>
+        By the end of this module, you will be able to:
+      </p>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '28px' }}>
+        {mod.objectives.map((obj, i) => (
+          <div key={i} style={{
+            display: 'flex', alignItems: 'flex-start', gap: '12px',
+            padding: '14px', borderRadius: '12px',
+            background: dark ? '#333' : '#fdf6f0',
+            border: `1.5px solid ${mod.color}22`,
+          }}>
+            <div style={{
+              minWidth: '28px', height: '28px', borderRadius: '50%',
+              background: mod.color, color: '#fff',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontSize: '13px', fontWeight: '700', flexShrink: 0,
+            }}>{i + 1}</div>
+            <p style={{ color: text, fontSize: '14px', lineHeight: 1.6, margin: 0 }}>{obj}</p>
+          </div>
+        ))}
+      </div>
+      <button style={{ ...styles.btn, background: mod.color }} onClick={onNext}>
+        Start Lessons →
       </button>
     </div>
   );
