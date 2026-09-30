@@ -16,7 +16,8 @@ export default function Certificate() {
     }
   }, [currentUser]);
 
-  const completedCount = Object.keys(progress).length;
+  const PASSING_SCORE = 80;
+  const completedCount = Object.values(progress).filter(p => p.percent >= PASSING_SCORE).length;
   const allDone = completedCount === modules.length;
   const totalScore = Object.values(progress).reduce((a, b) => a + b.score, 0);
   const totalQ = Object.values(progress).reduce((a, b) => a + b.total, 0);
@@ -31,8 +32,8 @@ export default function Certificate() {
         <div style={styles.notDone}>
           <div style={{ fontSize: '60px' }}>📚</div>
           <h2>Not yet complete</h2>
-          <p>Complete all {modules.length} modules to earn your certificate.</p>
-          <p style={{ color: '#8B4513', fontWeight: '600' }}>{completedCount}/{modules.length} done</p>
+          <p>Complete all {modules.length} modules with 80%+ to earn your certificate.</p>
+          <p style={{ color: '#8B4513', fontWeight: '600' }}>{completedCount}/{modules.length} passed</p>
           <button style={styles.btn} onClick={() => navigate('/dashboard')}>Back to Dashboard</button>
         </div>
       </div>

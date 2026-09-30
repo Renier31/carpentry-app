@@ -241,7 +241,6 @@ function LessonsPanel({ mod, dark, cardBg, text, sub, activeLesson, setActiveLes
 
 function QuizPanel({ title, subtitle, questions, answers, setAnswers, submitted, onSubmit, onNext, onRetry, onNextModule, nextLabel, mod, dark, cardBg, text, sub, showScore, score, showResult, postScore, postTotal, nextMod, isPreTest }) {
   const correctCount = questions.filter((q) => answers[q.id] === q.correct).length;
-  const percent = Math.round((correctCount / questions.length) * 100);
 
   return (
     <div style={{ ...styles.card, background: cardBg }}>
