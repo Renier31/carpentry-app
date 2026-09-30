@@ -5,7 +5,7 @@ const ITEMS_PER_PAGE = 5;
 
 export default function PagedQuizPanel({
   title, subtitle, questions, mod, dark, cardBg, text, sub,
-  onSubmit, onNext, onRetry, showResult, postScore, postTotal, isPreTest
+  onSubmit, onNext, onRetry, showResult, postScore, postTotal, isPreTest, nextMod
 }) {
   const [answers, setAnswers] = useState({});
   const [page, setPage] = useState(0); // 0-indexed
@@ -153,6 +153,7 @@ export default function PagedQuizPanel({
             onRetry();
           }}
           onNext={onNext}
+          nextMod={nextMod}
         />
       )}
     </div>

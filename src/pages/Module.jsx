@@ -87,16 +87,13 @@ export default function Module() {
           />
         )}
         {stage === 'posttest' && (
-          <QuizPanel
+          <PagedQuizPanel
             title="✅ Post-Test"
-            subtitle="You've completed the lessons. Now test what you've learned!"
+            subtitle="You've completed the lessons. Now test what you've learned! 5 questions per page."
             questions={mod.postTest}
-            answers={postAnswers}
-            setAnswers={setPostAnswers}
-            submitted={postSubmitted}
-            showResult={showResult}
-            onSubmit={async () => {
-              const score = mod.postTest.filter((q) => postAnswers[q.id] === q.correct).length;
+            mod={mod} dark={dark} cardBg={cardBg} text={text} sub={sub}
+            onSubmit={async (answers) => {
+              const score = mod.postTest.filter((q) => answers[q.id] === q.correct).length;
               setPostScore(score);
               setPostSubmitted(true);
               setShowResult(true);
@@ -109,19 +106,12 @@ export default function Module() {
             onNext={() => navigate('/dashboard')}
             onRetry={() => {
               setPostSubmitted(false);
-              setPostAnswers({});
               setShowResult(false);
               setStage('lessons');
               setActiveLesson(0);
             }}
-            onNextModule={() => {
-              setShowResult(false);
-              if (nextMod) navigate(`/module/${nextMod.id}`);
-              else navigate('/dashboard');
-            }}
-            nextLabel="Back to Dashboard"
-            mod={mod} dark={dark} cardBg={cardBg} text={text} sub={sub}
-            showScore={true} score={postScore}
+            showResult={showResult}
+            isPreTest={false}
             postScore={postScore}
             postTotal={mod.postTest.length}
             nextMod={nextMod}
