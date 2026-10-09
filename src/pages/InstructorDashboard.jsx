@@ -295,7 +295,7 @@ const styles = {
     padding: '8px 12px', borderRadius: '8px', border: '1.5px solid #ddd',
     background: 'transparent', cursor: 'pointer', fontSize: '12px', fontWeight: '500',
   },
-  tabActive: { background: '#8B4513', color: '#fff !important', borderColor: '#8B4513' },
+  tabActive: { background: '#8B4513', color: '#fff', borderColor: '#8B4513' },
   body: { padding: '12px 14px 40px' },
   card: { borderRadius: '14px', padding: '18px', boxShadow: '0 4px 16px rgba(0,0,0,0.07)', marginBottom: '0' },
   studentRow: { display: 'flex', alignItems: 'flex-start', gap: '10px', paddingBottom: '14px', marginBottom: '14px', borderBottom: '1px solid #f0f0f0' },

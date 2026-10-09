@@ -25,9 +25,11 @@ export default function Dashboard() {
     }
   }, [currentUser]);
 
-  // A module is unlocked if it's the first one, last one (module 6), or the previous module was passed
   function isUnlocked(index) {
-    return true; // All modules unlocked
+    if (index === 0) return true;
+    const prev = modules[index - 1];
+    const p = progress[prev.id];
+    return !!(p && p.percent >= PASSING_SCORE);
   }
 
   function getBadge(p) {
@@ -95,7 +97,7 @@ export default function Dashboard() {
           const unlocked = isUnlocked(index);
           const passed = p && p.percent >= PASSING_SCORE;
           const attempted = !!p;
-          const badge = getBadge(p);
+          const badge = getBadge(p) ?? { label: '—', bg: '#9ca3af' };
 
           return (
             <div

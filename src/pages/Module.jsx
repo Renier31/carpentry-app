@@ -8,7 +8,6 @@ import ResultScreen from '../components/ResultScreen';
 import PagedQuizPanel from '../components/PagedQuizPanel';
 
 // Stages: intro → pretest → objectives → lessons → posttest → done
-const PASSING_SCORE = 80; // percent
 
 export default function Module() {
   const { id } = useParams();
@@ -18,10 +17,6 @@ export default function Module() {
   const mod = modules.find((m) => m.id === parseInt(id));
   const [stage, setStage] = useState('intro'); // intro | pretest | objectives | lessons | posttest | done
   const [activeLesson, setActiveLesson] = useState(0);
-  const [preAnswers, setPreAnswers] = useState({});
-  const [postAnswers, setPostAnswers] = useState({});
-  const [preSubmitted, setPreSubmitted] = useState(false);
-  const [postSubmitted, setPostSubmitted] = useState(false);
   const [postScore, setPostScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [preScore, setPreScore] = useState(0);
@@ -262,88 +257,6 @@ function LessonsPanel({ mod, dark, cardBg, text, sub, activeLesson, setActiveLes
           )}
         </div>
       </div>
-    </div>
-  );
-}
-
-function QuizPanel({ title, subtitle, questions, answers, setAnswers, submitted, onSubmit, onNext, onRetry, onNextModule, nextLabel, mod, dark, cardBg, text, sub, showScore, score, showResult, postScore, postTotal, nextMod, isPreTest }) {
-  const correctCount = questions.filter((q) => answers[q.id] === q.correct).length;
-
-  return (
-    <div style={{ ...styles.card, background: cardBg }}>
-      <h2 style={{ ...styles.lessonTitle, color: text }}>{title}</h2>
-      <p style={{ color: sub, fontSize: '14px', marginBottom: '20px', lineHeight: 1.6 }}>{subtitle}</p>
-
-      {submitted && !showScore && !isPreTest && (
-        <div style={{ ...styles.resultBox, background: '#dbeafe' }}>
-          <div style={{ fontSize: '16px', color: '#1e40af', fontWeight: '600' }}>
-            ✅ Pre-test recorded! You answered {correctCount}/{questions.length} correctly.
-            <br />Now let's learn — proceed to the lessons.
-          </div>
-        </div>
-      )}
-
-      {questions.map((q, qi) => (
-        <div key={q.id} style={styles.qBlock}>
-          <p style={{ fontWeight: '600', fontSize: '15px', color: text, marginBottom: '10px' }}>
-            {qi + 1}. {q.question}
-          </p>
-          {q.options.map((opt, oi) => {
-            let bg = dark ? '#333' : '#f9f9f9';
-            let border = dark ? '#555' : '#e0e0e0';
-            if (submitted) {
-              if (oi === q.correct) { bg = '#dcfce7'; border = '#22c55e'; }
-              else if (answers[q.id] === oi) { bg = '#fee2e2'; border = '#ef4444'; }
-            } else if (answers[q.id] === oi) {
-              bg = dark ? '#1e3a5f' : '#dbeafe'; border = '#3b82f6';
-            }
-            return (
-              <button key={oi}
-                style={{ ...styles.optBtn, background: bg, borderColor: border, color: text }}
-                onClick={() => !submitted && setAnswers((prev) => ({ ...prev, [q.id]: oi }))}
-                aria-label={`Option ${oi + 1}`}>
-                <span style={styles.optLetter}>{['A','B','C','D'][oi]}</span>
-                {opt}
-              </button>
-            );
-          })}
-        </div>
-      ))}
-
-      <div style={styles.navRow}>
-        {!submitted ? (
-          <button style={{ ...styles.btn, background: mod.color, marginLeft: 'auto' }}
-            onClick={() => {
-              if (Object.keys(answers).length < questions.length) {
-                const unanswered = questions.length - Object.keys(answers).length;
-                alert(`Please answer all questions. You have ${unanswered} question(s) remaining.`);
-                return;
-              }
-              onSubmit();
-            }}>
-            Submit ({Object.keys(answers).length}/{questions.length} answered)
-          </button>
-        ) : !showScore ? (
-          <button style={{ ...styles.btn, background: '#22c55e', marginLeft: 'auto' }} onClick={onNext}>
-            {nextLabel}
-          </button>
-        ) : null}
-      </div>
-
-      {/* Animated result appears inline at bottom after submit */}
-      {showResult && (showScore || isPreTest) && (
-        <ResultScreen
-          score={postScore}
-          total={postTotal}
-          modColor={mod.color}
-          modId={mod.id}
-          modules={[]}
-          isPreTest={isPreTest}
-          onRetry={onRetry}
-          onNext={onNextModule}
-          nextMod={nextMod}
-        />
-      )}
     </div>
   );
 }

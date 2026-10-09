@@ -1,6 +1,6 @@
 // Run this once to seed yourself as the first admin
 // This is called automatically on first login if no admins exist
-import { doc, getDoc, setDoc, getDocs, collection } from 'firebase/firestore';
+import { doc, setDoc, getDocs, collection } from 'firebase/firestore';
 import { db } from '../firebase';
 
 const OWNER_UID = 'VTWCSTakXoMiiGz6srAq3kCxKan2';

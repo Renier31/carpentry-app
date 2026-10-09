@@ -1,5 +1,6 @@
 import { doc, setDoc, getDoc, collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
+import { modules } from '../data/modules';
 
 // Save quiz result to Firestore
 export async function saveProgress(userId, moduleId, score, total) {
@@ -17,10 +18,10 @@ export async function saveProgress(userId, moduleId, score, total) {
 // Get progress for one user across all modules
 export async function getUserProgress(userId) {
   const results = {};
-  for (let i = 1; i <= 6; i++) {
-    const ref = doc(db, 'progress', `${userId}_module_${i}`);
+  for (const mod of modules) {
+    const ref = doc(db, 'progress', `${userId}_module_${mod.id}`);
     const snap = await getDoc(ref);
-    if (snap.exists()) results[i] = snap.data();
+    if (snap.exists()) results[mod.id] = snap.data();
   }
   return results;
 }
